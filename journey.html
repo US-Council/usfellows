@@ -17,6 +17,187 @@
 <link rel="stylesheet" href="assets/css/icons.css">
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,400|Poppins:400,500,600,700" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/site.css">
+<style>
+  /* ---------- Journey page: Dream Quest–pattern spine timeline ----------
+     Page-scoped styles (journey.html only). Namespaced under .jt- to avoid
+     colliding with the shared .timeline component in assets/css/site.css. */
+
+  .jt-intro { max-width: 720px; margin: 0 auto 8px; text-align: center; }
+
+  .jt-section { padding: 24px 0 96px; overflow: hidden; }
+
+  .jt-timeline {
+    position: relative;
+    list-style: none;
+    margin: 0 auto;
+    padding: 48px 0 0;
+    max-width: 1080px;
+  }
+  .jt-timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    transform: translateX(-50%);
+    border-radius: 4px;
+    background: linear-gradient(180deg, var(--navy-900), var(--green-500) 45%, var(--navy-700) 100%);
+    opacity: 0.9;
+  }
+
+  .jt-phase {
+    position: relative;
+    width: 50%;
+    padding-bottom: 96px;
+  }
+  .jt-phase:last-child { padding-bottom: 0; }
+  .jt-phase:nth-child(odd) { padding-right: 68px; }
+  .jt-phase:nth-child(even) { margin-left: 50%; padding-left: 68px; }
+
+  .jt-phase__marker {
+    position: absolute;
+    top: 4px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--navy-800);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 20px;
+    border: 4px solid var(--paper);
+    box-shadow: var(--shadow-soft);
+    z-index: 2;
+  }
+  .jt-phase:nth-child(odd) .jt-phase__marker { right: -30px; }
+  .jt-phase:nth-child(even) .jt-phase__marker { left: -30px; }
+
+  .jt-phase__panel {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-soft);
+    padding: 30px 32px 32px;
+  }
+
+  .jt-phase__eyebrow {
+    display: inline-block;
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--green-600);
+    margin-bottom: 10px;
+  }
+  .jt-phase__panel h2 {
+    font-family: var(--font-display);
+    font-size: clamp(21px, 2.4vw, 26px);
+    margin-bottom: 8px;
+  }
+  .jt-phase__when {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--ink-soft);
+    margin-bottom: 16px;
+  }
+  .jt-phase__when i { color: var(--green-600); }
+  .jt-phase__lede { font-size: 15px; margin-bottom: 22px; }
+  .jt-phase__lede:last-child { margin-bottom: 0; }
+
+  .jt-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 16px;
+  }
+  .jt-card {
+    background: var(--paper-tint);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 18px;
+  }
+  .jt-card h3 {
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--navy-800);
+    margin-bottom: 8px;
+  }
+  .jt-card p {
+    font-size: 14px;
+    color: var(--ink-soft);
+    margin-bottom: 0;
+  }
+  .jt-card--usiva { background: rgba(61, 177, 102, 0.08); border-color: rgba(61, 177, 102, 0.28); }
+
+  .jt-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  .jt-tag {
+    display: inline-block;
+    background: #ffffff;
+    border: 1px solid rgba(61, 177, 102, 0.4);
+    color: var(--green-600);
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    padding: 4px 11px;
+    border-radius: 999px;
+  }
+
+  .jt-phase__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 18px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--navy-800);
+  }
+  .jt-phase__link i { color: var(--green-600); transition: transform 0.15s ease; }
+  .jt-phase__link:hover { color: var(--green-600); }
+  .jt-phase__link:hover i { transform: translateX(3px); }
+
+  /* Scroll reveal -- disabled entirely for reduced-motion users */
+  .jt-phase__panel {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .jt-phase__panel.is-visible { opacity: 1; transform: translateY(0); }
+
+  @media (prefers-reduced-motion: reduce) {
+    .jt-phase__panel,
+    .jt-phase__link i {
+      transition: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  }
+
+  /* Visible focus states for keyboard users */
+  .jt-phase__link:focus-visible,
+  .jt-tag:focus-visible {
+    outline: 3px solid var(--green-500);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  @media (max-width: 880px) {
+    .jt-timeline::before { left: 27px; transform: none; }
+    .jt-phase { width: 100%; padding-right: 0; padding-left: 76px; margin-left: 0; padding-bottom: 56px; }
+    .jt-phase:nth-child(odd),
+    .jt-phase:nth-child(even) { padding-left: 76px; padding-right: 0; margin-left: 0; }
+    .jt-phase:nth-child(odd) .jt-phase__marker,
+    .jt-phase:nth-child(even) .jt-phase__marker { left: 0; right: auto; width: 52px; height: 52px; font-size: 17px; }
+    .jt-phase__panel { padding: 24px 22px 26px; }
+  }
+</style>
 </head>
 <body>
 
@@ -51,39 +232,166 @@
 
   <section class="section">
     <div class="container">
-      <div class="timeline">
-
-        <div class="timeline-step">
-          <div class="timeline-step__num">1</div>
-          <h3>Arrival &amp; Eligibility</h3>
-          <p>The journey can start with any foreign national who holds a completed high-school degree. That's the entry point US Fellows works from — we help you understand what a fellowship is and whether it fits where you're starting from.</p>
-        </div>
-
-        <div class="timeline-step">
-          <div class="timeline-step__num">2</div>
-          <h3>Education</h3>
-          <p>From that high-school foundation, most fellows move through a degree program — bachelor's, master's, or PhD — that becomes the academic basis for the fellowship placement that follows.</p>
-        </div>
-
-        <div class="timeline-step">
-          <div class="timeline-step__num">3</div>
-          <h3>Fellowship Start: F-1 OPT or J-1</h3>
-          <p>Most journeys begin their fellowship chapter as an F-1 OPT fellow — Optional Practical Training tied to the degree just completed. A J-1 fellowship is the alternative starting point for candidates on that visa track. Either way, this is usually the first placement that builds a US professional record.</p>
-        </div>
-
-        <div class="timeline-step">
-          <div class="timeline-step__num">4</div>
-          <h3>Career &amp; Long-Term Doorways</h3>
-          <p>A fellowship well used becomes a foundation. From there, fellows and their host organizations often look toward longer-term status — pathways like EB-2 National Interest Waiver, H-1B, and other statuses that build on the record a fellowship established.</p>
-        </div>
-
-        <div class="timeline-step">
-          <div class="timeline-step__num">5</div>
-          <h3>A Lifelong Fellowship</h3>
-          <p>USIVA frames the fellowship relationship as something that doesn't end at the first placement. Fellows stay connected to the network of partner organizations well beyond their initial placement, as mentors, collaborators, and — eventually — hosts for the fellows who come after them.</p>
-        </div>
-
+      <div class="section-head jt-intro">
+        <span class="eyebrow">Five Phases, One Long View</span>
+        <h2>How a fellowship fits into a whole career</h2>
+        <p>Every fellow's path looks a little different, but the shape tends to repeat. USIVA maps each phase in advance, so the paperwork, timing, and posture for what comes next are never a surprise.</p>
       </div>
+    </div>
+  </section>
+
+  <section class="jt-section" aria-labelledby="jt-heading">
+    <h2 id="jt-heading" class="visually-hidden">The Fellow's Journey timeline</h2>
+    <div class="container">
+      <ol class="jt-timeline" aria-label="The five phases of the fellow's journey, in order">
+
+        <li class="jt-phase">
+          <div class="jt-phase__marker" aria-hidden="true">01</div>
+          <div class="jt-phase__panel">
+            <span class="jt-phase__eyebrow">Phase 01 &middot; The Starting Point</span>
+            <h2>Arrival &amp; Eligibility</h2>
+            <p class="jt-phase__when"><i class="fa fa-clock-o" aria-hidden="true"></i> Before enrolling in a US degree program — the earliest point of contact</p>
+            <p class="jt-phase__lede">The journey can start with any foreign national who holds a completed high-school degree. That's the entry point US Fellows works from, whether you're weighing options from abroad or already planning a US education.</p>
+            <div class="jt-card-grid">
+              <div class="jt-card">
+                <h3>What Happens</h3>
+                <p>A candidate reaches out with a completed high-school credential and an interest in studying and working in the US. USIVA reviews the basic facts of the case.</p>
+              </div>
+              <div class="jt-card">
+                <h3>What You Gain</h3>
+                <p>A clear, honest read on whether a fellowship track fits your situation, and a realistic picture of the years ahead before you commit to anything.</p>
+              </div>
+              <div class="jt-card jt-card--usiva">
+                <h3>What USIVA Does</h3>
+                <p>Teaches the vocabulary and shape of the process, and sketches a personalized long-view timeline that gets revisited at every later phase.</p>
+                <div class="jt-tags">
+                  <span class="jt-tag">Eligibility Review</span>
+                  <span class="jt-tag">Program Orientation</span>
+                  <span class="jt-tag">Long-View Timeline</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="jt-phase">
+          <div class="jt-phase__marker" aria-hidden="true">02</div>
+          <div class="jt-phase__panel">
+            <span class="jt-phase__eyebrow">Phase 02 &middot; The Foundation</span>
+            <h2>Education</h2>
+            <p class="jt-phase__when"><i class="fa fa-clock-o" aria-hidden="true"></i> Typically two to six years, depending on degree level</p>
+            <p class="jt-phase__lede">From that high-school foundation, most fellows move through a degree program — bachelor's, master's, or PhD — that becomes the academic basis for the fellowship placement that follows.</p>
+            <div class="jt-card-grid">
+              <div class="jt-card">
+                <h3>What Happens</h3>
+                <p>The fellow enrolls in and completes an accredited US degree program, choosing a field of study that will connect naturally to later fellowship work.</p>
+              </div>
+              <div class="jt-card">
+                <h3>What You Gain</h3>
+                <p>An accredited US credential, deepening familiarity with US institutions, and academic relationships that often carry into the fellowship search.</p>
+              </div>
+              <div class="jt-card jt-card--usiva">
+                <h3>What USIVA Does</h3>
+                <p>Helps fellows see how a choice of degree and field connects to later fellowship and visa options, and keeps the long-view timeline updated as milestones land.</p>
+                <div class="jt-tags">
+                  <span class="jt-tag">Degree Planning</span>
+                  <span class="jt-tag">Field Alignment</span>
+                  <span class="jt-tag">Long-View Timeline</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="jt-phase">
+          <div class="jt-phase__marker" aria-hidden="true">03</div>
+          <div class="jt-phase__panel">
+            <span class="jt-phase__eyebrow">Phase 03 &middot; The First Placement</span>
+            <h2>Fellowship Start: F-1 OPT or J-1</h2>
+            <p class="jt-phase__when"><i class="fa fa-clock-o" aria-hidden="true"></i> Usually begins immediately after degree completion</p>
+            <p class="jt-phase__lede">Most journeys begin their fellowship chapter as an F-1 OPT fellow — Optional Practical Training tied to the degree just completed. A J-1 fellowship is the alternative starting point for candidates on that visa track.</p>
+            <div class="jt-card-grid">
+              <div class="jt-card">
+                <h3>What Happens</h3>
+                <p>The fellow is matched with a host organization and begins their first US professional placement under F-1 OPT or J-1 status.</p>
+              </div>
+              <div class="jt-card">
+                <h3>What You Gain</h3>
+                <p>A first US professional record, direct working experience in your field, and a foothold with a host organization that can shape what comes next.</p>
+              </div>
+              <div class="jt-card jt-card--usiva">
+                <h3>What USIVA Does</h3>
+                <p>Prepares the paperwork and explains the posture and timing that F-1 OPT or J-1 status calls for, and matches fellows to host organizations.</p>
+                <div class="jt-tags">
+                  <span class="jt-tag">OPT / J-1 Paperwork</span>
+                  <span class="jt-tag">Host Placement</span>
+                  <span class="jt-tag">Posture &amp; Timing</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="jt-phase">
+          <div class="jt-phase__marker" aria-hidden="true">04</div>
+          <div class="jt-phase__panel">
+            <span class="jt-phase__eyebrow">Phase 04 &middot; The Turning Point</span>
+            <h2>Career &amp; Long-Term Doorways</h2>
+            <p class="jt-phase__when"><i class="fa fa-clock-o" aria-hidden="true"></i> Typically evaluated during the final year of an initial placement</p>
+            <p class="jt-phase__lede">A fellowship well used becomes a foundation. From there, fellows and their host organizations often look toward longer-term status — pathways like EB-2 National Interest Waiver, H-1B, and other statuses that build on the record a fellowship established.</p>
+            <div class="jt-card-grid">
+              <div class="jt-card">
+                <h3>What Happens</h3>
+                <p>The fellow and host organization weigh which longer-term status best fits the professional record built during the fellowship.</p>
+              </div>
+              <div class="jt-card">
+                <h3>What You Gain</h3>
+                <p>Exposure to the realistic doorway options in front of you — EB-2 NIW, H-1B, and others — grounded in the record you've already built, not guesswork.</p>
+              </div>
+              <div class="jt-card jt-card--usiva">
+                <h3>What USIVA Does</h3>
+                <p>Walks fellows and host organizations through the landscape of doorway options, prepares the paperwork and posture later petitions rely on, and connects fellows to USIVA's partner agencies who specialize in these transitions.</p>
+                <div class="jt-tags">
+                  <span class="jt-tag">EB-2 NIW</span>
+                  <span class="jt-tag">H-1B</span>
+                  <span class="jt-tag">Partner Agencies</span>
+                </div>
+              </div>
+            </div>
+            <a class="jt-phase__link" href="doorways.html">See the doorway options in depth <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </li>
+
+        <li class="jt-phase">
+          <div class="jt-phase__marker" aria-hidden="true">05</div>
+          <div class="jt-phase__panel">
+            <span class="jt-phase__eyebrow">Phase 05 &middot; The Ongoing Chapter</span>
+            <h2>A Lifelong Fellowship</h2>
+            <p class="jt-phase__when"><i class="fa fa-clock-o" aria-hidden="true"></i> Ongoing — often for years or decades after the first placement</p>
+            <p class="jt-phase__lede">USIVA frames the fellowship relationship as something that doesn't end at the first placement. Fellows stay connected to the network of partner organizations well beyond their initial placement.</p>
+            <div class="jt-card-grid">
+              <div class="jt-card">
+                <h3>What Happens</h3>
+                <p>Fellows remain part of the USIVA network as their careers grow, staying in touch with partner organizations and the fellows who came before and after them.</p>
+              </div>
+              <div class="jt-card">
+                <h3>What You Gain</h3>
+                <p>Continued belonging to a professional network, chances to mentor and collaborate, and eventually the opportunity to host the next generation of fellows.</p>
+              </div>
+              <div class="jt-card jt-card--usiva">
+                <h3>What USIVA Does</h3>
+                <p>Keeps the long-view timeline current across a fellow's career, connects fellows to peers and partner organizations, and invites experienced fellows to become mentors and hosts themselves.</p>
+                <div class="jt-tags">
+                  <span class="jt-tag">Mentorship</span>
+                  <span class="jt-tag">Alumni Network</span>
+                  <span class="jt-tag">Hosting the Next Fellow</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+      </ol>
     </div>
   </section>
 
@@ -143,5 +451,30 @@
 </footer>
 
 <script src="assets/js/site.js"></script>
+<script>
+  // Scroll-reveal for the journey timeline phases. Skipped entirely for
+  // users who prefer reduced motion -- panels are simply shown immediately.
+  (function () {
+    var panels = document.querySelectorAll('.jt-phase__panel');
+    if (!panels.length) return;
+
+    var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion || typeof IntersectionObserver === 'undefined') {
+      panels.forEach(function (panel) { panel.classList.add('is-visible'); });
+      return;
+    }
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+
+    panels.forEach(function (panel) { observer.observe(panel); });
+  })();
+</script>
 </body>
 </html>
