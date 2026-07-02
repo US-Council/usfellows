@@ -1,152 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>USFellows.org | USIVA Fellows Program</title>
-  <meta name="description" content="USFellows.org — the USIVA Fellows Program. Connecting immigrant fellows to unpaid fellowship placements, F-1 OPT and J-1 pathways, and long-term visa doorways like EB-2 NIW and H-1B.">
-  <style>
-    :root {
-      --bg: #0b1220;
-      --bg-panel: #111a2c;
-      --text-main: #f5f7fa;
-      --text-muted: #a7b0c0;
-      --accent: #4f8ef7;
-      --accent-soft: rgba(79, 142, 247, 0.12);
-      --border: rgba(255, 255, 255, 0.08);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      background: var(--bg);
-      color: var(--text-main);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    header {
-      padding: 2rem 1.5rem;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .brand {
-      font-weight: 700;
-      font-size: 1.1rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--accent);
-    }
-
-    main {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 3rem 1.5rem;
-    }
-
-    .card {
-      max-width: 640px;
-      width: 100%;
-      background: var(--bg-panel);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 3rem 2.5rem;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: clamp(1.8rem, 5vw, 2.6rem);
-      margin-bottom: 1rem;
-      letter-spacing: -0.01em;
-    }
-
-    p {
-      color: var(--text-muted);
-      font-size: 1.05rem;
-      margin-bottom: 1.75rem;
-    }
-
-    .badge {
-      display: inline-block;
-      background: var(--accent-soft);
-      color: var(--accent);
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 0.03em;
-      padding: 0.4rem 0.9rem;
-      border-radius: 999px;
-      margin-bottom: 1.5rem;
-    }
-
-    .cta {
-      display: inline-block;
-      background: var(--accent);
-      color: #06101f;
-      font-weight: 600;
-      text-decoration: none;
-      padding: 0.85rem 1.75rem;
-      border-radius: 8px;
-      transition: opacity 0.15s ease;
-    }
-
-    .cta:hover,
-    .cta:focus-visible {
-      opacity: 0.85;
-    }
-
-    footer {
-      padding: 1.5rem;
-      text-align: center;
-      color: var(--text-muted);
-      font-size: 0.85rem;
-      border-top: 1px solid var(--border);
-    }
-
-    footer a {
-      color: var(--text-muted);
-    }
-
-    @media (max-width: 480px) {
-      .card {
-        padding: 2rem 1.5rem;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>US Fellows Program — Fellowships as a Path to the United States</title>
+<meta name="description" content="US Fellows, run by USIVA with partner organizations Tao Learning, Curiosity Research Corporation, and INSTAR Lab Inc, helps immigrants and foreign nationals understand fellowships and build a long-view plan for their visa journey.">
+<link rel="canonical" href="https://usfellow.org/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="US Fellows Program">
+<meta property="og:title" content="US Fellows Program — Fellowships as a Path to the United States">
+<meta property="og:description" content="USIVA and its partner NGOs help immigrants and foreign nationals understand fellowships, plan their journey, and connect with placements that open doors.">
+<meta property="og:url" content="https://usfellow.org/">
+<meta property="og:image" content="https://usfellow.org/assets/img_hero_campus.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/icons.css">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,400|Poppins:400,500,600,700" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
-  <header>
-    <span class="brand">USFellows.org</span>
-  </header>
 
-  <main>
-    <div class="card">
-      <span class="badge">Coming soon</span>
-      <h1>USIVA Fellows Program</h1>
-      <p>
-        USIVA partners with immigrant fellows — anyone with a completed high-school
-        degree — to build a clear path from Bachelor's, Master's, or PhD study into
-        an F-1 OPT or J-1 fellowship, and from there toward long-term doorways like
-        EB-2 NIW and H-1B. We connect fellows to unpaid fellowship placements with
-        partner organizations, show them exactly what paperwork postures them for
-        each step, and walk the whole journey with them as lifelong fellows.
-      </p>
-      <p>Full site coming soon — consult with USIVA about joining a fellowship and starting your visa journey.</p>
-      <a class="cta" href="https://usiva.org">Visit usiva.org</a>
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="index.html">
+      <span>US<span class="brand__mark">Fellows</span></span>
+      <span class="brand__tag">USIVA Fellows Program</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><i class="fa fa-bars"></i></button>
+    <nav class="main-nav">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="journey.html">The Fellow's Journey</a>
+      <a href="pathways.html">Pathways</a>
+      <a href="partners.html">Partners</a>
+      <a href="apply.html">Apply / Consult</a>
+      <a class="btn btn-primary" href="apply.html">Start Your Journey</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container">
+      <span class="hero__eyebrow">USIVA &middot; US Fellows Program</span>
+      <h1>A fellowship can be the door that opens everything else.</h1>
+      <p class="lead">US Fellows helps immigrants and foreign nationals — starting from any completed high-school degree — understand what a fellowship is, build a long-view plan for their journey, and connect with the organizations that can place them. For many fellows, it's the first real foot in the door to the United States.</p>
+      <div class="hero__actions">
+        <a class="btn btn-primary" href="apply.html">Consult with USIVA</a>
+        <a class="btn btn-outline" href="journey.html">See the Fellow's Journey</a>
+      </div>
     </div>
-  </main>
+  </section>
 
-  <footer>
-    <p>&copy; 2026 USIVA &middot; <a href="mailto:hello@usiva.org">hello@usiva.org</a></p>
-    <p style="margin-top: 0.5rem; opacity: 0.7;">This site is reachable today at fellows.usiva.org while the usfellows.org domain purchase completes.</p>
-  </footer>
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Start Here</span>
+        <h2>What is a fellowship?</h2>
+        <p>A fellowship is a structured placement with a host organization — often unpaid, and often the first opportunity a candidate has to build a professional record in the United States. It is less about a single job and more about a relationship: one that can open doors to further study, work authorization, and long-term status.</p>
+      </div>
+      <div class="grid grid--4">
+        <div class="card">
+          <div class="card__icon"><i class="fa fa-key"></i></div>
+          <h3>A Foot in the Door</h3>
+          <p>US Fellows specializes in unpaid fellowship placements built for candidates who don't yet have a US work history — the first credential that makes the next step possible.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon"><i class="fa fa-map-signs"></i></div>
+          <h3>A Long-View Plan</h3>
+          <p>We help you map a timeline of your journey — from arrival through education, fellowship, and career — instead of just the next form to file.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon"><i class="fa fa-folder-open-o"></i></div>
+          <h3>Paperwork, Demystified</h3>
+          <p>We walk through the general document types a fellowship path typically calls for, and the posture that puts you in the best position to move forward.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon"><i class="fa fa-users"></i></div>
+          <h3>A Network, Not Just a Placement</h3>
+          <p>Fellows are connected to USIVA's partner organizations, and the relationship is built to last well beyond a first placement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tint">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Pathways</span>
+        <h2>Three degrees, one shared shape</h2>
+        <p>Whatever level you're starting from, the pathway follows the same general shape: education, a fellowship as an F-1 OPT (or J-1) fellow, and the doorways that open from there.</p>
+      </div>
+      <div class="grid grid--3">
+        <div class="pathway-card">
+          <span class="pathway-card__badge">Bachelor's</span>
+          <h3>Bachelor's &rarr; F-1 OPT Fellow</h3>
+          <p>For candidates completing or holding an undergraduate degree, moving into a fellowship placement under F-1 Optional Practical Training.</p>
+        </div>
+        <div class="pathway-card">
+          <span class="pathway-card__badge">Master's</span>
+          <h3>Master's &rarr; F-1 OPT Fellow</h3>
+          <p>For graduate-level candidates, a fellowship placement that builds directly on advanced coursework and specialization.</p>
+        </div>
+        <div class="pathway-card">
+          <span class="pathway-card__badge">PhD</span>
+          <h3>PhD &rarr; F-1 OPT Fellow</h3>
+          <p>For doctoral candidates and graduates, a fellowship placement suited to research-driven and highly specialized work.</p>
+        </div>
+      </div>
+      <p class="text-center" style="margin-top:34px;"><a class="btn btn-outline-navy" href="pathways.html">Explore all pathways, including the J-1 start</a></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Delivered With</span>
+        <h2>Three partner organizations, one program</h2>
+        <p>US Fellows is run by USIVA together with three partner NGOs, each contributing placements and mentorship across different fields.</p>
+      </div>
+      <div class="grid grid--3">
+        <div class="partner-card">
+          <span class="partner-card__mark">Tao Learning</span>
+          <span class="partner-card__field">Education</span>
+          <p>A partner organization contributing education-focused fellowship placements and mentorship to the program.</p>
+        </div>
+        <div class="partner-card">
+          <span class="partner-card__mark">Curiosity Research Corporation</span>
+          <span class="partner-card__field">Research</span>
+          <p>A partner organization contributing research-oriented fellowship placements to fellows in the program.</p>
+        </div>
+        <div class="partner-card">
+          <span class="partner-card__mark">INSTAR Lab Inc</span>
+          <span class="partner-card__field">Applied Science &amp; Labs</span>
+          <p>A partner organization contributing lab and applied-science fellowship placements to fellows in the program.</p>
+        </div>
+      </div>
+      <p class="text-center" style="margin-top:34px;"><a class="btn btn-outline-navy" href="partners.html">Meet the partner organizations</a></p>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container">
+      <h2>Ready to talk about your fellowship?</h2>
+      <p>Consult with USIVA about joining a fellowship and the visa journey that can follow — no forms, no obligation, just a conversation about where you're starting from.</p>
+      <div class="cta-band__actions">
+        <a class="btn btn-primary" href="apply.html">Consult with USIVA</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__top">
+    <div>
+      <a class="brand" href="index.html">
+        <span>US<span class="brand__mark">Fellows</span></span>
+        <span class="brand__tag">USIVA Fellows Program</span>
+      </a>
+      <p class="about">US Fellows connects immigrants and foreign nationals to fellowship placements and walks fellows through the visa journey that follows — from arrival through career.</p>
+    </div>
+    <div>
+      <h4>Program</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="journey.html">The Fellow's Journey</a></li>
+        <li><a href="pathways.html">Pathways</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>USIVA</h4>
+      <ul>
+        <li><a href="partners.html">Partner Organizations</a></li>
+        <li><a href="apply.html">Apply / Consult</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Partner NGOs</h4>
+      <ul>
+        <li>Tao Learning</li>
+        <li>Curiosity Research Corporation</li>
+        <li>INSTAR Lab Inc</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container site-footer__disclaimer">
+    US Fellows is an informational program site and is not a law firm. Nothing on this site is legal advice, and no attorney-client relationship is created by using it. Immigration outcomes depend on individual facts and circumstances — always consult a licensed immigration attorney for guidance specific to your situation. US Fellows and USIVA are not affiliated with, endorsed by, or acting on behalf of the U.S. government or any of its agencies.
+  </div>
+  <div class="container site-footer__bottom">
+    <span>&copy; 2026 USIVA / US Fellows Program.</span>
+    <span>Program partners: Tao Learning &middot; Curiosity Research Corporation &middot; INSTAR Lab Inc</span>
+  </div>
+</footer>
+
+<script src="assets/js/site.js"></script>
 </body>
 </html>
