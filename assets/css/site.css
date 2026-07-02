@@ -421,6 +421,19 @@ input:focus-visible,
   display: block;
 }
 
+/* ---------- Card footer link (homepage teaser cards) ---------- */
+.card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--green-600);
+  margin-top: 6px;
+}
+.card-link i { font-size: 11px; }
+.card-link:hover, .card-link:focus-visible { color: var(--green-500); text-decoration: underline; }
+
 /* ---------- Timeline (journey page) ---------- */
 .timeline { position: relative; max-width: 880px; margin: 0 auto; }
 .timeline::before {

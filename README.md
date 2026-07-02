@@ -20,28 +20,26 @@ one-time placement.
 
 ## Site map
 
-Built as a static v1 from a licensed HTML template (Kingster education
+Static site built from a licensed HTML template (Kingster education
 template — layout/typography/icon-font base only; all copy, imagery
 selection, and page structure are original to this build). Real content,
-no forms, no server-side code:
+no forms, no server-side code, six pages:
 
 | Page | File | Covers |
 |---|---|---|
-| Home | `index.html` | Hero + consult CTA, "What is a Fellowship?", benefits, pathway overview, partner strip, final CTA |
-| The Fellow's Journey | `journey.html` | Timeline: arrival → education → F-1 OPT/J-1 fellowship → career doorways → lifelong fellowship |
-| Pathways | `pathways.html` | Bachelor's / Master's / PhD → F-1 OPT fellow, plus the J-1 alternative start — who it fits, general paperwork, posture, doors opened |
-| Partners | `partners.html` | Tao Learning, Curiosity Research Corporation, INSTAR Lab Inc — roles and the unpaid-placement model |
-| Apply / Consult | `apply.html` | Process explainer; the only external action on the site is the link to `https://apply.usiva.org` |
+| Home | `index.html` | Hero + consult CTA, "What is a Fellowship?", journey teaser, pathway overview cards, doorways teaser, partner strip, final CTA |
+| The Fellow's Journey | `journey.html` | Gradient-spine timeline: arrival → education → F-1 OPT/J-1 fellowship → career doorways → lifelong fellowship |
+| Pathways | `pathways.html` | Bachelor's / Master's / PhD → F-1 OPT fellow, plus the J-1 alternative start — who each fits, how the journey unfolds, paperwork categories, doors opened, and a pathway comparison table |
+| Doorways | `doorways.html` | The long-term doorways a fellowship placement can posture a candidate for: F-1 OPT, J-1, EB-2 NIW, H-1B, and beyond |
+| Partners | `partners.html` | Tao Learning, Curiosity Research Corporation, INSTAR Lab Inc — real, sourced descriptions of each org, plus the unpaid-placement/foot-in-the-door model |
+| Apply / Consult | `apply.html` | Who it's for, what a consult covers, document prep, an FAQ, and the one external action on the site: the link to `https://apply.usiva.org` |
 
 Every page footer carries the mandatory disclaimer: informational only,
 not legal advice, not a law firm, not affiliated with the U.S.
-government.
-
-**Not yet done**: migrating the old `usiva.org/apply-opt.html` content
-into this site (source now lives at
-[US-Council/usiva](https://github.com/US-Council/usiva), `gh-pages`
-branch) — v1 links straight out to the existing `apply.usiva.org` intake
-instead. Tracked in the "Apply page" milestone issue.
+government. Every page also ships a skip-to-content link, a single `<h1>`,
+and per-page SEO metadata (unique title/description/OG tags, canonical
+link, and JSON-LD — `Organization` on the homepage, `BreadcrumbList` on
+every inner page, `FAQPage` on `apply.html` matching its visible FAQ).
 
 ## Local preview
 
@@ -68,11 +66,13 @@ Then open `http://localhost:8000`.
 
 ## Status
 
-v1 baseline shipped: all five pages built out with real copy, a small
-custom design system (`assets/css/site.css`) layered on the template's
-icon font (Font Awesome + Elegant Icons), and one licensed photo from the
-template package (the rest of the template's `upload/` imagery ships as
-unusable dimension placeholders, not real photography — see the
-"Brand & design system" milestone issue for the follow-up on real/AI
-imagery). Suzanne owns refining brand, visuals, and copy from here;
-tracked across the **USFellows.org v1 — launch** milestone issues.
+All six pages are built out with real, sourced copy on a shared custom
+design system (`assets/css/site.css`) layered on the template's icon font
+(Font Awesome + Elegant Icons), plus one licensed photo from the template
+package (the rest of the template's `upload/` imagery ships as unusable
+dimension placeholders, not real photography — still an open gap, see the
+"Brand & design system" milestone issue). We own this site end to end;
+there's no external handoff. Work is tracked across the
+**USFellows.org v1 — launch** milestone issues, and progress is logged
+directly on those issues as build-log comments rather than closed until a
+QA pass signs off.
