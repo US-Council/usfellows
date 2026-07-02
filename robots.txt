@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://usfellow.org/sitemap.xml
+Sitemap: https://usfellows.org/sitemap.xml

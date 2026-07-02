@@ -1,7 +1,7 @@
 # USFellows.org — USIVA Fellows Program
 
 This repo is the source for **USFellows.org**, the canonical home for the
-USIVA Fellows Program. The `usfellow.org` / `usfellows.org` domain purchase
+USIVA Fellows Program. The `usfellows.org` domain purchase
 is in progress; until DNS is live, the site is served at
 **fellows.usiva.org**, which points at this same repo. See the "Cut over to
 USFellows.org" milestone issue for the cutover plan once the domain
@@ -57,10 +57,10 @@ Then open `http://localhost:8000`.
 
 - **Hosting**: GitHub Pages, deployed from the `main` branch root. The
   `CNAME` file currently pins `fellows.usiva.org` (interim); it will be
-  repointed once `usfellow.org`/`usfellows.org` DNS is live — see the
+  repointed once `usfellows.org` DNS is live — see the
   cutover issue.
 - **DNS**: Cloudflare (interim, on the `usiva.org` zone). Once the
-  `usfellow.org`/`usfellows.org` domain is added to Cloudflare, DNS moves
+  `usfellows.org` domain is added to Cloudflare, DNS moves
   per the cutover issue.
 - **Stack**: plain HTML/CSS/vanilla JS, no framework, no build step, no
   server-side code. All internal links are relative so the site works
