@@ -54,6 +54,38 @@ p { margin: 0 0 1.1em; color: var(--ink-soft); }
   clip: rect(0 0 0 0); white-space: nowrap;
 }
 
+/* ---------- Global keyboard focus + skip link ----------
+   Site-wide default so every interactive element gets a visible focus ring,
+   even on pages/components that don't define their own local rule. Pages
+   that already set a page-scoped :focus-visible style (journey, pathways,
+   apply) simply layer their treatment on top of this baseline. */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+input:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--green-500);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -60px;
+  left: 16px;
+  z-index: 1000;
+  background: var(--navy-900);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  transition: top 0.15s ease;
+}
+.skip-link:focus {
+  top: 16px;
+}
+
 /* ---------- Buttons ---------- */
 .btn {
   display: inline-flex;
