@@ -1,21 +1,24 @@
-# USFellows.org — USIVA Fellows Program
+# USFellows.org — A US Council Program
 
 This repo is the source for **USFellows.org**, the canonical home for the
-USIVA Fellows Program. The `usfellows.org` domain purchase
-is in progress; until DNS is live, the site is served at
+US Fellows Program, a program of **US Council**. The `usfellows.org`
+domain purchase is in progress; until DNS is live, the site is served at
 **fellows.usiva.org**, which points at this same repo. See the "Cut over to
 USFellows.org" milestone issue for the cutover plan once the domain
 resolves.
 
-USIVA connects immigrants and foreign nationals (any candidate with a
-completed high-school degree) to unpaid fellowship placements and walks
-them through the visa journey that follows.
+US Council, through US Fellows, connects immigrants and foreign nationals
+(any candidate with a completed high-school degree) to unpaid fellowship
+placements — delivered together with partner organizations USIVA (which
+guides the visa track and intake), Tao Learning, Curiosity Research
+Corporation, and INSTAR Lab Inc — and walks them through the visa journey
+that follows.
 
-Entry point is a fellowship, but the journey doesn't stop there. USIVA's
-job is to show fellows exactly what paperwork gets them there, what
-postures them for the next step, and what doors it opens — from an F-1
-OPT or J-1 fellowship through to long-term pathways like EB-2 NIW and
-H-1B. USIVA treats fellows as potentially **lifelong fellows**, not a
+Entry point is a fellowship, but the journey doesn't stop there. The
+program's job is to show fellows exactly what paperwork gets them there,
+what postures them for the next step, and what doors it opens — from an
+F-1 OPT or J-1 fellowship through to long-term pathways like EB-2 NIW and
+H-1B. US Fellows treats fellows as potentially **lifelong fellows**, not a
 one-time placement.
 
 ## Site map
