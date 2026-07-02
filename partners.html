@@ -17,6 +17,59 @@
 <link rel="stylesheet" href="assets/css/icons.css">
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,400|Poppins:400,500,600,700" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/site.css">
+<style>
+  .org-card {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 28px;
+  }
+  .org-card:last-child { margin-bottom: 0; }
+  .org-card h3 { font-size: 24px; margin-bottom: 0; }
+  .org-card__blocks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .org-card__block h4 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-soft);
+    margin-bottom: 8px;
+  }
+  .org-card__block ul { display: flex; flex-direction: column; gap: 8px; margin: 0; }
+  .org-card__block li {
+    font-size: 14.5px;
+    color: var(--ink-soft);
+    padding-left: 22px;
+    position: relative;
+  }
+  .org-card__block li::before {
+    content: "\f00c";
+    font-family: FontAwesome;
+    position: absolute;
+    left: 0;
+    top: 1px;
+    color: var(--green-500);
+    font-size: 12px;
+  }
+  .org-card__block p { font-size: 14.5px; color: var(--ink-soft); margin: 0; }
+  .org-card__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  @media (max-width: 720px) {
+    .org-card__blocks { grid-template-columns: 1fr; }
+  }
+</style>
 </head>
 <body>
 
@@ -45,31 +98,85 @@
       <div class="breadcrumb"><a href="index.html">Home</a> &rsaquo; Partners</div>
       <span class="page-title__eyebrow">Who Delivers The Program</span>
       <h1>Partner Organizations</h1>
-      <p>US Fellows is run by USIVA together with three partner NGOs. Each contributes fellowship placements and mentorship in its own field, giving fellows a real choice of where to start.</p>
+      <p>US Fellows is run by USIVA together with three partner NGOs — Tao Learning, Curiosity Research Corporation, and INSTAR Lab Inc. USIVA handles the visa track; each partner hosts the unpaid fellowship placement itself, in its own field. Below is what each organization actually does, so fellows can see where they'd be working before they apply.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <div class="grid grid--3" style="margin-bottom:56px;">
-        <div class="partner-card">
-          <span class="partner-card__mark">Tao Learning</span>
-          <span class="partner-card__field">Education</span>
-          <p>Tao Learning contributes education-focused fellowship placements to the program — a fit for fellows whose background or degree points toward teaching, curriculum, or learning-technology work.</p>
-        </div>
-        <div class="partner-card">
-          <span class="partner-card__mark">Curiosity Research Corporation</span>
-          <span class="partner-card__field">Research</span>
-          <p>Curiosity Research Corporation contributes research-oriented fellowship placements — a fit for fellows coming out of graduate or doctoral programs looking to build a US research record.</p>
-        </div>
-        <div class="partner-card">
-          <span class="partner-card__mark">INSTAR Lab Inc</span>
-          <span class="partner-card__field">Applied Science &amp; Labs</span>
-          <p>INSTAR Lab Inc contributes lab and applied-science fellowship placements — a fit for fellows with a technical or applied-science background looking for hands-on work.</p>
-        </div>
+
+      <div class="section-head align-left mt-0" style="margin-bottom:28px;">
+        <span class="eyebrow">The Three Partners</span>
+        <h2>Where a placement is actually spent</h2>
       </div>
 
-      <div class="section-head align-left mt-0">
+      <div class="org-card">
+        <span class="partner-card__field">Education</span>
+        <h3>Tao Learning</h3>
+        <p>Tao Learning is a 501(c)(3) nonprofit built around a P-20+ initiative — advancing education across the full continuum from early learning through doctoral study and into the workforce, with a STEAM focus and a standing commitment to literacy across written, spoken, digital, and emerging forms of language.</p>
+        <div class="org-card__blocks">
+          <div class="org-card__block">
+            <h4>Focus Areas</h4>
+            <ul>
+              <li>P-20+ curriculum and pedagogy development</li>
+              <li>Literacy advocacy across written, spoken, and digital language</li>
+              <li>STEAM-focused instructional resources tied to workforce forecasting</li>
+              <li>The Tao Learning Consortium, its network of partner organizations</li>
+            </ul>
+          </div>
+          <div class="org-card__block">
+            <h4>What Fellows Do Here</h4>
+            <p>Placements sit inside Tao Learning's active education work — curriculum and pedagogy projects, literacy programs, and STEAM instructional resources. It's a fit for fellows whose degree points toward teaching, curriculum design, or learning-technology work.</p>
+          </div>
+        </div>
+        <a class="org-card__link" href="https://taolearning.org" target="_blank" rel="noopener noreferrer"><i class="fa fa-external-link"></i> taolearning.org</a>
+      </div>
+
+      <div class="org-card">
+        <span class="partner-card__field">Research</span>
+        <h3>Curiosity Research Corporation</h3>
+        <p>Curiosity Research Corporation studies the psychology of curiosity — in human learners and in machine systems — and turns that research into pedagogy: the methods that keep learners motivated as classroom models evolve. Its mission, stated plainly on its own site, is to make the world more curious.</p>
+        <div class="org-card__blocks">
+          <div class="org-card__block">
+            <h4>Focus Areas</h4>
+            <ul>
+              <li>Ignite Curiosity, its student-facing discovery program</li>
+              <li>Curiosity Camps and Curiosity Cottages, bootcamp and physical-space programs</li>
+              <li>Curiosity Hive, its learner community, and Curiosity Coaches, its mentors</li>
+              <li>DreamTrack, its portfolio system for auditable, career-ready progress</li>
+            </ul>
+          </div>
+          <div class="org-card__block">
+            <h4>What Fellows Do Here</h4>
+            <p>Placements are a fit for fellows coming out of graduate or doctoral programs who want to build a US research record — working on curiosity and pedagogy research, coaching, or program design across its Camps, Hive, and Coaches programs.</p>
+          </div>
+        </div>
+        <a class="org-card__link" href="https://curiositycorp.org" target="_blank" rel="noopener noreferrer"><i class="fa fa-external-link"></i> curiositycorp.org</a>
+      </div>
+
+      <div class="org-card">
+        <span class="partner-card__field">Applied Science &amp; Labs</span>
+        <h3>INSTAR Lab Inc</h3>
+        <p>INSTAR Lab is an independent 501(c)(3) nonprofit research institute advancing science through interdisciplinary collaboration, technological innovation, and partnership — accountable, as a public charity, to the public interest rather than to shareholders or a single funder.</p>
+        <div class="org-card__blocks">
+          <div class="org-card__block">
+            <h4>Focus Areas</h4>
+            <ul>
+              <li>AI &amp; machine intelligence, quantum science, and data analytics</li>
+              <li>Health, energy, and high-performance computing research</li>
+              <li>Earth &amp; space, life, social, and physical sciences</li>
+              <li>Its own "Chart. Explore. Transmit." research method, PI-led end to end</li>
+            </ul>
+          </div>
+          <div class="org-card__block">
+            <h4>What Fellows Do Here</h4>
+            <p>Placements are a fit for fellows with a technical or applied-science background looking for hands-on, PI-led research work. INSTAR runs its own citizen-scientist fellowship model in parallel, training researchers at every level with no minimum degree requirement.</p>
+          </div>
+        </div>
+        <a class="org-card__link" href="https://instarlab.org" target="_blank" rel="noopener noreferrer"><i class="fa fa-external-link"></i> instarlab.org</a>
+      </div>
+
+      <div class="section-head align-left" style="margin-bottom:44px;margin-top:64px;">
         <span class="eyebrow">How It Works</span>
         <h2>The unpaid-placement, foot-in-the-door model</h2>
       </div>
@@ -92,7 +199,7 @@
         <div class="card">
           <div class="card__icon"><i class="fa fa-refresh"></i></div>
           <h3>A Relationship That Continues</h3>
-          <p>Placements are a starting point, not an end point — many fellows stay connected to their partner organization well past the initial fellowship.</p>
+          <p>Placements are a starting point, not an end point. Fellows keep standing in their partner organization's network long after the fellowship ends — a lifelong connection, not a one-time credential.</p>
         </div>
       </div>
     </div>
