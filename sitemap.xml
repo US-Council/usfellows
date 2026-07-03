@@ -44,4 +44,6 @@
   <url><loc>https://usfellows.org/fellow-stories.html</loc></url>
   <url><loc>https://usfellows.org/institutional-briefings.html</loc></url>
   <url><loc>https://usfellows.org/impact-reports.html</loc></url>
+  <url><loc>https://usfellows.org/terms-of-service.html</loc><priority>0.4</priority></url>
+  <url><loc>https://usfellows.org/privacy-policy.html</loc><priority>0.4</priority></url>
 </urlset>

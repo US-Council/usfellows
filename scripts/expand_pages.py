@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Expand short destination pages into the site's long-form editorial layout."""
+"""Build each destination page from its own long-form editorial composition."""
 
 from pathlib import Path
 import html
@@ -129,7 +129,7 @@ PAGES = {
     "become-a-fellow.html": ("fellows", "Fellowship begins with a contribution you can name", "The Society welcomes accomplished professionals, emerging leaders, researchers, builders, educators, public servants, and others prepared for mission-aligned work.", "A strong expression of interest is specific about both record and readiness: what you know, what you have done, where you want to serve, and what you can responsibly undertake now.", [("Clarify your mission", "Identify the public questions and communities to which you can bring sustained, informed commitment."), ("Describe your capabilities", "Use concrete evidence from work, research, leadership, creative practice, or service."), ("Propose your contribution", "Explain the kind of project, affiliation, research, advising, or institutional work you could pursue."), ("Show readiness", "Address availability, collaboration, learning, ethical responsibility, and the support your work would require.")]),
     "eligibility.html": ("fellows", "Excellence can emerge from any field", "There is no single profession, career stage, geography, or academic pathway that defines a US Fellow.", "Eligibility is broad by design, but selection is discerning. Candidates must show credible ability, integrity, mission relevance, and readiness for a structured public-interest affiliation.", [("Professionals and practitioners", "People with demonstrated capability in their field and a serious desire to direct it toward public purpose."), ("Researchers and scholars", "Individuals able to advance, translate, or apply knowledge within a mission and host context."), ("Graduates and emerging leaders", "Candidates with strong preparation, promise, judgment, and readiness for field-aligned contribution."), ("Senior and distinguished leaders", "Experienced people prepared to advise, mentor, convene, or lead work of major public consequence.")]),
     "selection-criteria.html": ("fellows", "A whole-person assessment of merit and purpose", "Selection considers accomplishment in context. Reviewers look for evidence of what a candidate can do, how they exercise responsibility, and why a particular mission or appointment makes sense.", "No single credential substitutes for the full standard, and potential may be considered alongside an established record where evidence supports it.", [("Excellence and capability", "Quality of work, depth of knowledge, disciplined execution, creativity, leadership, or demonstrated promise."), ("Integrity and character", "Honesty, judgment, respect, accountability, humility, and conduct consistent with public trust."), ("Service and mission alignment", "A credible relationship between the candidate's record, stated purpose, and the mission they seek to advance."), ("Contribution potential", "Readiness, collaboration, field fit, and the likelihood of producing useful work in a qualified setting.")]),
-    "fellow-benefits.html": ("fellows", "Recognition, affiliation, and a platform for service", "Fellowship offers a distinguished civic identity and access to relationships, institutions, and opportunities organized around meaningful contribution.", "Benefits vary with the program and appointment. They do not imply employment, funding, immigration status, academic credit, or guaranteed placement unless explicitly established separately.", [("Fellowship identity", "Recognition grounded in a selective standard of excellence, character, and public purpose."), ("Mission and host affiliation", "A structured connection to relevant work, institutional context, and a defined contribution."), ("Cohort and Society life", "Peer exchange, convenings, mentorship, cross-disciplinary relationships, and alumni continuity."), ("A record of contribution", "Opportunities to document learning, share field insight, publish, advise, and pursue future missions.")]),
+    "fellow-benefits.html": ("fellows", "Recognition, affiliation, and a platform for service", "Fellowship offers a distinguished civic identity and access to relationships, institutions, and opportunities organized around meaningful contribution.", "Benefits vary with the program and appointment. They do not imply an employment relationship, financial support, academic credit, or a guaranteed appointment unless explicitly established separately.", [("Fellowship identity", "Recognition grounded in a selective standard of excellence, character, and public purpose."), ("Mission and host affiliation", "A structured connection to relevant work, institutional context, and a defined contribution."), ("Cohort and Society life", "Peer exchange, convenings, mentorship, cross-disciplinary relationships, and alumni continuity."), ("A record of contribution", "Opportunities to document learning, share field insight, publish, advise, and pursue future missions.")]),
     "nominate-a-fellow.html": ("fellows", "Bring exceptional people to the Society's attention", "Nominations help identify people whose records may not fit conventional pipelines but whose work, character, and potential deserve serious consideration.", "A nomination is strongest when it goes beyond admiration and provides specific evidence of excellence, integrity, mission alignment, and readiness to contribute.", [("Identify the person", "Provide accurate professional context, your relationship to the nominee, and how they may be contacted."), ("Describe the record", "Point to consequential work, leadership, research, service, creative contribution, or demonstrated promise."), ("Speak to character", "Offer examples of judgment, integrity, humility, collaboration, and responsibility under real conditions."), ("Connect to mission", "Explain where the nominee's capabilities could serve and what kind of contribution they may be prepared to make.")]),
 
     # Journal
@@ -141,22 +141,183 @@ PAGES = {
 }
 
 
+# Each destination has a deliberately authored composition. The tuple is:
+# hero, section order, overview, focus, principles, process, close, navigation.
+# Components repeat where their semantics fit, but no complete recipe repeats.
+DESIGNS = {
+    "our-mission.html": ("declaration", "opfx", "statement", "bands", "manifesto", "path", "banner", "none"),
+    "vision.html": ("horizon", "ofxp", "centered", "orbit", "pillars", "milestones", "quote", "none"),
+    "why-us-fellows.html": ("light-brief", "opfx", "brief", "bento", "sidebar", "ledger", "split", "bar"),
+    "us-fellows-standard.html": ("seal", "pofx", "dossier", "table", "checklist", "vertical", "inset", "index"),
+    "governance-stewardship.html": ("side-number", "oxpf", "index", "ledger", "rows", "ledger", "compact", "rail"),
+    "fellowship-programs.html": ("diagonal", "fopx", "editorial", "mosaic", "cards", "steps", "standard", "bar"),
+    "career-advancement.html": ("portrait", "ofxp", "portrait", "cards", "rows", "path", "quote", "bar"),
+    "international-graduate-fellows.html": ("letterbox", "oxfp", "letter", "table", "checklist", "milestones", "inset", "index"),
+    "national-capacity-fellows.html": ("offset", "foxp", "split", "bento", "sidebar", "stair", "split", "rail"),
+    "mission-fellowships.html": ("centered", "opxf", "statement", "chapters", "pillars", "timeline", "banner", "none"),
+    "fellowship-society.html": ("declaration", "opfx", "statement", "mosaic", "rows", "milestones", "banner", "none"),
+    "cohorts-chapters.html": ("panorama", "foxp", "split", "orbit", "pillars", "path", "standard", "bar"),
+    "convenings-honors.html": ("blue-block", "ofpx", "portrait", "mosaic", "band", "milestones", "quote", "rail"),
+    "code-of-service.html": ("red-rule", "poxf", "dossier", "ledger", "checklist", "vertical", "inset", "index"),
+    "fellowship-oath.html": ("quiet", "opfx", "letter", "rail", "manifesto", "path", "compact", "none"),
+    "become-a-host.html": ("image-right", "xofp", "index", "bento", "sidebar", "stair", "split", "bar"),
+    "who-can-host.html": ("light-brief", "fopx", "brief", "table", "pillars", "steps", "standard", "rail"),
+    "host-standards.html": ("seal", "pofx", "dossier", "ledger", "checklist", "ledger", "inset", "index"),
+    "appointment-model.html": ("portrait", "oxfp", "portrait", "cards", "rows", "path", "quote", "bar"),
+    "submit-opportunity.html": ("compact", "xopf", "letter", "table", "checklist", "milestones", "banner", "rail"),
+    "humanity-dignity.html": ("centered", "ofpx", "centered", "chapters", "pillars", "timeline", "quote", "none"),
+    "science-discovery.html": ("portrait", "fopx", "split", "mosaic", "sidebar", "steps", "split", "bar"),
+    "planetary-stewardship.html": ("declaration", "opfx", "statement", "orbit", "manifesto", "milestones", "compact", "none"),
+    "civic-life-public-trust.html": ("light-brief", "oxpf", "brief", "ledger", "cards", "ledger", "standard", "bar"),
+    "national-capacity-resilience.html": ("diagonal", "fxop", "index", "bento", "pillars", "stair", "inset", "index"),
+    "become-a-fellow.html": ("guide", "xofp", "dossier", "rail", "checklist", "vertical", "banner", "rail"),
+    "eligibility.html": ("light-brief", "fopx", "index", "mosaic", "sidebar", "steps", "quote", "bar"),
+    "selection-criteria.html": ("side-number", "poxf", "dossier", "ledger", "cards", "ledger", "split", "index"),
+    "fellow-benefits.html": ("portrait", "ofxp", "split", "orbit", "band", "milestones", "compact", "bar"),
+    "nominate-a-fellow.html": ("letterbox", "oxpf", "letter", "chapters", "checklist", "vertical", "banner", "rail"),
+    "essays-research-notes.html": ("quiet", "ofpx", "centered", "mosaic", "sidebar", "path", "quote", "none"),
+    "field-reports.html": ("guide", "xofp", "dossier", "ledger", "checklist", "milestones", "inset", "index"),
+    "fellow-stories.html": ("image-right", "ofpx", "portrait", "cards", "rows", "path", "split", "bar"),
+    "institutional-briefings.html": ("light-brief", "oxpf", "brief", "table", "pillars", "ledger", "standard", "rail"),
+    "impact-reports.html": ("offset", "fxop", "index", "bento", "cards", "stair", "banner", "index"),
+}
+
+if set(DESIGNS) != set(PAGES):
+    raise RuntimeError("Every generated destination must have exactly one design recipe.")
+if len(set(DESIGNS.values())) != len(DESIGNS):
+    raise RuntimeError("Destination design recipes must be unique.")
+
+
+def _heading(eyebrow, title, text="", centered=False):
+    cls = "section-intro section-intro--center" if centered else "section-intro"
+    copy = f'<p>{html.escape(text)}</p>' if text else ""
+    return f'<div class="{cls}"><span class="eyebrow">{eyebrow}</span><h2>{title}</h2><div class="rule"></div>{copy}</div>'
+
+
+def _overview(style, c):
+    intro = c["intro"]
+    if style == "statement":
+        return f'<section class="manifesto-opening" id="overview"><div class="container"><span class="eyebrow">{c["label"]}</span><p class="manifesto-statement">{c["lead"]}</p><div class="manifesto-detail"><h2>{c["heading"]}</h2><p>{c["detail"]}</p></div></div></section>'
+    if style == "centered":
+        return f'<section class="section narrative-opening" id="overview"><div class="container">{intro}<blockquote><p>“{c["lens"]}”</p></blockquote></div></section>'
+    if style == "brief":
+        return f'<section class="section brief-overview" id="overview"><div class="container"><div class="brief-heading">{intro}<span class="brief-mark" aria-hidden="true">USF / BRIEF</span></div><div class="fact-strip">{c["fact_strip"]}</div></div></section>'
+    if style == "letter":
+        return f'<section class="section letter-opening" id="overview"><div class="container"><div class="letter-meta"><span>US Fellows</span><strong>Service memorandum</strong><small>Subject / {c["heading"]}</small></div><div class="letter-copy">{intro}</div></div></section>'
+    if style == "dossier":
+        return f'<section class="section dossier-opening" id="overview"><div class="container editorial-grid">{intro}<aside class="guide-index"><span>Working dossier</span><h3>Questions to carry forward</h3><ul class="fact-list">{c["facts"]}</ul></aside></div></section>'
+    if style == "split":
+        return f'<section class="split-opening" id="overview"><div class="split-opening__copy">{intro}</div><div class="split-opening__visual"><span>01</span><p>{c["lens"]}</p></div></section>'
+    if style == "index":
+        return f'<section class="section index-opening" id="overview"><div class="container"><div class="index-number" aria-hidden="true">01</div>{intro}<aside><span class="eyebrow">At a glance</span><ul class="fact-list">{c["facts"]}</ul></aside></div></section>'
+    if style == "portrait":
+        return f'<section class="section profile-opening" id="overview"><div class="container profile-grid">{intro}<aside class="profile-emblem"><span>Perspective</span><strong>01</strong><p>{c["lens"]}</p></aside></div></section>'
+    return f'<section class="section" id="overview"><div class="container editorial-grid">{intro}<aside class="fact-panel"><h3>This page at a glance</h3><ul class="fact-list">{c["facts"]}</ul></aside></div></section>'
+
+
+def _focus(style, c):
+    head = _heading("The substance", "Four dimensions of the work", c["lead"], style in {"mosaic", "orbit"})
+    if style == "chapters":
+        return f'<section class="narrative-focus" id="focus"><div class="container"><span class="eyebrow">The story of the work</span><h2>Four chapters of contribution</h2>{c["focus_items"]}</div></section>'
+    if style == "bands":
+        return f'<section class="focus-bands" id="focus"><div class="container">{head}</div><div class="focus-bands__grid">{c["focus_cards"]}</div></section>'
+    if style == "orbit":
+        return f'<section class="section section--mist" id="focus"><div class="container">{head}<div class="focus-orbit"><div class="focus-orbit__center"><span>One mission</span><strong>Four fields</strong></div>{c["focus_cards"]}</div></div></section>'
+    if style == "ledger":
+        return f'<section class="section section--mist" id="focus"><div class="container focus-ledger">{head}<div>{c["focus_items"]}</div></div></section>'
+    if style == "table":
+        return f'<section class="section" id="focus"><div class="container">{head}<div class="focus-table">{c["focus_cards"]}</div></div></section>'
+    if style == "rail":
+        return f'<section class="section section--navy" id="focus"><div class="container"><div class="focus-rail"><div>{head}</div><div>{c["focus_items"]}</div></div></div></section>'
+    if style == "bento":
+        return f'<section class="section section--mist" id="focus"><div class="container">{head}<div class="focus-bento">{c["focus_cards"]}</div></div></section>'
+    if style == "mosaic":
+        return f'<section class="section" id="focus"><div class="container">{head}<div class="focus-mosaic">{c["focus_cards"]}</div></div></section>'
+    if style == "cards":
+        return f'<section class="section section--mist" id="focus"><div class="container">{head}<div class="profile-focus">{c["focus_items"]}</div></div></section>'
+    return f'<section class="section section--navy" id="focus"><div class="container">{head}<div class="dimension-grid">{c["focus_cards"]}</div></div></section>'
+
+
+def _principles(style, c):
+    head = _heading("The standard", "Principles that hold the work", "These tests connect public purpose to responsible practice.")
+    if style == "manifesto":
+        return f'<section class="section" id="principles"><div class="container">{head}<div class="manifesto-principles">{c["principle_rows"]}</div></div></section>'
+    if style == "rows":
+        return f'<section class="section section--navy" id="principles"><div class="container narrative-standard"><div>{head}</div><div class="principle-list">{c["principle_rows"]}</div></div></section>'
+    if style == "pillars":
+        return f'<section class="section" id="principles"><div class="container">{head}<div class="principle-pillars">{c["principles"]}</div></div></section>'
+    if style == "checklist":
+        return f'<section class="section principle-checks" id="principles"><div class="container"><div>{head}<p class="checks-note">Use these as a readiness review, not ceremonial language.</p></div><div>{c["principle_rows"]}</div></div></section>'
+    if style == "sidebar":
+        return f'<section class="section" id="principles"><div class="container principle-sidebar"><aside>{head}</aside><div class="grid grid--3">{c["principles"]}</div></div></section>'
+    if style == "band":
+        return f'<section class="section section--mist" id="principles"><div class="container">{head}</div><div class="principle-band-grid">{c["principle_rows"]}</div></section>'
+    return f'<section class="section section--mist" id="principles"><div class="container">{head}<div class="grid grid--3">{c["principles"]}</div></div></section>'
+
+
+def _process(style, c):
+    head = _heading("From intent to practice", c["process_title"], c["process_intro"])
+    if style == "timeline":
+        return f'<section class="section section--blue" id="process"><div class="container process-split"><div>{head}</div><div class="timeline">{c["steps_vertical"]}</div></div></section>'
+    if style == "vertical":
+        return f'<section class="section" id="process"><div class="container process-vertical"><div>{head}</div><div class="timeline timeline--check">{c["steps_vertical"]}</div></div></section>'
+    if style == "ledger":
+        return f'<section class="section section--navy" id="process"><div class="container process-ledger">{head}<div>{c["steps_vertical"]}</div></div></section>'
+    if style == "stair":
+        return f'<section class="section" id="process"><div class="container">{head}<div class="process-stair">{c["steps"]}</div></div></section>'
+    if style == "path":
+        return f'<section class="section section--blue" id="process"><div class="container">{head}<div class="process-path">{c["steps"]}</div></div></section>'
+    if style == "milestones":
+        return f'<section class="section section--mist" id="process"><div class="container"><div class="process-header"><div>{head}</div><p class="process-pull">{c["lens"]}</p></div><div class="process-milestones">{c["steps"]}</div></div></section>'
+    return f'<section class="section" id="process"><div class="container">{head}<div class="steps">{c["steps"]}</div></div></section>'
+
+
+def _close(style, c):
+    buttons = f'<div class="actions"><a class="button button--gold" href="{c["primary_href"]}">{c["primary_label"]}</a><a class="button button--outline" href="{c["secondary_href"]}">{c["secondary_label"]}</a></div>'
+    copy = f'<div><h2>Put this work into practice</h2><p>Begin with {c["first_focus"]}, then define a contribution your capabilities or institution can support.</p></div>'
+    if style == "quote":
+        return f'<section class="section close-quote" id="next"><div class="container"><blockquote>“{c["lens"]}”</blockquote><div>{copy}{buttons}</div>{c["links"]}</div></section>'
+    if style == "split":
+        return f'<section class="close-split" id="next"><div>{copy}{buttons}</div>{c["links"]}</section>'
+    if style == "compact":
+        return f'<section class="close-compact" id="next"><div class="container">{copy}{buttons}</div></section><div class="container close-related">{c["links"]}</div>'
+    if style == "banner":
+        return f'<section class="close-banner" id="next"><div class="container">{copy}{buttons}</div></section><div class="container close-related">{c["links"]}</div>'
+    if style == "inset":
+        return f'<section class="section close-inset" id="next"><div class="container"><span aria-hidden="true">04</span><div>{copy}{buttons}</div>{c["links"]}</div></section>'
+    return f'<section class="section layout-cta" id="next"><div class="container"><div class="cta">{copy}{buttons}</div><div class="atlas-links">{c["links"]}</div></div></section>'
+
+
+def _nav(mode, order):
+    if mode == "none":
+        return ""
+    labels = {"o": ("overview", "Overview"), "f": ("focus", "Areas of focus"), "p": ("principles", "Principles"), "x": ("process", "How it works")}
+    links = "".join(f'<a href="#{labels[key][0]}"><span>0{i}</span>{labels[key][1]}</a>' for i, key in enumerate(order, 1))
+    return f'<nav class="anchor-nav anchor-nav--{mode}" aria-label="On this page"><div class="container">{links}<a href="#next"><span>05</span>Next steps</a></div></nav>'
+
+
 def render(page, data):
     category, heading, lead, detail, focus = data
     shared = CATEGORY[category]
-    facts = "".join(f'<li><strong>{html.escape(k)}</strong>{html.escape(v)}</li>' for k, v in shared["facts"])
-    cards = "".join(f'<article class="card card--numbered"><span class="card__number">0{i}</span><h3>{html.escape(k)}</h3><p>{html.escape(v)}</p></article>' for i, (k, v) in enumerate(shared["principles"], 1))
-    focuses = "".join(f'<article class="focus-item"><i class="fa fa-{ICONS[i]}" aria-hidden="true"></i><div><h3>{html.escape(k)}</h3><p>{html.escape(v)}</p></div></article>' for i, (k, v) in enumerate(focus))
-    steps = "".join(f'<article class="step"><h3>{html.escape(k)}</h3><p>{html.escape(v)}</p></article>' for k, v in shared["steps"])
-    related = "".join(f'<li><a href="{href}">{html.escape(label)}</a></li>' for href, label in shared["related"])
-    cta_title, cta_text, primary_href, primary_label, secondary_href, secondary_label = shared["cta"]
-    return f'''<nav class="anchor-nav" aria-label="On this page"><div class="container"><a href="#overview">Overview</a><a href="#principles">Principles</a><a href="#focus">Areas of focus</a><a href="#process">How it works</a><a href="#next">Next steps</a></div></nav>
-<section class="section" id="overview"><div class="container editorial-grid"><div class="prose"><span class="eyebrow">{html.escape(shared['label'])}</span><h2>{html.escape(heading)}</h2><div class="rule"></div><p>{html.escape(lead)}</p><p>{html.escape(detail)}</p><p>The Society approaches this work through defined responsibilities, capable partners, and standards proportionate to the trust involved. The aim is not activity for its own sake, but contribution that an institution can use and a Fellow can stand behind.</p></div><aside class="fact-panel"><h3>At a glance</h3><p>A concise view of how this page fits the US Fellows model.</p><ul class="fact-list">{facts}</ul></aside></div></section>
-<section class="section section--mist" id="principles"><div class="container"><div class="section-intro"><span class="eyebrow">Guiding principles</span><h2>What responsible participation requires</h2><div class="rule"></div><p>Different settings call for different methods, but these commitments remain constant.</p></div><div class="grid grid--3">{cards}</div></div></section>
-<section class="section section--navy" id="focus"><div class="container"><div class="section-intro"><span class="eyebrow">In practice</span><h2>Where the work takes shape</h2><div class="rule"></div><p>These areas illustrate the substance and range of contribution. Individual appointments remain focused, realistic, and matched to the Fellow and host.</p></div><div class="focus-grid">{focuses}</div></div></section>
-<section class="section" id="process"><div class="container"><div class="section-intro"><span class="eyebrow">A deliberate pathway</span><h2>{html.escape(shared['process_title'])}</h2><div class="rule"></div><p>{html.escape(shared['process_intro'])}</p></div><div class="steps">{steps}</div><p class="section-note"><strong>Quality over formula:</strong> The sequence can adapt to the field and institution. What should not disappear is clarity about purpose, responsibility, support, and learning.</p></div></section>
-<section class="section section--mist"><div class="container"><div class="principle-band"><div class="principle-band__quote"><blockquote><p>“{html.escape(shared['quote'])}”</p><cite>The US Fellows Standard</cite></blockquote></div><aside class="principle-band__links"><span class="eyebrow">Continue exploring</span><h3>Related pathways</h3><ul class="related-list">{related}</ul></aside></div></div></section>
-<section class="section" id="next"><div class="container"><div class="cta"><div><h2>{html.escape(cta_title)}</h2><p>{html.escape(cta_text)}</p></div><div class="actions"><a class="button button--gold" href="{primary_href}">{html.escape(primary_label)}</a><a class="button button--outline" href="{secondary_href}">{html.escape(secondary_label)}</a></div></div></div></section>'''
+    hero, order, overview, focus_style, principle_style, process_style, close_style, nav = DESIGNS[page]
+    esc = html.escape
+    facts_data = [("Central question", heading), ("Opening priorities", f"{focus[0][0]}; {focus[1][0]}"), ("Extended scope", f"{focus[2][0]}; {focus[3][0]}")]
+    facts = "".join(f'<li><strong>{esc(k)}</strong>{esc(v)}</li>' for k, v in facts_data)
+    fact_strip = "".join(f'<div><span>{esc(k)}</span><strong>{esc(v)}</strong></div>' for k, v in facts_data)
+    focus_items = "".join(f'<article class="focus-item"><i class="fa fa-{ICONS[i]}" aria-hidden="true"></i><div><span class="item-index">0{i + 1}</span><h3>{esc(k)}</h3><p>{esc(v)}</p></div></article>' for i, (k, v) in enumerate(focus))
+    focus_cards = "".join(f'<article class="dimension-card"><span>0{i + 1}</span><i class="fa fa-{ICONS[i]}" aria-hidden="true"></i><h3>{esc(k)}</h3><p>{esc(v)}</p></article>' for i, (k, v) in enumerate(focus))
+    principles = "".join(f'<article class="card card--numbered"><span class="card__number">0{i}</span><h3>{esc(k)}</h3><p>{esc(v)} In this context, consider {esc(focus[i - 1][0].lower())}.</p></article>' for i, (k, v) in enumerate(shared["principles"], 1))
+    principle_rows = "".join(f'<article class="principle-row"><span>0{i}</span><div><h3>{esc(k)}</h3><p>{esc(v)}</p></div></article>' for i, (k, v) in enumerate(shared["principles"], 1))
+    steps = "".join(f'<article class="step"><h3>{esc(k)}</h3><p>{esc(v)} Here, attend to {esc(focus[i][0].lower())}: {esc(focus[i][1])}</p></article>' for i, (k, v) in enumerate(shared["steps"]))
+    steps_vertical = "".join(f'<article class="timeline-step"><span>0{i + 1}</span><div><h3>{esc(k)}</h3><p>{esc(v)} Attend specifically to {esc(focus[i][0].lower())}.</p></div></article>' for i, (k, v) in enumerate(shared["steps"]))
+    related = "".join(f'<li><a href="{href}">{esc(label)}</a></li>' for href, label in shared["related"])
+    _, _, primary_href, primary_label, secondary_href, secondary_label = shared["cta"]
+    lens = f'{focus[0][0]} establishes the point of entry; {focus[3][0].lower()} defines what should remain after the immediate work is complete.'
+    intro = f'<div class="prose"><span class="eyebrow">{esc(shared["label"])}</span><h2>{esc(heading)}</h2><div class="rule"></div><p>{esc(lead)}</p><p>{esc(detail)}</p><p>{esc(lens)}</p></div>'
+    links = f'<aside class="related-panel"><span class="eyebrow">Continue exploring</span><h3>Related pathways</h3><ul class="related-list">{related}</ul></aside>'
+    c = {"heading": esc(heading), "lead": esc(lead), "detail": esc(detail), "label": esc(shared["label"]), "lens": esc(lens), "intro": intro, "facts": facts, "fact_strip": fact_strip, "focus_items": focus_items, "focus_cards": focus_cards, "principles": principles, "principle_rows": principle_rows, "steps": steps, "steps_vertical": steps_vertical, "process_title": esc(shared["process_title"]), "process_intro": esc(shared["process_intro"]), "links": links, "primary_href": primary_href, "primary_label": esc(primary_label), "secondary_href": secondary_href, "secondary_label": esc(secondary_label), "first_focus": esc(focus[0][0].lower())}
+    blocks = {"o": _overview(overview, c), "f": _focus(focus_style, c), "p": _principles(principle_style, c), "x": _process(process_style, c)}
+    return _nav(nav, order) + "".join(blocks[key] for key in order) + _close(close_style, c)
 
 
 def main():
@@ -165,6 +326,12 @@ def main():
         source = path.read_text(encoding="utf-8")
         if 'rel="icon"' not in source:
             source = source.replace('<link rel="stylesheet" href="assets/css/icons.css">', '<link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/css/icons.css">', 1)
+        if 'rel="canonical"' not in source:
+            canonical = f'<link rel="canonical" href="https://usfellows.org/{filename}">'
+            source = source.replace('</head>', canonical + '</head>', 1)
+        hero = DESIGNS[filename][0]
+        source = re.sub(r'<header class="page-hero(?: page-hero--[a-z-]+)?"',
+                        f'<header class="page-hero page-hero--{hero}"', source, count=1)
         header_end = source.find("</header>")
         main_end = source.find("</main>")
         if header_end < 0 or main_end < 0 or header_end > main_end:
