@@ -89,6 +89,68 @@ CATEGORY = {
     },
 }
 
+# Section language follows the subject of each page family. Reusing structural
+# components is useful for orientation; repeating the same generic headings on
+# every destination is not.
+SECTION_COPY = {
+    "mission": {
+        "focus_eyebrow": "The civic proposition",
+        "focus_title": "What the institution is designed to make possible",
+        "principles_eyebrow": "Tests of purpose",
+        "principles_title": "Standards for work of public consequence",
+        "principles_intro": "These tests keep public purpose visible from recognition through completion.",
+        "close_title": "Carry the mission into a defined contribution",
+    },
+    "fellowship": {
+        "focus_eyebrow": "The fellowship pathway",
+        "focus_title": "What this form of fellowship brings together",
+        "principles_eyebrow": "Appointment standard",
+        "principles_title": "Commitments behind a credible fellowship",
+        "principles_intro": "A strong appointment aligns the Fellow, the institution, and the public value of the work.",
+        "close_title": "Move from interest toward appointment",
+    },
+    "society": {
+        "focus_eyebrow": "Life in the Society",
+        "focus_title": "How belonging becomes continued contribution",
+        "principles_eyebrow": "Obligations of membership",
+        "principles_title": "The practices that sustain a civic society",
+        "principles_intro": "Belonging has meaning when recognition is joined to exchange, responsibility, and service.",
+        "close_title": "Continue the work through Society life",
+    },
+    "host": {
+        "focus_eyebrow": "The host relationship",
+        "focus_title": "What a consequential host setting must provide",
+        "principles_eyebrow": "Conditions for trust",
+        "principles_title": "The responsibilities of a qualified host",
+        "principles_intro": "Responsible hosting requires a real need, capable supervision, and mutual clarity from the outset.",
+        "close_title": "Shape an opportunity the Society can assess",
+    },
+    "missions": {
+        "focus_eyebrow": "The field of action",
+        "focus_title": "Where this mission concentrates disciplined effort",
+        "principles_eyebrow": "Mission guardrails",
+        "principles_title": "How ambitious work remains responsible",
+        "principles_intro": "Scale increases the need for context, collaboration, and durable public value.",
+        "close_title": "Translate a large mission into useful work",
+    },
+    "fellows": {
+        "focus_eyebrow": "The candidate in full",
+        "focus_title": "What the selection journey seeks to understand",
+        "principles_eyebrow": "The Fellow standard",
+        "principles_title": "Qualities expected under responsibility",
+        "principles_intro": "Selection considers the record, the person, and the contribution they are prepared to make.",
+        "close_title": "Prepare a substantive expression of interest",
+    },
+    "journal": {
+        "focus_eyebrow": "Knowledge in service",
+        "focus_title": "What this form contributes to the public record",
+        "principles_eyebrow": "Editorial trust",
+        "principles_title": "Standards for useful public knowledge",
+        "principles_intro": "The Journal makes evidence, interpretation, limits, and practical relevance visible to readers.",
+        "close_title": "Turn experience into knowledge others can use",
+    },
+}
+
 PAGES = {
     # Mission and institutional purpose
     "our-mission.html": ("mission", "A framework for service of public consequence", "The mission is intentionally broad enough to welcome excellence from many fields and disciplined enough to require a real public-interest contribution.", "US Fellows joins recognition to responsibility. Every affiliation should connect a capable person, a consequential mission, a trusted setting, and work that can be described plainly.", [("Recognize capability", "Honor people whose work demonstrates substance, judgment, and the potential for further service."), ("Connect talent to mission", "Help exceptional people locate institutions and problems where their abilities are genuinely relevant."), ("Structure contribution", "Turn goodwill into a defined appointment with purpose, scope, support, and useful outputs."), ("Sustain civic identity", "Create relationships and obligations that endure beyond a single project or period of service.")]),
@@ -145,39 +207,39 @@ PAGES = {
 # hero, section order, overview, focus, principles, process, close, navigation.
 # Components repeat where their semantics fit, but no complete recipe repeats.
 DESIGNS = {
-    "our-mission.html": ("declaration", "opfx", "statement", "bands", "manifesto", "path", "banner", "none"),
-    "vision.html": ("horizon", "ofxp", "centered", "orbit", "pillars", "milestones", "quote", "none"),
-    "why-us-fellows.html": ("light-brief", "opfx", "brief", "bento", "sidebar", "ledger", "split", "bar"),
-    "us-fellows-standard.html": ("seal", "pofx", "dossier", "table", "checklist", "vertical", "inset", "index"),
-    "governance-stewardship.html": ("side-number", "oxpf", "index", "ledger", "rows", "ledger", "compact", "rail"),
-    "fellowship-programs.html": ("diagonal", "fopx", "editorial", "mosaic", "cards", "steps", "standard", "bar"),
-    "career-advancement.html": ("portrait", "ofxp", "portrait", "cards", "rows", "path", "quote", "bar"),
-    "international-graduate-fellows.html": ("letterbox", "oxfp", "letter", "table", "checklist", "milestones", "inset", "index"),
-    "national-capacity-fellows.html": ("offset", "foxp", "split", "bento", "sidebar", "stair", "split", "rail"),
+    "our-mission.html": ("declaration", "opfx", "statement", "bands", "manifesto", "ribbon", "banner", "none"),
+    "vision.html": ("horizon", "ofxp", "centered", "orbit", "pillars", "quadrants", "quote", "none"),
+    "why-us-fellows.html": ("light-brief", "opfx", "brief", "bento", "annotations", "ledger", "split", "bar"),
+    "us-fellows-standard.html": ("seal", "pofx", "dispatch", "columns", "checklist", "vertical", "inset", "index"),
+    "governance-stewardship.html": ("side-number", "oxpf", "thesis", "cascade", "rows", "ledger", "compact", "rail"),
+    "fellowship-programs.html": ("diagonal", "fopx", "editorial", "gallery", "cards", "steps", "standard", "bar"),
+    "career-advancement.html": ("portrait", "ofxp", "portrait", "cards", "rows", "ribbon", "quote", "bar"),
+    "international-graduate-fellows.html": ("letterbox", "oxfp", "letter", "table", "annotations", "quadrants", "ledger-close", "index"),
+    "national-capacity-fellows.html": ("offset", "foxp", "split", "bento", "triptych", "stair", "seal-close", "rail"),
     "mission-fellowships.html": ("centered", "opxf", "statement", "chapters", "pillars", "timeline", "banner", "none"),
-    "fellowship-society.html": ("declaration", "opfx", "statement", "mosaic", "rows", "milestones", "banner", "none"),
-    "cohorts-chapters.html": ("panorama", "foxp", "split", "orbit", "pillars", "path", "standard", "bar"),
-    "convenings-honors.html": ("blue-block", "ofpx", "portrait", "mosaic", "band", "milestones", "quote", "rail"),
-    "code-of-service.html": ("red-rule", "poxf", "dossier", "ledger", "checklist", "vertical", "inset", "index"),
-    "fellowship-oath.html": ("quiet", "opfx", "letter", "rail", "manifesto", "path", "compact", "none"),
-    "become-a-host.html": ("image-right", "xofp", "index", "bento", "sidebar", "stair", "split", "bar"),
-    "who-can-host.html": ("light-brief", "fopx", "brief", "table", "pillars", "steps", "standard", "rail"),
-    "host-standards.html": ("seal", "pofx", "dossier", "ledger", "checklist", "ledger", "inset", "index"),
+    "fellowship-society.html": ("declaration", "opfx", "statement", "gallery", "rows", "quadrants", "seal-close", "none"),
+    "cohorts-chapters.html": ("panorama", "foxp", "split", "orbit", "triptych", "path", "standard", "bar"),
+    "convenings-honors.html": ("blue-block", "ofpx", "portrait", "mosaic", "band", "milestones", "ledger-close", "rail"),
+    "code-of-service.html": ("red-rule", "poxf", "dispatch", "cascade", "checklist", "vertical", "inset", "index"),
+    "fellowship-oath.html": ("quiet", "opfx", "letter", "rail", "manifesto", "ribbon", "compact", "none"),
+    "become-a-host.html": ("image-right", "xofp", "thesis", "bento", "sidebar", "stair", "split", "bar"),
+    "who-can-host.html": ("light-brief", "fopx", "brief", "columns", "pillars", "steps", "standard", "rail"),
+    "host-standards.html": ("seal", "pofx", "dossier", "cascade", "annotations", "ledger", "inset", "index"),
     "appointment-model.html": ("portrait", "oxfp", "portrait", "cards", "rows", "path", "quote", "bar"),
-    "submit-opportunity.html": ("compact", "xopf", "letter", "table", "checklist", "milestones", "banner", "rail"),
-    "humanity-dignity.html": ("centered", "ofpx", "centered", "chapters", "pillars", "timeline", "quote", "none"),
-    "science-discovery.html": ("portrait", "fopx", "split", "mosaic", "sidebar", "steps", "split", "bar"),
+    "submit-opportunity.html": ("compact", "xopf", "letter", "table", "annotations", "quadrants", "banner", "rail"),
+    "humanity-dignity.html": ("centered", "ofpx", "centered", "chapters", "triptych", "timeline", "quote", "none"),
+    "science-discovery.html": ("portrait", "fopx", "split", "gallery", "sidebar", "steps", "seal-close", "bar"),
     "planetary-stewardship.html": ("declaration", "opfx", "statement", "orbit", "manifesto", "milestones", "compact", "none"),
     "civic-life-public-trust.html": ("light-brief", "oxpf", "brief", "ledger", "cards", "ledger", "standard", "bar"),
-    "national-capacity-resilience.html": ("diagonal", "fxop", "index", "bento", "pillars", "stair", "inset", "index"),
-    "become-a-fellow.html": ("guide", "xofp", "dossier", "rail", "checklist", "vertical", "banner", "rail"),
+    "national-capacity-resilience.html": ("diagonal", "fxop", "thesis", "bento", "pillars", "stair", "ledger-close", "index"),
+    "become-a-fellow.html": ("guide", "xofp", "dispatch", "rail", "checklist", "vertical", "banner", "rail"),
     "eligibility.html": ("light-brief", "fopx", "index", "mosaic", "sidebar", "steps", "quote", "bar"),
-    "selection-criteria.html": ("side-number", "poxf", "dossier", "ledger", "cards", "ledger", "split", "index"),
-    "fellow-benefits.html": ("portrait", "ofxp", "split", "orbit", "band", "milestones", "compact", "bar"),
-    "nominate-a-fellow.html": ("letterbox", "oxpf", "letter", "chapters", "checklist", "vertical", "banner", "rail"),
-    "essays-research-notes.html": ("quiet", "ofpx", "centered", "mosaic", "sidebar", "path", "quote", "none"),
-    "field-reports.html": ("guide", "xofp", "dossier", "ledger", "checklist", "milestones", "inset", "index"),
-    "fellow-stories.html": ("image-right", "ofpx", "portrait", "cards", "rows", "path", "split", "bar"),
+    "selection-criteria.html": ("side-number", "poxf", "dossier", "cascade", "cards", "ledger", "split", "index"),
+    "fellow-benefits.html": ("portrait", "ofxp", "split", "orbit", "band", "quadrants", "compact", "bar"),
+    "nominate-a-fellow.html": ("letterbox", "oxpf", "letter", "chapters", "annotations", "vertical", "banner", "rail"),
+    "essays-research-notes.html": ("quiet", "ofpx", "centered", "gallery", "sidebar", "ribbon", "quote", "none"),
+    "field-reports.html": ("guide", "xofp", "dispatch", "ledger", "checklist", "milestones", "inset", "index"),
+    "fellow-stories.html": ("image-right", "ofpx", "portrait", "cards", "triptych", "path", "split", "bar"),
     "institutional-briefings.html": ("light-brief", "oxpf", "brief", "table", "pillars", "ledger", "standard", "rail"),
     "impact-reports.html": ("offset", "fxop", "index", "bento", "cards", "stair", "banner", "index"),
 }
@@ -212,11 +274,15 @@ def _overview(style, c):
         return f'<section class="section index-opening" id="overview"><div class="container"><div class="index-number" aria-hidden="true">01</div>{intro}<aside><span class="eyebrow">At a glance</span><ul class="fact-list">{c["facts"]}</ul></aside></div></section>'
     if style == "portrait":
         return f'<section class="section profile-opening" id="overview"><div class="container profile-grid">{intro}<aside class="profile-emblem"><span>Perspective</span><strong>01</strong><p>{c["lens"]}</p></aside></div></section>'
+    if style == "dispatch":
+        return f'<section class="section dispatch-opening" id="overview"><div class="container"><div class="dispatch-copy">{intro}</div><aside class="dispatch-facts"><span>Field notes / 01</span><ul class="fact-list">{c["facts"]}</ul></aside></div></section>'
+    if style == "thesis":
+        return f'<section class="section thesis-opening" id="overview"><div class="container"><span class="thesis-index" aria-hidden="true">01</span>{intro}<blockquote>{c["lens"]}</blockquote></div></section>'
     return f'<section class="section" id="overview"><div class="container editorial-grid">{intro}<aside class="fact-panel"><h3>This page at a glance</h3><ul class="fact-list">{c["facts"]}</ul></aside></div></section>'
 
 
 def _focus(style, c):
-    head = _heading("The substance", "Four dimensions of the work", c["lead"], style in {"mosaic", "orbit"})
+    head = _heading(c["focus_eyebrow"], c["focus_title"], c["lead"], style in {"mosaic", "orbit", "gallery"})
     if style == "chapters":
         return f'<section class="narrative-focus" id="focus"><div class="container"><span class="eyebrow">The story of the work</span><h2>Four chapters of contribution</h2>{c["focus_items"]}</div></section>'
     if style == "bands":
@@ -235,11 +301,17 @@ def _focus(style, c):
         return f'<section class="section" id="focus"><div class="container">{head}<div class="focus-mosaic">{c["focus_cards"]}</div></div></section>'
     if style == "cards":
         return f'<section class="section section--mist" id="focus"><div class="container">{head}<div class="profile-focus">{c["focus_items"]}</div></div></section>'
+    if style == "gallery":
+        return f'<section class="section focus-gallery" id="focus"><div class="container">{head}<div class="focus-gallery__grid">{c["focus_cards"]}</div></div></section>'
+    if style == "cascade":
+        return f'<section class="section focus-cascade" id="focus"><div class="container"><div class="focus-cascade__heading">{head}</div><div class="focus-cascade__items">{c["focus_items"]}</div></div></section>'
+    if style == "columns":
+        return f'<section class="section focus-columns" id="focus"><div class="container">{head}<div class="focus-columns__grid">{c["focus_cards"]}</div></div></section>'
     return f'<section class="section section--navy" id="focus"><div class="container">{head}<div class="dimension-grid">{c["focus_cards"]}</div></div></section>'
 
 
 def _principles(style, c):
-    head = _heading("The standard", "Principles that hold the work", "These tests connect public purpose to responsible practice.")
+    head = _heading(c["principles_eyebrow"], c["principles_title"], c["principles_intro"])
     if style == "manifesto":
         return f'<section class="section" id="principles"><div class="container">{head}<div class="manifesto-principles">{c["principle_rows"]}</div></div></section>'
     if style == "rows":
@@ -252,6 +324,10 @@ def _principles(style, c):
         return f'<section class="section" id="principles"><div class="container principle-sidebar"><aside>{head}</aside><div class="grid grid--3">{c["principles"]}</div></div></section>'
     if style == "band":
         return f'<section class="section section--mist" id="principles"><div class="container">{head}</div><div class="principle-band-grid">{c["principle_rows"]}</div></section>'
+    if style == "annotations":
+        return f'<section class="section principle-annotations" id="principles"><div class="container"><aside>{head}</aside><div class="principle-annotations__list">{c["principle_rows"]}</div></div></section>'
+    if style == "triptych":
+        return f'<section class="section principle-triptych" id="principles"><div class="container">{head}<div class="principle-triptych__grid">{c["principles"]}</div></div></section>'
     return f'<section class="section section--mist" id="principles"><div class="container">{head}<div class="grid grid--3">{c["principles"]}</div></div></section>'
 
 
@@ -269,12 +345,16 @@ def _process(style, c):
         return f'<section class="section section--blue" id="process"><div class="container">{head}<div class="process-path">{c["steps"]}</div></div></section>'
     if style == "milestones":
         return f'<section class="section section--mist" id="process"><div class="container"><div class="process-header"><div>{head}</div><p class="process-pull">{c["lens"]}</p></div><div class="process-milestones">{c["steps"]}</div></div></section>'
+    if style == "quadrants":
+        return f'<section class="section process-quadrants" id="process"><div class="container"><div class="process-quadrants__heading">{head}<p class="process-pull">{c["lens"]}</p></div><div class="process-quadrants__grid">{c["steps"]}</div></div></section>'
+    if style == "ribbon":
+        return f'<section class="section process-ribbon" id="process"><div class="container">{head}<div class="process-ribbon__track">{c["steps"]}</div></div></section>'
     return f'<section class="section" id="process"><div class="container">{head}<div class="steps">{c["steps"]}</div></div></section>'
 
 
 def _close(style, c):
     buttons = f'<div class="actions"><a class="button button--gold" href="{c["primary_href"]}">{c["primary_label"]}</a><a class="button button--outline" href="{c["secondary_href"]}">{c["secondary_label"]}</a></div>'
-    copy = f'<div><h2>Put this work into practice</h2><p>Begin with {c["first_focus"]}, then define a contribution your capabilities or institution can support.</p></div>'
+    copy = f'<div><h2>{c["close_title"]}</h2><p>Begin with {c["first_focus"]}, then define a contribution your capabilities or institution can support.</p></div>'
     if style == "quote":
         return f'<section class="section close-quote" id="next"><div class="container"><blockquote>“{c["lens"]}”</blockquote><div>{copy}{buttons}</div>{c["links"]}</div></section>'
     if style == "split":
@@ -285,6 +365,10 @@ def _close(style, c):
         return f'<section class="close-banner" id="next"><div class="container">{copy}{buttons}</div></section><div class="container close-related">{c["links"]}</div>'
     if style == "inset":
         return f'<section class="section close-inset" id="next"><div class="container"><span aria-hidden="true">04</span><div>{copy}{buttons}</div>{c["links"]}</div></section>'
+    if style == "seal-close":
+        return f'<section class="section close-seal" id="next"><div class="container"><span class="close-seal__mark" aria-hidden="true">USF</span>{copy}{buttons}{c["links"]}</div></section>'
+    if style == "ledger-close":
+        return f'<section class="section close-ledger" id="next"><div class="container"><span class="close-ledger__index" aria-hidden="true">05</span><div>{copy}{buttons}</div>{c["links"]}</div></section>'
     return f'<section class="section layout-cta" id="next"><div class="container"><div class="cta">{copy}{buttons}</div><div class="atlas-links">{c["links"]}</div></div></section>'
 
 
@@ -299,6 +383,7 @@ def _nav(mode, order):
 def render(page, data):
     category, heading, lead, detail, focus = data
     shared = CATEGORY[category]
+    section_copy = SECTION_COPY[category]
     hero, order, overview, focus_style, principle_style, process_style, close_style, nav = DESIGNS[page]
     esc = html.escape
     facts_data = [("Central question", heading), ("Opening priorities", f"{focus[0][0]}; {focus[1][0]}"), ("Extended scope", f"{focus[2][0]}; {focus[3][0]}")]
@@ -315,7 +400,7 @@ def render(page, data):
     lens = f'{focus[0][0]} establishes the point of entry; {focus[3][0].lower()} defines what should remain after the immediate work is complete.'
     intro = f'<div class="prose"><span class="eyebrow">{esc(shared["label"])}</span><h2>{esc(heading)}</h2><div class="rule"></div><p>{esc(lead)}</p><p>{esc(detail)}</p><p>{esc(lens)}</p></div>'
     links = f'<aside class="related-panel"><span class="eyebrow">Continue exploring</span><h3>Related pathways</h3><ul class="related-list">{related}</ul></aside>'
-    c = {"heading": esc(heading), "lead": esc(lead), "detail": esc(detail), "label": esc(shared["label"]), "lens": esc(lens), "intro": intro, "facts": facts, "fact_strip": fact_strip, "focus_items": focus_items, "focus_cards": focus_cards, "principles": principles, "principle_rows": principle_rows, "steps": steps, "steps_vertical": steps_vertical, "process_title": esc(shared["process_title"]), "process_intro": esc(shared["process_intro"]), "links": links, "primary_href": primary_href, "primary_label": esc(primary_label), "secondary_href": secondary_href, "secondary_label": esc(secondary_label), "first_focus": esc(focus[0][0].lower())}
+    c = {"heading": esc(heading), "lead": esc(lead), "detail": esc(detail), "label": esc(shared["label"]), "lens": esc(lens), "intro": intro, "facts": facts, "fact_strip": fact_strip, "focus_items": focus_items, "focus_cards": focus_cards, "principles": principles, "principle_rows": principle_rows, "steps": steps, "steps_vertical": steps_vertical, "process_title": esc(shared["process_title"]), "process_intro": esc(shared["process_intro"]), "links": links, "primary_href": primary_href, "primary_label": esc(primary_label), "secondary_href": secondary_href, "secondary_label": esc(secondary_label), "first_focus": esc(focus[0][0].lower()), **{key: esc(value) for key, value in section_copy.items()}}
     blocks = {"o": _overview(overview, c), "f": _focus(focus_style, c), "p": _principles(principle_style, c), "x": _process(process_style, c)}
     return _nav(nav, order) + "".join(blocks[key] for key in order) + _close(close_style, c)
 
