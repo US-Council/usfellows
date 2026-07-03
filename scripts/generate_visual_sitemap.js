@@ -4,23 +4,17 @@
  * Generate a numbered screenshot grid for every root-level HTML page.
  *
  * Usage:
- *   node scripts/generate_visual_sitemap.js http://127.0.0.1:8000 \
- *     --out=visual-sitemap
+ *   npm run build
+ *   npm run preview
+ *   npm run visual:sitemap
  *
- * Requires either `playwright` or `playwright-core`. Set CHROME_PATH when the
- * browser executable is not available at one of the common system paths.
+ * Set CHROME_PATH when the browser executable is not available at one of the
+ * common system paths.
  */
 
-const fs = require('fs');
-const path = require('path');
-
-function loadPlaywright() {
-  try {
-    return require('playwright');
-  } catch (_) {
-    return require('playwright-core');
-  }
-}
+import fs from 'node:fs';
+import path from 'node:path';
+import { chromium } from 'playwright';
 
 function parseArgs() {
   const args = process.argv.slice(2);
@@ -38,8 +32,8 @@ function parseArgs() {
   return {
     base: base.endsWith('/') ? base : `${base}/`,
     concurrency: Number.parseInt(option('concurrency', '4'), 10),
-    out: path.resolve(option('out', 'visual-sitemap')),
-    root: path.resolve(option('root', '.')),
+    out: path.resolve(option('out', 'public/visual-sitemap')),
+    root: path.resolve(option('root', 'dist')),
     width: Number.parseInt(option('width', '1280'), 10),
   };
 }
@@ -57,17 +51,14 @@ function textContent(value) {
   return value.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
 }
 
-function getPageInventory(root) {
+function getPageInventory(root, out) {
   const files = fs.readdirSync(root)
     .filter((file) => file.endsWith('.html') && fs.statSync(path.join(root, file)).isFile());
 
-  const sitemapPath = path.join(root, 'sitemap.xml');
-  const sitemapFiles = fs.existsSync(sitemapPath)
-    ? [...fs.readFileSync(sitemapPath, 'utf8').matchAll(/<loc>\s*([^<]+?)\s*<\/loc>/gi)]
-      .map((match) => {
-        const pathname = new URL(match[1]).pathname;
-        return pathname === '/' ? 'index.html' : decodeURIComponent(pathname.replace(/^\//, ''));
-      })
+  const existingManifest = path.join(out, 'manifest.json');
+  const sitemapFiles = fs.existsSync(existingManifest)
+    ? JSON.parse(fs.readFileSync(existingManifest, 'utf8'))
+      .map((entry) => entry.file)
       .filter((file) => files.includes(file))
     : [];
 
@@ -104,7 +95,6 @@ function safeSlug(file) {
 }
 
 async function capturePages(inventory, options) {
-  const { chromium } = loadPlaywright();
   const executablePath = findChrome();
   const browser = await chromium.launch(executablePath ? { executablePath } : {});
   const shotDir = path.join(options.out, 'shots');
@@ -257,7 +247,7 @@ function buildHtml(results, base) {
 
 (async () => {
   const options = parseArgs();
-  const inventory = getPageInventory(options.root);
+  const inventory = getPageInventory(options.root, options.out);
   if (!inventory.length) throw new Error(`No root-level HTML files found in ${options.root}`);
 
   fs.mkdirSync(options.out, { recursive: true });

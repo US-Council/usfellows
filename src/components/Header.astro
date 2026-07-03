@@ -1,0 +1,42 @@
+---
+import { Menu, X } from "@lucide/astro";
+import Navigation from "./Navigation.astro";
+
+interface Props {
+  activePage?: string;
+}
+
+const { activePage = "" } = Astro.props;
+---
+
+<div class="topbar">
+  <div class="container">
+    <div class="topbar__left">For service beyond self.</div>
+    <div class="topbar__right">
+      <a href="fellowships.html">Explore Fellowships</a>
+      <a class="topbar__cta" href="become-a-host.html">Host a Fellow</a>
+    </div>
+  </div>
+</div>
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="US Fellows home">
+      <span class="brand__seal" aria-hidden="true">US</span>
+      <span class="brand__name">US Fellows</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Primary">
+      <Navigation activePage={activePage} />
+    </nav>
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+      <Menu aria-hidden="true" />
+    </button>
+  </div>
+</header>
+<div class="header-spacer" aria-hidden="true"></div>
+<div class="mobile-panel" role="dialog" aria-modal="true" aria-label="Site navigation" aria-hidden="true">
+  <div class="mobile-head">
+    <span class="brand__name">US Fellows</span>
+    <button class="mobile-close" type="button" aria-label="Close navigation"><X aria-hidden="true" /> Close</button>
+  </div>
+  <nav aria-label="Mobile primary"><Navigation mobile activePage={activePage} /></nav>
+</div>

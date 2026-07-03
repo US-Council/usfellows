@@ -1,0 +1,40 @@
+---
+import { navigation } from "../data/navigation";
+
+interface Props {
+  mobile?: boolean;
+  activePage?: string;
+}
+
+const { mobile = false, activePage = "" } = Astro.props;
+---
+
+<ul class={mobile ? "mobile-nav" : "nav-list"}>
+  {navigation.map((item) => {
+    const active = activePage === item.href.replace(".html", "");
+    return (
+      <li class="nav-item has-menu">
+        <a
+          class="nav-link"
+          href={item.href}
+          aria-current={active ? "page" : undefined}
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          {item.label}
+        </a>
+        {mobile && (
+          <button type="button" aria-expanded="false" aria-label={`Open ${item.label} menu`} />
+        )}
+        <ul class="dropdown">
+          {item.children.map((child) => (
+            <li><a href={child.href}>{child.label}</a></li>
+          ))}
+        </ul>
+      </li>
+    );
+  })}
+  <li class="nav-item nav-apply">
+    <a class="nav-link" href="apply.html" aria-current={activePage === "apply" ? "page" : undefined}>Apply</a>
+  </li>
+</ul>

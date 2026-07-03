@@ -1,0 +1,64 @@
+---
+import {
+  BookOpen,
+  BriefcaseMedical,
+  Code,
+  Compass,
+  FlaskConical,
+  Globe,
+  GraduationCap,
+  Handshake,
+  Heart,
+  HeartPulse,
+  History,
+  Hourglass,
+  Landmark,
+  Leaf,
+  Lightbulb,
+  MapPin,
+  Network,
+  Scale,
+  Shield,
+  Signpost,
+  Star,
+  Target,
+  Users
+} from "@lucide/astro";
+
+interface Props {
+  name: string;
+}
+
+const { name } = Astro.props;
+const icons = {
+  "balance-scale": Scale,
+  book: BookOpen,
+  bullseye: Target,
+  code: Code,
+  compass: Compass,
+  flask: FlaskConical,
+  globe: Globe,
+  "graduation-cap": GraduationCap,
+  "handshake-o": Handshake,
+  heart: Heart,
+  "heart-o": Heart,
+  heartbeat: HeartPulse,
+  history: History,
+  "hourglass-half": Hourglass,
+  institution: Landmark,
+  leaf: Leaf,
+  "lightbulb-o": Lightbulb,
+  "map-marker": MapPin,
+  "map-signs": Signpost,
+  medkit: BriefcaseMedical,
+  shield: Shield,
+  sitemap: Network,
+  star: Star,
+  university: Landmark,
+  users: Users
+} as const;
+
+const Icon = icons[name as keyof typeof icons] ?? Compass;
+---
+
+<i class="site-icon" aria-hidden="true"><Icon stroke-width={1.8} /></i>

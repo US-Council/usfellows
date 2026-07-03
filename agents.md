@@ -14,9 +14,9 @@ Maintain the official US Fellows website as a prestigious, credible national civ
 
 - Keep the site static and GitHub Pages-compatible.
 - Use relative internal links.
-- Put shared styling in `assets/css/site.css`.
-- Put shared navigation, footer, and interaction behavior in `assets/js/kingster-shell.js`.
-- Do not add a framework or build tool without explicit approval.
+- Put shared styling in `src/styles/global.css`.
+- Put shared navigation and footer markup in `src/components/`, navigation data in `src/data/navigation.ts`, and interaction behavior in `src/scripts/`.
+- Keep Astro configured for static output and preserve the established `.html` routes.
 - Preserve one descriptive `h1`, skip navigation, keyboard access, responsive behavior, unique metadata, and visible focus states on every substantive page.
 - Do not add nonfunctional forms or fabricate submission endpoints, people, metrics, dates, cohorts, partnerships, awards, or publications.
 
@@ -31,8 +31,8 @@ Maintain the official US Fellows website as a prestigious, credible national civ
 
 Before finishing a change:
 
-1. Serve the site locally.
-2. Check all internal links and asset references.
+1. Run `npm run validate`.
+2. Run `npm run preview` and `npm run smoke`.
 3. Confirm the browser console has no errors.
 4. Inspect homepage and one inner page at desktop and mobile widths.
 5. Search for retired narrative terms before release.
