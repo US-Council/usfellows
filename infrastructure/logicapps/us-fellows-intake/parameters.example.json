@@ -1,0 +1,12 @@
+{
+  "$connections": {
+    "value": {
+      "dynamicscrmonline": {
+        "connectionId": "/subscriptions/REPLACE/resourceGroups/REPLACE/providers/Microsoft.Web/connections/dynamicscrmonline",
+        "connectionName": "dynamicscrmonline",
+        "id": "/subscriptions/REPLACE/providers/Microsoft.Web/locations/eastus/managedApis/dynamicscrmonline"
+      }
+    }
+  },
+  "d365Organization": { "value": "org8a977f45.crm" }
+}
