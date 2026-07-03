@@ -1,158 +1,31 @@
-/* US Fellows -- Kingster shell interaction layer.
-   Dependency-free (no jQuery). Drives the sf-menu/sf-mega megamenu, the
-   mobile off-canvas panel, the sticky header, and the homepage crossfade
-   hero. The megamenu's open/close is CSS-driven (:hover / :focus-within on
-   .menu-item-has-children), so keyboard-tab focus already opens a submenu
-   with no JS at all; this file only layers in aria-expanded sync, Escape-
-   to-close, and the mobile panel, so the shell degrades gracefully if a
-   script fails to load. */
-(function () {
+(function(){
   "use strict";
-
-  /* ---------- aria-expanded sync + Escape-to-close on the megamenu ---------- */
-  var topItems = document.querySelectorAll(".sf-menu > .menu-item-has-children");
-
-  function closeItem(item) {
-    item.classList.remove("is-open");
-    var trigger = item.querySelector(":scope > a[aria-haspopup]");
-    if (trigger) trigger.setAttribute("aria-expanded", "false");
+  var page=document.body.dataset.page||"";
+  var menus=[
+    ["mission.html","Mission",[["our-mission.html","Our Mission"],["vision.html","Our Vision"],["why-us-fellows.html","Why US Fellows Exists"],["us-fellows-standard.html","The US Fellows Standard"],["governance-stewardship.html","Governance & Stewardship"]]],
+    ["fellowships.html","Fellowships",[["fellowship-programs.html","Fellowship Programs"],["career-advancement.html","Career Advancement Track"],["international-graduate-fellows.html","International Graduate Fellows"],["national-capacity-fellows.html","National Capacity Fellows"],["mission-fellowships.html","Mission Fellowships"]]],
+    ["society.html","The Society",[["fellowship-society.html","The US Fellows Society"],["cohorts-chapters.html","Cohorts & Chapters"],["convenings-honors.html","Convenings & Honors"],["code-of-service.html","Code of Service"],["fellowship-oath.html","Fellowship Oath"]]],
+    ["host-institutions.html","Host Institutions",[["become-a-host.html","Become a Host"],["who-can-host.html","Who Can Host"],["host-standards.html","Host Standards"],["appointment-model.html","Appointment Model"],["submit-opportunity.html","Submit an Opportunity"]]],
+    ["missions.html","Missions",[["humanity-dignity.html","Humanity & Dignity"],["science-discovery.html","Science & Discovery"],["planetary-stewardship.html","Planetary Stewardship"],["civic-life-public-trust.html","Civic Life & Trust"],["national-capacity-resilience.html","National Capacity"]]],
+    ["fellows.html","Fellows",[["become-a-fellow.html","Become a Fellow"],["eligibility.html","Eligibility"],["selection-criteria.html","Selection Criteria"],["fellow-benefits.html","Fellow Benefits"],["nominate-a-fellow.html","Nominate a Fellow"]]],
+    ["journal.html","Journal",[["essays-research-notes.html","Essays & Research Notes"],["field-reports.html","Field Reports"],["fellow-stories.html","Fellow Stories"],["institutional-briefings.html","Institutional Briefings"],["impact-reports.html","Impact Reports"]]]
+  ];
+  function esc(s){return s.replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]})}
+  function navMarkup(mobile){
+    return '<ul class="'+(mobile?'mobile-nav':'nav-list')+'">'+menus.map(function(m){
+      var active=page===m[0].replace('.html','');
+      return '<li class="nav-item has-menu"><a class="nav-link" href="'+m[0]+'"'+(active?' aria-current="page"':'')+'>'+m[1]+'</a>'+(mobile?'<button type="button" aria-expanded="false" aria-label="Open '+esc(m[1])+' menu"></button>':'')+'<ul class="dropdown">'+m[2].map(function(x){return '<li><a href="'+x[0]+'">'+x[1]+'</a></li>'}).join('')+'</ul></li>';
+    }).join('')+'<li class="nav-item nav-apply"><a class="nav-link" href="apply.html"'+(page==='apply'?' aria-current="page"':'')+'>Apply</a></li></ul>';
   }
-
-  function openItem(item) {
-    item.classList.add("is-open");
-    var trigger = item.querySelector(":scope > a[aria-haspopup]");
-    if (trigger) trigger.setAttribute("aria-expanded", "true");
-  }
-
-  topItems.forEach(function (item) {
-    item.addEventListener("mouseenter", function () { openItem(item); });
-    item.addEventListener("mouseleave", function () { closeItem(item); });
-    item.addEventListener("focusin", function () { openItem(item); });
-    item.addEventListener("focusout", function (evt) {
-      if (!item.contains(evt.relatedTarget)) closeItem(item);
-    });
-  });
-
-  document.addEventListener("keydown", function (evt) {
-    if (evt.key !== "Escape") return;
-    var openEl = document.querySelector(".sf-menu > .menu-item-has-children.is-open");
-    if (!openEl) return;
-    var trigger = openEl.querySelector(":scope > a");
-    closeItem(openEl);
-    if (trigger) trigger.focus();
-  });
-
-  /* ---------- sticky header shadow ---------- */
-  var header = document.getElementById("site-header");
-  if (header) {
-    var onScroll = function () {
-      header.classList.toggle("is-scrolled", window.scrollY > 8);
-    };
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-  }
-
-  /* ---------- mobile off-canvas panel ---------- */
-  var menuButton = document.getElementById("mobile-menu-button");
-  var desktopMenu = document.getElementById("primary-menu");
-  var panel = document.getElementById("mobile-menu-panel");
-
-  if (menuButton && desktopMenu && panel) {
-    var sheet = panel.querySelector(".kingster-mobile-panel__sheet");
-    var mount = panel.querySelector(".kingster-mobile-panel__menu-mount");
-    var closeBtn = panel.querySelector(".kingster-mobile-panel__close");
-    var built = false;
-
-    function buildMobileMenu() {
-      if (built) return;
-      built = true;
-      var clone = desktopMenu.cloneNode(true);
-      clone.removeAttribute("id");
-      clone.classList.remove("kingster-desktop-menu");
-
-      // Convert hover/focus-only submenus into tap-to-expand accordions.
-      clone.querySelectorAll(".menu-item-has-children").forEach(function (li) {
-        var trigger = li.querySelector(":scope > a");
-        var sub = li.querySelector(":scope > .sub-menu, :scope > .sf-mega");
-        if (!trigger || !sub) return;
-
-        var toggle = document.createElement("button");
-        toggle.type = "button";
-        toggle.className = "kingster-mobile-panel-toggle";
-        toggle.innerHTML = trigger.textContent + ' <i class="fa fa-angle-down" aria-hidden="true"></i>';
-        toggle.setAttribute("aria-expanded", "false");
-
-        li.insertBefore(toggle, trigger.nextSibling);
-
-        toggle.addEventListener("click", function () {
-          var isOpen = li.classList.toggle("is-open");
-          toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-        });
-      });
-
-      mount.appendChild(clone);
-    }
-
-    function openPanel() {
-      buildMobileMenu();
-      panel.classList.add("is-open");
-      panel.setAttribute("aria-hidden", "false");
-      menuButton.setAttribute("aria-expanded", "true");
-      document.body.style.overflow = "hidden";
-      if (closeBtn) closeBtn.focus();
-    }
-
-    function closePanel() {
-      panel.classList.remove("is-open");
-      panel.setAttribute("aria-hidden", "true");
-      menuButton.setAttribute("aria-expanded", "false");
-      document.body.style.overflow = "";
-      menuButton.focus();
-    }
-
-    menuButton.addEventListener("click", function () {
-      var isOpen = panel.classList.contains("is-open");
-      if (isOpen) { closePanel(); } else { openPanel(); }
-    });
-
-    if (closeBtn) closeBtn.addEventListener("click", closePanel);
-
-    panel.querySelector(".kingster-mobile-panel__scrim").addEventListener("click", closePanel);
-
-    document.addEventListener("keydown", function (evt) {
-      if (evt.key === "Escape" && panel.classList.contains("is-open")) closePanel();
-    });
-
-    // Close the panel automatically if the viewport grows past the mobile breakpoint.
-    window.addEventListener("resize", function () {
-      if (window.innerWidth > 1080 && panel.classList.contains("is-open")) closePanel();
-    });
-  }
-
-  /* ---------- homepage crossfade hero ---------- */
-  var hero = document.querySelector(".kingster-hero");
-  if (hero) {
-    var slides = Array.prototype.slice.call(hero.querySelectorAll(".kingster-hero__slide"));
-    var dots = Array.prototype.slice.call(hero.querySelectorAll(".kingster-hero__dots button"));
-    var index = 0;
-    var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-    function showSlide(next) {
-      slides[index].classList.remove("is-active");
-      if (dots[index]) dots[index].classList.remove("is-active");
-      index = next;
-      slides[index].classList.add("is-active");
-      if (dots[index]) dots[index].classList.add("is-active");
-    }
-
-    dots.forEach(function (dot, i) {
-      dot.addEventListener("click", function () { showSlide(i); });
-    });
-
-    if (slides.length > 1 && !reduceMotion) {
-      setInterval(function () {
-        showSlide((index + 1) % slides.length);
-      }, 6500);
-    }
-  }
+  var header=document.getElementById('site-shell-header');
+  if(header){header.innerHTML='<div class="topbar"><div class="container"><div class="topbar__left">For service beyond self.</div><div class="topbar__right"><a href="fellowships.html">Explore Fellowships</a><a class="topbar__cta" href="become-a-host.html">Host a Fellow</a></div></div></div><header class="site-header" id="site-header"><div class="container header-inner"><a class="brand" href="index.html" aria-label="US Fellows home"><span class="brand__seal" aria-hidden="true">US</span><span class="brand__name">US Fellows</span></a><nav class="desktop-nav" aria-label="Primary">'+navMarkup(false)+'</nav><button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><i class="fa fa-bars" aria-hidden="true"></i></button></div></header><div class="header-spacer" aria-hidden="true"></div><div class="mobile-panel" role="dialog" aria-modal="true" aria-label="Site navigation" aria-hidden="true"><div class="mobile-head"><span class="brand__name">US Fellows</span><button class="mobile-close" type="button">Close</button></div><nav aria-label="Mobile primary">'+navMarkup(true)+'</nav></div>'}
+  var footer=document.getElementById('site-shell-footer');
+  if(footer){footer.innerHTML='<footer class="site-footer"><div class="footer-main"><div class="container footer-grid"><div class="footer-brand"><a class="brand" href="index.html"><span class="brand__seal" aria-hidden="true" style="color:#fff">US</span><span class="brand__name" style="color:#fff">US Fellows</span></a><p style="margin-top:22px">A national civic fellowship society connecting exceptional people to humanity-scale missions.</p></div><div><h2 class="footer-title">US Fellows</h2><ul class="footer-links"><li><a href="mission.html">Mission</a></li><li><a href="fellowships.html">Fellowships</a></li><li><a href="society.html">The Society</a></li><li><a href="missions.html">Missions</a></li></ul></div><div><h2 class="footer-title">Participate</h2><ul class="footer-links"><li><a href="become-a-fellow.html">Become a Fellow</a></li><li><a href="nominate-a-fellow.html">Nominate a Fellow</a></li><li><a href="become-a-host.html">Host a Fellow</a></li><li><a href="fellowship-society.html">Join as an Advisor</a></li></ul></div><div><h2 class="footer-title">Explore</h2><ul class="footer-links"><li><a href="journal.html">Journal</a></li><li><a href="governance-stewardship.html">Governance</a></li><li><a href="our-mission.html">Public-Benefit Commitment</a></li><li><a href="institutional-briefings.html">Institutional Briefings</a></li></ul></div><div><h2 class="footer-title">Apply</h2><ul class="footer-links"><li><a href="apply.html">Fellow Application</a></li><li><a href="become-a-host.html">Host Institution</a></li><li><a href="submit-opportunity.html">Mission Opportunity</a></li><li><a href="host-institutions.html">Partner with Us</a></li></ul></div></div></div><div class="footer-bottom"><div class="container footer-bottom__line"><span>&copy; <span data-year></span> US Fellows. All rights reserved.</span><span class="footer-separator" aria-hidden="true">&bull;</span><span class="owner-mark">A national civic fellowship society owned and stewarded by US Council.</span><span class="footer-separator" aria-hidden="true">&bull;</span><a href="terms-of-service.html">Terms of Service</a><span class="footer-separator" aria-hidden="true">&bull;</span><a href="privacy-policy.html">Privacy Policy</a></div></div></footer>'}
+  document.querySelectorAll('[data-year]').forEach(function(el){el.textContent=new Date().getFullYear()});
+  var toggle=document.querySelector('.menu-toggle'),panel=document.querySelector('.mobile-panel'),close=document.querySelector('.mobile-close');
+  function setPanel(open){if(!panel)return;panel.classList.toggle('is-open',open);panel.setAttribute('aria-hidden',String(!open));toggle.setAttribute('aria-expanded',String(open));document.body.classList.toggle('menu-open',open);if(open)close.focus();else toggle.focus()}
+  if(toggle){toggle.addEventListener('click',function(){setPanel(true)});close.addEventListener('click',function(){setPanel(false)});document.addEventListener('keydown',function(e){if(!panel.classList.contains('is-open'))return;if(e.key==='Escape'){setPanel(false);return}if(e.key==='Tab'){var f=panel.querySelectorAll('a[href],button:not([disabled])'),first=f[0],last=f[f.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}});panel.querySelectorAll('.mobile-nav button').forEach(function(btn){btn.addEventListener('click',function(){var li=btn.closest('li'),open=li.classList.toggle('is-open');btn.setAttribute('aria-expanded',String(open))})})}
+  document.querySelectorAll('.desktop-nav .has-menu').forEach(function(item){var link=item.querySelector(':scope > a');function open(){item.classList.add('is-open');link.setAttribute('aria-expanded','true')}function closeItem(){item.classList.remove('is-open');link.setAttribute('aria-expanded','false')}item.addEventListener('mouseenter',open);item.addEventListener('mouseleave',closeItem);item.addEventListener('focusin',open);item.addEventListener('focusout',function(e){if(!item.contains(e.relatedTarget))closeItem()});item.addEventListener('keydown',function(e){if(e.key==='Escape'){closeItem();link.focus()}});link.setAttribute('aria-haspopup','true');link.setAttribute('aria-expanded','false')});
+  var siteHeader=document.getElementById('site-header'),spacer=document.querySelector('.header-spacer');if(siteHeader){var updateSticky=function(){var fixed=window.scrollY>42;siteHeader.classList.toggle('is-sticky',fixed);if(spacer)spacer.classList.toggle('is-active',fixed)};updateSticky();window.addEventListener('scroll',updateSticky,{passive:true})}
+  if(!window.location.hash){window.scrollTo(0,0);window.addEventListener('pageshow',function(){window.scrollTo(0,0)})}
 })();
