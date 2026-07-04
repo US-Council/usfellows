@@ -42,8 +42,18 @@ for (const file of htmlFiles) {
 
 const robots = fs.readFileSync(path.join(root, "robots.txt"), "utf8");
 if (!robots.includes("sitemap-index.xml")) failures.push("robots.txt does not reference the generated sitemap index.");
-for (const required of ["CNAME", ".nojekyll", "sitemap-index.xml", "assets/favicon.svg", "assets/img_hero_campus.jpg"]) {
+for (const required of ["CNAME", ".nojekyll", "sitemap-index.xml", "assets/favicon.svg", "assets/img_hero_campus.jpg", "visual-sitemap/compact.html", "visual-sitemap/manifest.json", "visual-sitemap/meta.json"]) {
   if (!fs.existsSync(path.join(root, required))) failures.push(`Missing required build artifact: ${required}.`);
+}
+
+const visualManifest = JSON.parse(fs.readFileSync(path.join(root, "visual-sitemap/manifest.json"), "utf8"));
+const visualMetadata = JSON.parse(fs.readFileSync(path.join(root, "visual-sitemap/meta.json"), "utf8"));
+if (visualManifest.length !== 50 || visualMetadata.pageCount !== 50) failures.push("Visual sitemap does not contain all 50 pages.");
+if (visualMetadata.base !== "https://usfellows.org/") failures.push("Visual sitemap was not generated from the live site.");
+for (const entry of visualManifest) {
+  if (!entry.ok || !fs.existsSync(path.join(root, "visual-sitemap", entry.image))) {
+    failures.push(`Missing visual sitemap capture for ${entry.file}.`);
+  }
 }
 
 if (failures.length) {
