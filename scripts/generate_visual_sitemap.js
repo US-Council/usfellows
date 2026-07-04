@@ -255,6 +255,12 @@ function buildHtml(results, base) {
   const results = await capturePages(inventory, options);
   fs.writeFileSync(path.join(options.out, 'index.html'), buildHtml(results, options.base));
   fs.writeFileSync(path.join(options.out, 'manifest.json'), `${JSON.stringify(results, null, 2)}\n`);
+  fs.writeFileSync(path.join(options.out, 'meta.json'), `${JSON.stringify({
+    base: options.base,
+    generatedAt: new Date().toISOString(),
+    pageCount: results.length,
+    successfulCaptures: results.filter((result) => result.ok).length,
+  }, null, 2)}\n`);
   console.log(`Visual sitemap written to ${path.join(options.out, 'index.html')}`);
 })().catch((error) => {
   console.error(error);
