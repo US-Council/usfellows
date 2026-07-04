@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://usfellows.org/sitemap-index.xml

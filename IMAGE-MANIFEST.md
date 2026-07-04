@@ -4,7 +4,7 @@ The current site intentionally uses one licensed architectural image from the Ki
 
 | Asset | Dimensions | Use |
 | --- | --- | --- |
-| `assets/img_hero_campus.jpg` | 1800 × 981 | Homepage hero, inner-page title banners, and institutional split feature |
+| `public/assets/img_hero_campus.jpg` | 1800 × 981 | Homepage hero, inner-page title banners, and institutional split feature |
 
 The image receives a dark navy overlay in CSS so headings meet contrast requirements and the treatment remains consistent with the US Fellows visual identity.
 

@@ -1,0 +1,29 @@
+image: node:24-bookworm-slim
+
+stages:
+  - test
+
+workflow:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH
+
+cache:
+  key:
+    files:
+      - package-lock.json
+  paths:
+    - .npm/
+
+validate:
+  stage: test
+  variables:
+    npm_config_cache: "$CI_PROJECT_DIR/.npm"
+  before_script:
+    - npm ci
+  script:
+    - npm run validate
+  artifacts:
+    expire_in: 7 days
+    paths:
+      - dist/

@@ -1,0 +1,640 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Compact Numbered Visual Sitemap | US Fellows</title>
+<style>
+  :root { color-scheme: light; --ink: #17212b; --muted: #66717d; --line: #d8dde3; --paper: #fff; --accent: #9d3026; }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; overflow: hidden; background: #eef1f4; color: var(--ink); font: 14px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  .app-shell { display: grid; grid-template-columns: minmax(0, 80%) minmax(0, 20%); width: 100%; height: 100vh; overflow: hidden; }
+  .content { min-width: 0; height: 100vh; overflow-y: auto; }
+  header { padding: 32px clamp(20px, 4vw, 64px) 24px; background: var(--paper); border-bottom: 1px solid var(--line); }
+  h1 { margin: 0 0 6px; font-family: Georgia, serif; font-size: clamp(28px, 4vw, 44px); font-weight: 500; }
+  .meta { margin: 0; color: var(--muted); }
+  .summary { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 16px; font-weight: 600; }
+  .directory-wrap { max-height: 30vh; overflow-y: auto; padding: 24px clamp(20px, 4vw, 64px); background: #f8f9fa; border-bottom: 1px solid var(--line); }
+  .directory-wrap h2 { margin: 0 0 12px; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; }
+  .directory { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 5px 20px; margin: 0; padding: 0; list-style: none; }
+  .directory a { display: flex; gap: 8px; color: var(--ink); text-decoration: none; }
+  .directory a:hover { color: var(--accent); text-decoration: underline; }
+  .directory span { flex: 0 0 auto; color: var(--accent); font-variant-numeric: tabular-nums; font-weight: 800; }
+  main { min-width: 0; padding: 24px 12px 64px clamp(20px, 4vw, 64px); }
+  .grid { display: grid; grid-template-columns: repeat(16, minmax(0, 1fr)); align-items: start; gap: 5px; }
+  .card { position: relative; min-width: 0; overflow: hidden; background: var(--paper); border: 1px solid #cbd1d8; border-radius: 3px; scroll-margin-top: 16px; cursor: zoom-in; }
+  .card:hover { border-color: var(--accent); }
+  .card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .card.is-selected { outline: 3px solid var(--accent); outline-offset: -3px; }
+  .image-link { display: block; background: #dfe3e7; }
+  .image-link img { display: block; width: 100%; height: auto; }
+  .number { position: absolute; z-index: 1; top: 2px; left: 2px; min-width: 19px; padding: 2px 3px; border: 1px solid #fff; border-radius: 2px; background: var(--accent); color: #fff; box-shadow: 0 1px 3px rgb(0 0 0 / 35%); font-size: 8px; font-weight: 800; line-height: 1; text-align: center; font-variant-numeric: tabular-nums; }
+  .caption { display: none; }
+  .filename { font-weight: 750; word-break: break-word; }
+  .title { margin-top: 2px; color: var(--muted); font-size: 12px; }
+  .redirect { margin-top: 7px; padding-top: 7px; border-top: 1px solid #eceff2; color: var(--accent); font-size: 11px; font-weight: 700; }
+  .error { min-height: 180px; display: grid; place-content: center; padding: 20px; color: #9b1c1c; text-align: center; }
+  .preview-shell { min-width: 0; height: 100vh; padding: 12px; border-left: 1px solid #cbd1d8; background: #dfe3e7; }
+  .preview { display: flex; flex-direction: column; height: 100%; overflow: hidden; background: var(--paper); border: 1px solid #cbd1d8; border-radius: 8px; box-shadow: 0 3px 14px rgb(28 39 49 / 12%); }
+  .preview-header { flex: 0 0 auto; padding: 12px 13px; border-bottom: 1px solid var(--line); }
+  .preview-kicker { margin: 0 0 3px; color: var(--accent); font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+  .preview-name { margin: 0; font-size: 14px; overflow-wrap: anywhere; }
+  .preview-title { margin: 3px 0 0; color: var(--muted); font-size: 11px; }
+  .preview-help { margin: 8px 0 0; color: var(--muted); font-size: 10px; }
+  .preview-scroll { flex: 1 1 auto; min-height: 0; overflow: auto; background: #dfe3e7; }
+  .preview-link { display: block; min-height: 100%; }
+  .preview-image { display: block; width: 100%; height: auto; }
+  @media (max-width: 1400px) { .grid { grid-template-columns: repeat(12, minmax(0, 1fr)); } }
+  @media (max-width: 900px) { .grid { grid-template-columns: repeat(8, minmax(0, 1fr)); } }
+  @media (max-width: 680px) { body { overflow: auto; } .app-shell { display: block; height: auto; overflow: visible; } .content { height: auto; overflow: visible; } main { padding-right: 20px; } .grid { grid-template-columns: repeat(5, minmax(0, 1fr)); } .preview-shell { height: 70vh; padding: 0 20px 24px; border-left: 0; } }
+  @media print { body { overflow: visible; background: #fff; } .app-shell { display: block; height: auto; overflow: visible; } .content { height: auto; overflow: visible; } .directory-wrap, .preview-shell { display: none; } .grid { grid-template-columns: repeat(15, minmax(0, 1fr)); } }
+</style>
+</head>
+<body>
+  <div class="app-shell">
+  <div class="content">
+  <header>
+    <h1>US Fellows Compact Visual Sitemap</h1>
+    <p class="meta">Generated July 3, 2026 at 5:41 PM from http://127.0.0.1:4173/</p>
+    <div class="summary"><span>50 numbered pages</span><span>50 screenshots captured</span><span>4 legacy redirects</span></div>
+  </header>
+  <nav class="directory-wrap" aria-label="Page directory">
+    <h2>Numbered page directory</h2>
+    <ol class="directory"><li><a href="#page-01"><span>01</span>index.html</a></li>
+<li><a href="#page-02"><span>02</span>mission.html</a></li>
+<li><a href="#page-03"><span>03</span>fellowships.html</a></li>
+<li><a href="#page-04"><span>04</span>society.html</a></li>
+<li><a href="#page-05"><span>05</span>host-institutions.html</a></li>
+<li><a href="#page-06"><span>06</span>missions.html</a></li>
+<li><a href="#page-07"><span>07</span>fellows.html</a></li>
+<li><a href="#page-08"><span>08</span>journal.html</a></li>
+<li><a href="#page-09"><span>09</span>apply.html</a></li>
+<li><a href="#page-10"><span>10</span>our-mission.html</a></li>
+<li><a href="#page-11"><span>11</span>vision.html</a></li>
+<li><a href="#page-12"><span>12</span>why-us-fellows.html</a></li>
+<li><a href="#page-13"><span>13</span>us-fellows-standard.html</a></li>
+<li><a href="#page-14"><span>14</span>governance-stewardship.html</a></li>
+<li><a href="#page-15"><span>15</span>fellowship-programs.html</a></li>
+<li><a href="#page-16"><span>16</span>career-advancement.html</a></li>
+<li><a href="#page-17"><span>17</span>international-graduate-fellows.html</a></li>
+<li><a href="#page-18"><span>18</span>national-capacity-fellows.html</a></li>
+<li><a href="#page-19"><span>19</span>mission-fellowships.html</a></li>
+<li><a href="#page-20"><span>20</span>fellowship-society.html</a></li>
+<li><a href="#page-21"><span>21</span>cohorts-chapters.html</a></li>
+<li><a href="#page-22"><span>22</span>convenings-honors.html</a></li>
+<li><a href="#page-23"><span>23</span>code-of-service.html</a></li>
+<li><a href="#page-24"><span>24</span>fellowship-oath.html</a></li>
+<li><a href="#page-25"><span>25</span>become-a-host.html</a></li>
+<li><a href="#page-26"><span>26</span>who-can-host.html</a></li>
+<li><a href="#page-27"><span>27</span>host-standards.html</a></li>
+<li><a href="#page-28"><span>28</span>appointment-model.html</a></li>
+<li><a href="#page-29"><span>29</span>submit-opportunity.html</a></li>
+<li><a href="#page-30"><span>30</span>humanity-dignity.html</a></li>
+<li><a href="#page-31"><span>31</span>science-discovery.html</a></li>
+<li><a href="#page-32"><span>32</span>planetary-stewardship.html</a></li>
+<li><a href="#page-33"><span>33</span>civic-life-public-trust.html</a></li>
+<li><a href="#page-34"><span>34</span>national-capacity-resilience.html</a></li>
+<li><a href="#page-35"><span>35</span>become-a-fellow.html</a></li>
+<li><a href="#page-36"><span>36</span>eligibility.html</a></li>
+<li><a href="#page-37"><span>37</span>selection-criteria.html</a></li>
+<li><a href="#page-38"><span>38</span>fellow-benefits.html</a></li>
+<li><a href="#page-39"><span>39</span>nominate-a-fellow.html</a></li>
+<li><a href="#page-40"><span>40</span>essays-research-notes.html</a></li>
+<li><a href="#page-41"><span>41</span>field-reports.html</a></li>
+<li><a href="#page-42"><span>42</span>fellow-stories.html</a></li>
+<li><a href="#page-43"><span>43</span>institutional-briefings.html</a></li>
+<li><a href="#page-44"><span>44</span>impact-reports.html</a></li>
+<li><a href="#page-45"><span>45</span>terms-of-service.html</a></li>
+<li><a href="#page-46"><span>46</span>privacy-policy.html</a></li>
+<li><a href="#page-47"><span>47</span>doorways.html</a></li>
+<li><a href="#page-48"><span>48</span>journey.html</a></li>
+<li><a href="#page-49"><span>49</span>partners.html</a></li>
+<li><a href="#page-50"><span>50</span>pathways.html</a></li></ol>
+  </nav>
+  <main>
+    <div class="grid"><article class="card" id="page-01">
+      <div class="number">01</div>
+      <a class="image-link" href="shots/01-index.jpg" target="_blank"><img src="shots/01-index.jpg" loading="lazy" alt="Screenshot of index.html"></a>
+      <div class="caption">
+        <div class="filename">index.html</div>
+        <div class="title">US Fellows | A National Fellowship Society for Humanity-Scale Service</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-02">
+      <div class="number">02</div>
+      <a class="image-link" href="shots/02-mission.jpg" target="_blank"><img src="shots/02-mission.jpg" loading="lazy" alt="Screenshot of mission.html"></a>
+      <div class="caption">
+        <div class="filename">mission.html</div>
+        <div class="title">Mission | US Fellows</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-03">
+      <div class="number">03</div>
+      <a class="image-link" href="shots/03-fellowships.jpg" target="_blank"><img src="shots/03-fellowships.jpg" loading="lazy" alt="Screenshot of fellowships.html"></a>
+      <div class="caption">
+        <div class="filename">fellowships.html</div>
+        <div class="title">Fellowships | US Fellows</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-04">
+      <div class="number">04</div>
+      <a class="image-link" href="shots/04-society.jpg" target="_blank"><img src="shots/04-society.jpg" loading="lazy" alt="Screenshot of society.html"></a>
+      <div class="caption">
+        <div class="filename">society.html</div>
+        <div class="title">The Society | US Fellows</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-05">
+      <div class="number">05</div>
+      <a class="image-link" href="shots/05-host-institutions.jpg" target="_blank"><img src="shots/05-host-institutions.jpg" loading="lazy" alt="Screenshot of host-institutions.html"></a>
+      <div class="caption">
+        <div class="filename">host-institutions.html</div>
+        <div class="title">Host Institutions | US Fellows</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-06">
+      <div class="number">06</div>
+      <a class="image-link" href="shots/06-missions.jpg" target="_blank"><img src="shots/06-missions.jpg" loading="lazy" alt="Screenshot of missions.html"></a>
+      <div class="caption">
+        <div class="filename">missions.html</div>
+        <div class="title">Humanity-Scale Missions | US Fellows</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-07">
+      <div class="number">07</div>
+      <a class="image-link" href="shots/07-fellows.jpg" target="_blank"><img src="shots/07-fellows.jpg" loading="lazy" alt="Screenshot of fellows.html"></a>
+      <div class="caption">
+        <div class="filename">fellows.html</div>
+        <div class="title">Become a Fellow | US Fellows</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-08">
+      <div class="number">08</div>
+      <a class="image-link" href="shots/08-journal.jpg" target="_blank"><img src="shots/08-journal.jpg" loading="lazy" alt="Screenshot of journal.html"></a>
+      <div class="caption">
+        <div class="filename">journal.html</div>
+        <div class="title">Journal | US Fellows</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-09">
+      <div class="number">09</div>
+      <a class="image-link" href="shots/09-apply.jpg" target="_blank"><img src="shots/09-apply.jpg" loading="lazy" alt="Screenshot of apply.html"></a>
+      <div class="caption">
+        <div class="filename">apply.html</div>
+        <div class="title">Apply to US Fellows</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-10">
+      <div class="number">10</div>
+      <a class="image-link" href="shots/10-our-mission.jpg" target="_blank"><img src="shots/10-our-mission.jpg" loading="lazy" alt="Screenshot of our-mission.html"></a>
+      <div class="caption">
+        <div class="filename">our-mission.html</div>
+        <div class="title">Our Mission | US Fellows</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-11">
+      <div class="number">11</div>
+      <a class="image-link" href="shots/11-vision.jpg" target="_blank"><img src="shots/11-vision.jpg" loading="lazy" alt="Screenshot of vision.html"></a>
+      <div class="caption">
+        <div class="filename">vision.html</div>
+        <div class="title">Our Vision | US Fellows</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-12">
+      <div class="number">12</div>
+      <a class="image-link" href="shots/12-why-us-fellows.jpg" target="_blank"><img src="shots/12-why-us-fellows.jpg" loading="lazy" alt="Screenshot of why-us-fellows.html"></a>
+      <div class="caption">
+        <div class="filename">why-us-fellows.html</div>
+        <div class="title">Why US Fellows Exists | US Fellows</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-13">
+      <div class="number">13</div>
+      <a class="image-link" href="shots/13-us-fellows-standard.jpg" target="_blank"><img src="shots/13-us-fellows-standard.jpg" loading="lazy" alt="Screenshot of us-fellows-standard.html"></a>
+      <div class="caption">
+        <div class="filename">us-fellows-standard.html</div>
+        <div class="title">The US Fellows Standard</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-14">
+      <div class="number">14</div>
+      <a class="image-link" href="shots/14-governance-stewardship.jpg" target="_blank"><img src="shots/14-governance-stewardship.jpg" loading="lazy" alt="Screenshot of governance-stewardship.html"></a>
+      <div class="caption">
+        <div class="filename">governance-stewardship.html</div>
+        <div class="title">Governance &amp; Stewardship | US Fellows</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-15">
+      <div class="number">15</div>
+      <a class="image-link" href="shots/15-fellowship-programs.jpg" target="_blank"><img src="shots/15-fellowship-programs.jpg" loading="lazy" alt="Screenshot of fellowship-programs.html"></a>
+      <div class="caption">
+        <div class="filename">fellowship-programs.html</div>
+        <div class="title">Fellowship Programs | US Fellows</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-16">
+      <div class="number">16</div>
+      <a class="image-link" href="shots/16-career-advancement.jpg" target="_blank"><img src="shots/16-career-advancement.jpg" loading="lazy" alt="Screenshot of career-advancement.html"></a>
+      <div class="caption">
+        <div class="filename">career-advancement.html</div>
+        <div class="title">Career Advancement Track | US Fellows</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-17">
+      <div class="number">17</div>
+      <a class="image-link" href="shots/17-international-graduate-fellows.jpg" target="_blank"><img src="shots/17-international-graduate-fellows.jpg" loading="lazy" alt="Screenshot of international-graduate-fellows.html"></a>
+      <div class="caption">
+        <div class="filename">international-graduate-fellows.html</div>
+        <div class="title">International Graduate Fellows | US Fellows</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-18">
+      <div class="number">18</div>
+      <a class="image-link" href="shots/18-national-capacity-fellows.jpg" target="_blank"><img src="shots/18-national-capacity-fellows.jpg" loading="lazy" alt="Screenshot of national-capacity-fellows.html"></a>
+      <div class="caption">
+        <div class="filename">national-capacity-fellows.html</div>
+        <div class="title">National Capacity Fellows | US Fellows</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-19">
+      <div class="number">19</div>
+      <a class="image-link" href="shots/19-mission-fellowships.jpg" target="_blank"><img src="shots/19-mission-fellowships.jpg" loading="lazy" alt="Screenshot of mission-fellowships.html"></a>
+      <div class="caption">
+        <div class="filename">mission-fellowships.html</div>
+        <div class="title">Mission Fellowships | US Fellows</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-20">
+      <div class="number">20</div>
+      <a class="image-link" href="shots/20-fellowship-society.jpg" target="_blank"><img src="shots/20-fellowship-society.jpg" loading="lazy" alt="Screenshot of fellowship-society.html"></a>
+      <div class="caption">
+        <div class="filename">fellowship-society.html</div>
+        <div class="title">The US Fellows Society</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-21">
+      <div class="number">21</div>
+      <a class="image-link" href="shots/21-cohorts-chapters.jpg" target="_blank"><img src="shots/21-cohorts-chapters.jpg" loading="lazy" alt="Screenshot of cohorts-chapters.html"></a>
+      <div class="caption">
+        <div class="filename">cohorts-chapters.html</div>
+        <div class="title">Cohorts &amp; Chapters | US Fellows</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-22">
+      <div class="number">22</div>
+      <a class="image-link" href="shots/22-convenings-honors.jpg" target="_blank"><img src="shots/22-convenings-honors.jpg" loading="lazy" alt="Screenshot of convenings-honors.html"></a>
+      <div class="caption">
+        <div class="filename">convenings-honors.html</div>
+        <div class="title">Convenings &amp; Honors | US Fellows</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-23">
+      <div class="number">23</div>
+      <a class="image-link" href="shots/23-code-of-service.jpg" target="_blank"><img src="shots/23-code-of-service.jpg" loading="lazy" alt="Screenshot of code-of-service.html"></a>
+      <div class="caption">
+        <div class="filename">code-of-service.html</div>
+        <div class="title">Code of Service | US Fellows</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-24">
+      <div class="number">24</div>
+      <a class="image-link" href="shots/24-fellowship-oath.jpg" target="_blank"><img src="shots/24-fellowship-oath.jpg" loading="lazy" alt="Screenshot of fellowship-oath.html"></a>
+      <div class="caption">
+        <div class="filename">fellowship-oath.html</div>
+        <div class="title">Fellowship Oath | US Fellows</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-25">
+      <div class="number">25</div>
+      <a class="image-link" href="shots/25-become-a-host.jpg" target="_blank"><img src="shots/25-become-a-host.jpg" loading="lazy" alt="Screenshot of become-a-host.html"></a>
+      <div class="caption">
+        <div class="filename">become-a-host.html</div>
+        <div class="title">Become a Host Institution | US Fellows</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-26">
+      <div class="number">26</div>
+      <a class="image-link" href="shots/26-who-can-host.jpg" target="_blank"><img src="shots/26-who-can-host.jpg" loading="lazy" alt="Screenshot of who-can-host.html"></a>
+      <div class="caption">
+        <div class="filename">who-can-host.html</div>
+        <div class="title">Who Can Host | US Fellows</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-27">
+      <div class="number">27</div>
+      <a class="image-link" href="shots/27-host-standards.jpg" target="_blank"><img src="shots/27-host-standards.jpg" loading="lazy" alt="Screenshot of host-standards.html"></a>
+      <div class="caption">
+        <div class="filename">host-standards.html</div>
+        <div class="title">Host Standards | US Fellows</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-28">
+      <div class="number">28</div>
+      <a class="image-link" href="shots/28-appointment-model.jpg" target="_blank"><img src="shots/28-appointment-model.jpg" loading="lazy" alt="Screenshot of appointment-model.html"></a>
+      <div class="caption">
+        <div class="filename">appointment-model.html</div>
+        <div class="title">Fellowship Appointment Model | US Fellows</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-29">
+      <div class="number">29</div>
+      <a class="image-link" href="shots/29-submit-opportunity.jpg" target="_blank"><img src="shots/29-submit-opportunity.jpg" loading="lazy" alt="Screenshot of submit-opportunity.html"></a>
+      <div class="caption">
+        <div class="filename">submit-opportunity.html</div>
+        <div class="title">Submit a Mission Opportunity | US Fellows</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-30">
+      <div class="number">30</div>
+      <a class="image-link" href="shots/30-humanity-dignity.jpg" target="_blank"><img src="shots/30-humanity-dignity.jpg" loading="lazy" alt="Screenshot of humanity-dignity.html"></a>
+      <div class="caption">
+        <div class="filename">humanity-dignity.html</div>
+        <div class="title">Humanity &amp; Human Dignity | US Fellows</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-31">
+      <div class="number">31</div>
+      <a class="image-link" href="shots/31-science-discovery.jpg" target="_blank"><img src="shots/31-science-discovery.jpg" loading="lazy" alt="Screenshot of science-discovery.html"></a>
+      <div class="caption">
+        <div class="filename">science-discovery.html</div>
+        <div class="title">Science &amp; Discovery | US Fellows</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-32">
+      <div class="number">32</div>
+      <a class="image-link" href="shots/32-planetary-stewardship.jpg" target="_blank"><img src="shots/32-planetary-stewardship.jpg" loading="lazy" alt="Screenshot of planetary-stewardship.html"></a>
+      <div class="caption">
+        <div class="filename">planetary-stewardship.html</div>
+        <div class="title">Climate &amp; Planetary Stewardship | US Fellows</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-33">
+      <div class="number">33</div>
+      <a class="image-link" href="shots/33-civic-life-public-trust.jpg" target="_blank"><img src="shots/33-civic-life-public-trust.jpg" loading="lazy" alt="Screenshot of civic-life-public-trust.html"></a>
+      <div class="caption">
+        <div class="filename">civic-life-public-trust.html</div>
+        <div class="title">Civic Life &amp; Public Trust | US Fellows</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-34">
+      <div class="number">34</div>
+      <a class="image-link" href="shots/34-national-capacity-resilience.jpg" target="_blank"><img src="shots/34-national-capacity-resilience.jpg" loading="lazy" alt="Screenshot of national-capacity-resilience.html"></a>
+      <div class="caption">
+        <div class="filename">national-capacity-resilience.html</div>
+        <div class="title">National Capacity &amp; Resilience | US Fellows</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-35">
+      <div class="number">35</div>
+      <a class="image-link" href="shots/35-become-a-fellow.jpg" target="_blank"><img src="shots/35-become-a-fellow.jpg" loading="lazy" alt="Screenshot of become-a-fellow.html"></a>
+      <div class="caption">
+        <div class="filename">become-a-fellow.html</div>
+        <div class="title">Become a US Fellow</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-36">
+      <div class="number">36</div>
+      <a class="image-link" href="shots/36-eligibility.jpg" target="_blank"><img src="shots/36-eligibility.jpg" loading="lazy" alt="Screenshot of eligibility.html"></a>
+      <div class="caption">
+        <div class="filename">eligibility.html</div>
+        <div class="title">Fellowship Eligibility | US Fellows</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-37">
+      <div class="number">37</div>
+      <a class="image-link" href="shots/37-selection-criteria.jpg" target="_blank"><img src="shots/37-selection-criteria.jpg" loading="lazy" alt="Screenshot of selection-criteria.html"></a>
+      <div class="caption">
+        <div class="filename">selection-criteria.html</div>
+        <div class="title">Selection Criteria | US Fellows</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-38">
+      <div class="number">38</div>
+      <a class="image-link" href="shots/38-fellow-benefits.jpg" target="_blank"><img src="shots/38-fellow-benefits.jpg" loading="lazy" alt="Screenshot of fellow-benefits.html"></a>
+      <div class="caption">
+        <div class="filename">fellow-benefits.html</div>
+        <div class="title">Fellow Benefits | US Fellows</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-39">
+      <div class="number">39</div>
+      <a class="image-link" href="shots/39-nominate-a-fellow.jpg" target="_blank"><img src="shots/39-nominate-a-fellow.jpg" loading="lazy" alt="Screenshot of nominate-a-fellow.html"></a>
+      <div class="caption">
+        <div class="filename">nominate-a-fellow.html</div>
+        <div class="title">Nominate a Fellow | US Fellows</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-40">
+      <div class="number">40</div>
+      <a class="image-link" href="shots/40-essays-research-notes.jpg" target="_blank"><img src="shots/40-essays-research-notes.jpg" loading="lazy" alt="Screenshot of essays-research-notes.html"></a>
+      <div class="caption">
+        <div class="filename">essays-research-notes.html</div>
+        <div class="title">Essays &amp; Research Notes | US Fellows Journal</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-41">
+      <div class="number">41</div>
+      <a class="image-link" href="shots/41-field-reports.jpg" target="_blank"><img src="shots/41-field-reports.jpg" loading="lazy" alt="Screenshot of field-reports.html"></a>
+      <div class="caption">
+        <div class="filename">field-reports.html</div>
+        <div class="title">Field Reports | US Fellows Journal</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-42">
+      <div class="number">42</div>
+      <a class="image-link" href="shots/42-fellow-stories.jpg" target="_blank"><img src="shots/42-fellow-stories.jpg" loading="lazy" alt="Screenshot of fellow-stories.html"></a>
+      <div class="caption">
+        <div class="filename">fellow-stories.html</div>
+        <div class="title">Fellow Stories | US Fellows Journal</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-43">
+      <div class="number">43</div>
+      <a class="image-link" href="shots/43-institutional-briefings.jpg" target="_blank"><img src="shots/43-institutional-briefings.jpg" loading="lazy" alt="Screenshot of institutional-briefings.html"></a>
+      <div class="caption">
+        <div class="filename">institutional-briefings.html</div>
+        <div class="title">Institutional Briefings | US Fellows Journal</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-44">
+      <div class="number">44</div>
+      <a class="image-link" href="shots/44-impact-reports.jpg" target="_blank"><img src="shots/44-impact-reports.jpg" loading="lazy" alt="Screenshot of impact-reports.html"></a>
+      <div class="caption">
+        <div class="filename">impact-reports.html</div>
+        <div class="title">Impact Reports | US Fellows Journal</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-45">
+      <div class="number">45</div>
+      <a class="image-link" href="shots/45-terms-of-service.jpg" target="_blank"><img src="shots/45-terms-of-service.jpg" loading="lazy" alt="Screenshot of terms-of-service.html"></a>
+      <div class="caption">
+        <div class="filename">terms-of-service.html</div>
+        <div class="title">Terms of Service | US Fellows</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-46">
+      <div class="number">46</div>
+      <a class="image-link" href="shots/46-privacy-policy.jpg" target="_blank"><img src="shots/46-privacy-policy.jpg" loading="lazy" alt="Screenshot of privacy-policy.html"></a>
+      <div class="caption">
+        <div class="filename">privacy-policy.html</div>
+        <div class="title">Privacy Policy | US Fellows</div>
+        
+      </div>
+    </article>
+<article class="card" id="page-47">
+      <div class="number">47</div>
+      <a class="image-link" href="shots/47-doorways.jpg" target="_blank"><img src="shots/47-doorways.jpg" loading="lazy" alt="Screenshot of doorways.html"></a>
+      <div class="caption">
+        <div class="filename">doorways.html</div>
+        <div class="title">Moved | US Fellows</div>
+        <div class="redirect">Legacy redirect &rarr; fellows.html</div>
+      </div>
+    </article>
+<article class="card" id="page-48">
+      <div class="number">48</div>
+      <a class="image-link" href="shots/48-journey.jpg" target="_blank"><img src="shots/48-journey.jpg" loading="lazy" alt="Screenshot of journey.html"></a>
+      <div class="caption">
+        <div class="filename">journey.html</div>
+        <div class="title">Moved | US Fellows</div>
+        <div class="redirect">Legacy redirect &rarr; society.html</div>
+      </div>
+    </article>
+<article class="card" id="page-49">
+      <div class="number">49</div>
+      <a class="image-link" href="shots/49-partners.jpg" target="_blank"><img src="shots/49-partners.jpg" loading="lazy" alt="Screenshot of partners.html"></a>
+      <div class="caption">
+        <div class="filename">partners.html</div>
+        <div class="title">Moved | US Fellows</div>
+        <div class="redirect">Legacy redirect &rarr; host-institutions.html</div>
+      </div>
+    </article>
+<article class="card" id="page-50">
+      <div class="number">50</div>
+      <a class="image-link" href="shots/50-pathways.jpg" target="_blank"><img src="shots/50-pathways.jpg" loading="lazy" alt="Screenshot of pathways.html"></a>
+      <div class="caption">
+        <div class="filename">pathways.html</div>
+        <div class="title">Moved | US Fellows</div>
+        <div class="redirect">Legacy redirect &rarr; fellowships.html</div>
+      </div>
+    </article></div>
+  </main>
+  </div>
+  <aside class="preview-shell" aria-label="Selected page preview">
+    <section class="preview">
+      <div class="preview-header" aria-live="polite">
+        <p class="preview-kicker">Page <span id="preview-number">01</span></p>
+        <h2 class="preview-name" id="preview-name">index.html</h2>
+        <p class="preview-title" id="preview-title">US Fellows | A National Fellowship Society for Humanity-Scale Service</p>
+        <p class="preview-help">Click any thumbnail to preview it here. Click the larger preview to open the full-size screenshot.</p>
+      </div>
+      <div class="preview-scroll">
+        <a class="preview-link" id="preview-link" href="shots/01-index.jpg" target="_blank">
+          <img class="preview-image" id="preview-image" src="shots/01-index.jpg" alt="Larger screenshot of index.html">
+        </a>
+      </div>
+    </section>
+  </aside>
+  </div>
+  <script>
+    (() => {
+      const cards = [...document.querySelectorAll('.card')];
+      const previewNumber = document.getElementById('preview-number');
+      const previewName = document.getElementById('preview-name');
+      const previewTitle = document.getElementById('preview-title');
+      const previewLink = document.getElementById('preview-link');
+      const previewImage = document.getElementById('preview-image');
+
+      function selectCard(card) {
+        const source = card.querySelector('.image-link');
+        const thumbnail = source?.querySelector('img');
+        if (!source || !thumbnail) return;
+
+        cards.forEach((item) => {
+          item.classList.toggle('is-selected', item === card);
+          item.setAttribute('aria-selected', String(item === card));
+        });
+
+        const number = card.querySelector('.number')?.textContent.trim() || '';
+        const name = card.querySelector('.filename')?.textContent.trim() || thumbnail.alt;
+        const title = card.querySelector('.title')?.textContent.trim() || '';
+        previewNumber.textContent = number;
+        previewName.textContent = name;
+        previewTitle.textContent = title;
+        previewLink.href = source.getAttribute('href');
+        previewImage.src = source.getAttribute('href');
+        previewImage.alt = `Larger screenshot of ${name}`;
+        document.querySelector('.preview-scroll').scrollTop = 0;
+      }
+
+      cards.forEach((card) => {
+        card.tabIndex = 0;
+        card.querySelector('.image-link')?.addEventListener('click', (event) => {
+          event.preventDefault();
+          selectCard(card);
+        });
+        card.addEventListener('keydown', (event) => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            selectCard(card);
+          }
+        });
+      });
+
+      document.querySelectorAll('.directory a').forEach((link) => {
+        link.addEventListener('click', () => {
+          const card = document.querySelector(link.getAttribute('href'));
+          if (card) selectCard(card);
+        });
+      });
+
+      if (cards[0]) selectCard(cards[0]);
+    })();
+  </script>
+</body>
+</html>

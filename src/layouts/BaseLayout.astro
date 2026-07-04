@@ -1,0 +1,68 @@
+---
+import "@fontsource/cormorant-garamond/latin-500.css";
+import "@fontsource/cormorant-garamond/latin-600.css";
+import "@fontsource/cormorant-garamond/latin-700.css";
+import "@fontsource/source-sans-3/latin-400.css";
+import "@fontsource/source-sans-3/latin-600.css";
+import "@fontsource/source-sans-3/latin-700.css";
+import "@fontsource/source-sans-3/latin-800.css";
+import "../styles/global.css";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+
+interface OpenGraph {
+  title?: string;
+  description?: string;
+  type?: string;
+  url?: string;
+  image?: string;
+}
+
+interface Props {
+  title: string;
+  description?: string;
+  canonical?: string;
+  activePage?: string;
+  openGraph?: OpenGraph;
+  structuredData?: Record<string, unknown>;
+  redirect?: string;
+  shell?: boolean;
+}
+
+const {
+  title,
+  description,
+  canonical,
+  activePage = "",
+  openGraph,
+  structuredData,
+  redirect,
+  shell = true
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    {canonical && <link rel="canonical" href={canonical} />}
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    {redirect && <meta http-equiv="refresh" content={`0;url=${redirect}`} />}
+    {openGraph?.title && <meta property="og:title" content={openGraph.title} />}
+    {openGraph?.description && <meta property="og:description" content={openGraph.description} />}
+    {openGraph?.type && <meta property="og:type" content={openGraph.type} />}
+    {openGraph?.url && <meta property="og:url" content={openGraph.url} />}
+    {openGraph?.image && <meta property="og:image" content={openGraph.image} />}
+    {structuredData && <script is:inline type="application/ld+json" set:html={JSON.stringify(structuredData)} />}
+  </head>
+  <body data-page={activePage || undefined}>
+    {shell && <a class="skip-link" href="#main">Skip to content</a>}
+    {shell && <Header activePage={activePage} />}
+    <slot />
+    {shell && <Footer />}
+    {shell && <script src="../scripts/site.ts"></script>}
+  </body>
+</html>
