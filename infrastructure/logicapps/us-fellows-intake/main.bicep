@@ -3,6 +3,8 @@ param workflowName string = 'US_Fellows_Application_Intake'
 param d365Organization string = 'org8a977f45.crm'
 param d365ConnectionId string
 param d365ManagedApiId string
+param office365ConnectionId string
+param office365ManagedApiId string
 
 resource workflow 'Microsoft.Logic/workflows@2019-05-01' = {
   name: workflowName
@@ -22,6 +24,11 @@ resource workflow 'Microsoft.Logic/workflows@2019-05-01' = {
             connectionId: d365ConnectionId
             connectionName: last(split(d365ConnectionId, '/'))
             id: d365ManagedApiId
+          }
+          office365: {
+            connectionId: office365ConnectionId
+            connectionName: last(split(office365ConnectionId, '/'))
+            id: office365ManagedApiId
           }
         }
       }
