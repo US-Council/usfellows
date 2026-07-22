@@ -2,3 +2,8 @@ node_modules/
 dist/
 .astro/
 /US-Fellows-Scholars-Program.chat.json
+
+# Full-resolution visual-sitemap QA captures are disposable. The generator
+# commits only compressed AVIF thumbnails.
+public/visual-sitemap/shots/*.jpg
+public/visual-sitemap/shots/*.jpeg

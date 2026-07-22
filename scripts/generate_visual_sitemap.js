@@ -15,6 +15,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { chromium } from 'playwright';
+import sharp from 'sharp';
 
 function parseArgs() {
   const args = process.argv.slice(2);
@@ -37,6 +38,8 @@ function parseArgs() {
       ? option('publish-base', base)
       : `${option('publish-base', base)}/`,
     root: path.resolve(option('root', 'dist')),
+    thumbnailQuality: Number.parseInt(option('thumbnail-quality', '32'), 10),
+    thumbnailWidth: Number.parseInt(option('thumbnail-width', '800'), 10),
     width: Number.parseInt(option('width', '1280'), 10),
   };
 }
@@ -102,6 +105,9 @@ async function capturePages(inventory, options) {
   const browser = await chromium.launch(executablePath ? { executablePath } : {});
   const shotDir = path.join(options.out, 'shots');
   fs.mkdirSync(shotDir, { recursive: true });
+  for (const file of fs.readdirSync(shotDir)) {
+    if (/\.(?:avif|jpe?g)$/i.test(file)) fs.rmSync(path.join(shotDir, file));
+  }
 
   const digits = String(inventory.length).length;
   const results = new Array(inventory.length);
@@ -119,7 +125,7 @@ async function capturePages(inventory, options) {
       const index = cursor++;
       const entry = inventory[index];
       const prefix = String(entry.number).padStart(digits, '0');
-      const outputName = `${prefix}-${safeSlug(entry.file)}.jpg`;
+      const outputName = `${prefix}-${safeSlug(entry.file)}.avif`;
       const outputPath = path.join(shotDir, outputName);
       const sourcePath = entry.file === 'index.html' ? '' : entry.file;
       const url = new URL(sourcePath, options.publishBase).toString();
@@ -133,13 +139,16 @@ async function capturePages(inventory, options) {
           if (document.fonts?.ready) await document.fonts.ready;
           await Promise.all([...document.images].map((image) => image.decode().catch(() => {})));
         });
-        await page.screenshot({
+        const screenshot = await page.screenshot({
           animations: 'disabled',
           fullPage: true,
-          path: outputPath,
           quality: 78,
           type: 'jpeg',
         });
+        await sharp(screenshot)
+          .resize({ width: options.thumbnailWidth, withoutEnlargement: true })
+          .avif({ effort: 2, quality: options.thumbnailQuality })
+          .toFile(outputPath);
         results[index] = { ...entry, captureUrl, image: `shots/${outputName}`, ok: true, url };
         console.log(`[${prefix}/${inventory.length}] ${entry.file}`);
       } catch (error) {

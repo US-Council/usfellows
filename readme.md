@@ -76,3 +76,5 @@ npm run smoke
 The production build is written to `dist/`. `.github/workflows/deploy.yml` uses Astro's official GitHub Pages action when `gh-pages` is pushed. Work only on `gh-pages`, or use `demo` when a change needs staging before production. GitHub Pages must use **GitHub Actions** as its publishing source, and the custom domain remains `usfellows.org`.
 
 Files copied directly to the build, including `CNAME`, `.nojekyll`, `robots.txt`, visual-sitemap artifacts, and public images, live in `public/`.
+
+The visual-sitemap generator stores only compressed AVIF thumbnails. Full-resolution JPEG captures are disposable QA artifacts, ignored by Git, and must not be added to LFS.
