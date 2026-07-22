@@ -33,6 +33,9 @@ function parseArgs() {
     base: base.endsWith('/') ? base : `${base}/`,
     concurrency: Number.parseInt(option('concurrency', '4'), 10),
     out: path.resolve(option('out', 'public/visual-sitemap')),
+    publishBase: option('publish-base', base).endsWith('/')
+      ? option('publish-base', base)
+      : `${option('publish-base', base)}/`,
     root: path.resolve(option('root', 'dist')),
     width: Number.parseInt(option('width', '1280'), 10),
   };
@@ -119,7 +122,7 @@ async function capturePages(inventory, options) {
       const outputName = `${prefix}-${safeSlug(entry.file)}.jpg`;
       const outputPath = path.join(shotDir, outputName);
       const sourcePath = entry.file === 'index.html' ? '' : entry.file;
-      const url = new URL(sourcePath, options.base).toString();
+      const url = new URL(sourcePath, options.publishBase).toString();
       // Zero-delay meta refresh pages can destroy Playwright's execution
       // context mid-capture. Their destination is the page a visitor sees.
       const captureUrl = new URL(entry.redirect || sourcePath, options.base).toString();
@@ -253,10 +256,11 @@ function buildHtml(results, base) {
   fs.mkdirSync(options.out, { recursive: true });
   console.log(`Capturing ${inventory.length} pages from ${options.base}`);
   const results = await capturePages(inventory, options);
-  fs.writeFileSync(path.join(options.out, 'index.html'), buildHtml(results, options.base));
+  const visualSitemap = buildHtml(results, options.publishBase).replace(/[ \t]+$/gm, '');
+  fs.writeFileSync(path.join(options.out, 'index.html'), visualSitemap);
   fs.writeFileSync(path.join(options.out, 'manifest.json'), `${JSON.stringify(results, null, 2)}\n`);
   fs.writeFileSync(path.join(options.out, 'meta.json'), `${JSON.stringify({
-    base: options.base,
+    base: options.publishBase,
     generatedAt: new Date().toISOString(),
     pageCount: results.length,
     successfulCaptures: results.filter((result) => result.ok).length,

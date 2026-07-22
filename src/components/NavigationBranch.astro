@@ -1,0 +1,34 @@
+---
+import type { NavigationItem } from "../data/navigation";
+
+interface Props {
+  items: NavigationItem[];
+  mobile?: boolean;
+  nested?: boolean;
+}
+
+const { items, mobile = false, nested = false } = Astro.props;
+---
+
+<ul class={nested ? "subdropdown" : "dropdown"}>
+  {
+    items.map((item) => {
+      const hasChildren = Boolean(item.children?.length);
+      return (
+        <li class:list={{ "dropdown-group": hasChildren, "has-menu": hasChildren }}>
+          <a
+            href={item.href}
+            aria-haspopup={hasChildren ? "true" : undefined}
+            aria-expanded={hasChildren ? "false" : undefined}
+          >
+            {item.label}
+          </a>
+          {mobile && hasChildren && (
+            <button type="button" aria-expanded="false" aria-label={`Open ${item.label} menu`} />
+          )}
+          {hasChildren && <Astro.self items={item.children!} mobile={mobile} nested />}
+        </li>
+      );
+    })
+  }
+</ul>

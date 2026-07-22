@@ -14,6 +14,36 @@ if (form) {
   const stepName = document.querySelector<HTMLElement>("#application-step-name");
   const review = document.querySelector<HTMLElement>("#application-review");
   const shell = document.querySelector<HTMLElement>(".application-shell");
+  const program = document.querySelector<HTMLSelectElement>("#program");
+  const scholarFields = Array.from(form.querySelectorAll<HTMLElement>("[data-scholar-fields]"));
+  const scholarPrograms = [
+    "International R&D Scholar",
+    "Resident R&D Scholar",
+    "Trusted R&D Scholar",
+    "Principal R&D Scholar",
+    "Distinguished R&D Scholar"
+  ];
+  const scholarDataFields = [
+    "scholar_research_focus",
+    "thesis_summary",
+    "home_advisor",
+    "advisor_endorsement_url",
+    "solicitation_ids",
+    "collaboration_request",
+    "scholar_guidance_consent",
+    "resident_time_commitment",
+    "resident_development_goals",
+    "trusted_clearance_confirmation",
+    "trusted_full_time_engagement",
+    "trusted_verification_consent",
+    "principal_role_type",
+    "principal_role_summary",
+    "principal_evidence_url",
+    "distinguished_review_route",
+    "distinguished_impact_summary",
+    "distinguished_contribution",
+    "distinguished_record_url"
+  ];
   const draftKey = "us_fellows_application_v1";
   let current = 0;
 
@@ -53,6 +83,24 @@ if (form) {
       field.setAttribute("aria-describedby", error.id);
     }
     return valid;
+  }
+
+  function updateScholarFields(): void {
+    const selection = program?.value ?? "";
+    const isScholar = scholarPrograms.includes(selection);
+
+    scholarFields.forEach((panel) => {
+      const active = isScholar && (panel.dataset.scholarFor === "all" || panel.dataset.scholarFor === selection);
+      panel.hidden = !active;
+      panel.querySelectorAll<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>("input, select, textarea").forEach((field) => {
+        field.disabled = !active;
+        field.required = active && field.hasAttribute("data-required");
+        if (!active) {
+          field.removeAttribute("aria-invalid");
+          errorFor(field)?.classList.remove("is-visible");
+        }
+      });
+    });
   }
 
   function validateStep(): boolean {
@@ -112,6 +160,26 @@ if (form) {
       why_apply: "Why fellowship",
       proposed_contribution: "Proposed contribution"
     };
+    const scholarLabels: Record<string, string> = {
+      scholar_research_focus: "Research focus",
+      thesis_summary: "Thesis/project",
+      home_advisor: "Home advisor",
+      advisor_endorsement_url: "Advisor endorsement",
+      solicitation_ids: "Opportunity IDs",
+      collaboration_request: "Collaboration request",
+      resident_time_commitment: "20+ hour commitment",
+      resident_development_goals: "Resident development goals",
+      trusted_clearance_confirmation: "Active clearance confirmation",
+      trusted_full_time_engagement: "Full-time national-mission engagement",
+      trusted_verification_consent: "Verification consent",
+      principal_role_type: "Principal role",
+      principal_role_summary: "Principal leadership record",
+      principal_evidence_url: "Principal evidence",
+      distinguished_review_route: "Distinguished review route",
+      distinguished_impact_summary: "National-impact record",
+      distinguished_contribution: "Continuing contribution",
+      distinguished_record_url: "Distinguished public record"
+    };
     const rows = Object.entries(labels).map(([key, label]) => {
       let value: unknown = data[key] ?? "Not provided";
       if (key === "first_name") {
@@ -119,6 +187,9 @@ if (form) {
       }
       return `<dt>${label}</dt><dd>${escapeHtml(String(value))}</dd>`;
     });
+    for (const [key, label] of Object.entries(scholarLabels)) {
+      if (data[key]) rows.push(`<dt>${label}</dt><dd>${escapeHtml(String(data[key]))}</dd>`);
+    }
     review.innerHTML = `<h2>Application summary</h2><dl class="review-list">${rows.join("")}</dl>`;
   }
 
@@ -151,7 +222,10 @@ if (form) {
       saveDraft();
     }
   });
-  form.addEventListener("change", saveDraft);
+  form.addEventListener("change", (event) => {
+    if (event.target === program) updateScholarFields();
+    saveDraft();
+  });
 
   next?.addEventListener("click", () => {
     if (validateStep()) {
@@ -185,16 +259,22 @@ if (form) {
     if (intakeConfig.testMode) {
       localStorage.removeItem(draftKey);
       form.reset();
+      updateScholarFields();
       setStatus("Test submission accepted. No Dynamics record was created.", "success");
       submit.disabled = false;
       return;
     }
 
     try {
-      const response = await fetch(intakeConfig.endpoint, { method: "POST", body: new FormData(form) });
+      const payload = new FormData(form);
+      scholarDataFields.forEach((name) => {
+        if (!payload.has(name)) payload.append(name, "");
+      });
+      const response = await fetch(intakeConfig.endpoint, { method: "POST", body: payload });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       localStorage.removeItem(draftKey);
       form.reset();
+      updateScholarFields();
       setStatus("Your application has been received. US Fellows will contact you at the email address provided.", "success");
       submit.disabled = false;
       showStep(0, false);
@@ -205,5 +285,10 @@ if (form) {
   });
 
   restoreDraft();
+  const requestedProgram = new URLSearchParams(window.location.search).get("program");
+  if (program && !program.value && requestedProgram && Array.from(program.options).some((option) => option.value === requestedProgram)) {
+    program.value = requestedProgram;
+  }
+  updateScholarFields();
   showStep(current, false);
 }

@@ -10,6 +10,14 @@ Maintain the official US Fellows website as a prestigious, credible national civ
 2. Use `readme.md` for the current technical architecture.
 3. Treat old immigration, visa, unpaid-placement, and named partner copy as retired. Do not reintroduce it.
 
+## Branch policy
+
+- Work only on `gh-pages` or `demo` in this repository.
+- `gh-pages` is the production branch that publishes the live site at `usfellows.org`.
+- Use `demo` when a change should be staged and reviewed before it is promoted to `gh-pages`.
+- Do not create, commit to, or push `main`, `codex/*`, or any other branch.
+- Confirm the current branch before editing, committing, or pushing. A live release must land on `gh-pages`; a push elsewhere does not update the website.
+
 ## Technical constraints
 
 - Keep the site static and GitHub Pages-compatible.

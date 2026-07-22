@@ -6,10 +6,10 @@ import path from "node:path";
 const root = path.resolve("dist");
 const htmlFiles = fs.readdirSync(root).filter((file) => file.endsWith(".html")).sort();
 const failures = [];
-const redirectPages = new Set(["doorways.html", "journey.html", "partners.html", "pathways.html"]);
+const redirectPages = new Set(["doorways.html", "journey.html", "partners.html", "pathways.html", "research-scientist-network.html"]);
 
-if (htmlFiles.length !== 50) {
-  failures.push(`Expected 50 root HTML pages, found ${htmlFiles.length}.`);
+if (htmlFiles.length !== 59) {
+  failures.push(`Expected 59 root HTML pages, found ${htmlFiles.length}.`);
 }
 
 function localTarget(fromFile, reference) {
@@ -48,7 +48,7 @@ for (const required of ["CNAME", ".nojekyll", "sitemap-index.xml", "assets/favic
 
 const visualManifest = JSON.parse(fs.readFileSync(path.join(root, "visual-sitemap/manifest.json"), "utf8"));
 const visualMetadata = JSON.parse(fs.readFileSync(path.join(root, "visual-sitemap/meta.json"), "utf8"));
-if (visualManifest.length !== 50 || visualMetadata.pageCount !== 50) failures.push("Visual sitemap does not contain all 50 pages.");
+if (visualManifest.length !== 59 || visualMetadata.pageCount !== 59) failures.push("Visual sitemap does not contain all 59 pages.");
 if (visualMetadata.base !== "https://usfellows.org/") failures.push("Visual sitemap was not generated from the live site.");
 for (const entry of visualManifest) {
   if (!entry.ok || !fs.existsSync(path.join(root, "visual-sitemap", entry.image))) {

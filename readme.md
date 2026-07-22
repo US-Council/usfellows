@@ -11,6 +11,14 @@ US Fellows honors and connects exceptional people across disciplines to humanity
 | `index.html` | Institutional homepage and primary overview |
 | `mission.html` | Mission, vision, standard, public-benefit commitment, and governance |
 | `fellowships.html` | Fellowship programs, appointment model, and specialized tracks |
+| `scholars.html` | Five R&D Scholar designations, standards, standing, and program boundaries |
+| `international-rd-scholars.html` | International Scholar thesis, outreach, network, and opportunity guide |
+| `resident-rd-scholar.html` | Structured 20-hour Resident curriculum, applied work, mentorship, and completion standard |
+| `trusted-rd-scholar.html` | Trusted eligibility, national-mission responsibilities, security boundaries, and standing |
+| `principal-rd-scholar.html` | Principal-level funding, team, sponsor, risk, delivery, and mentorship leadership |
+| `distinguished-rd-scholar.html` | Distinguished record, national impact, stewardship, review, and emeritus standing |
+| `scholar-standards.html` | Shared selection, integrity, security, publication, service, title-use, and standing rules |
+| `scholars-network.html` | Cross-level Scholar community and responsible collaboration protocol |
 | `society.html` | Society life, code of service, and Fellowship Oath |
 | `host-institutions.html` | Host eligibility, standards, and appointment model |
 | `missions.html` | Ten humanity-scale mission areas |
@@ -18,7 +26,7 @@ US Fellows honors and connects exceptional people across disciplines to humanity
 | `journal.html` | Journal scope, publication categories, and editorial standard |
 | `apply.html` | Participation routes for Fellows, hosts, nominators, advisors, and partners |
 
-Every dropdown destination in the primary navigation is a standalone HTML document. The application page is a five-step accessible wizard with local draft persistence and Azure Logic App submission.
+Every dropdown destination in the primary navigation is a standalone HTML document. The application page is a five-step accessible wizard with local draft persistence, designation-specific Scholar fields, and Azure Logic App submission.
 
 Legacy paths (`journey.html`, `pathways.html`, `doorways.html`, and `partners.html`) are retained only as redirects.
 
@@ -33,6 +41,7 @@ Legacy paths (`journey.html`, `pathways.html`, `doorways.html`, and `partners.ht
 - Tree-shaken Lucide SVG icons through `@lucide/astro`
 - Generated XML sitemap through `@astrojs/sitemap`
 - Azure/Dynamics intake infrastructure in `infrastructure/logicapps/us-fellows-intake/`
+- Scholar communication source and delivery rules in `communications/SCHOLAR-COMMUNICATIONS.md`
 - Static output compatible with GitHub Pages and other static hosts
 
 ## Local preview
@@ -60,10 +69,10 @@ npm run preview
 npm run smoke
 ```
 
-`validate` compiles the site and checks all 50 routes, metadata, internal links, and deployment assets. `smoke` checks representative pages at desktop and mobile widths against a running preview server.
+`validate` compiles the site and checks all 59 routes, metadata, internal links, and deployment assets. `smoke` checks representative pages at desktop and mobile widths against a running preview server.
 
 ## Deployment
 
-The production build is written to `dist/`. `.github/workflows/deploy.yml` uses Astro's official GitHub Pages action when `main` or `gh-pages` is pushed. GitHub Pages must use **GitHub Actions** as its publishing source, and the custom domain remains `usfellows.org`.
+The production build is written to `dist/`. `.github/workflows/deploy.yml` uses Astro's official GitHub Pages action when `gh-pages` is pushed. Work only on `gh-pages`, or use `demo` when a change needs staging before production. GitHub Pages must use **GitHub Actions** as its publishing source, and the custom domain remains `usfellows.org`.
 
 Files copied directly to the build, including `CNAME`, `.nojekyll`, `robots.txt`, visual-sitemap artifacts, and public images, live in `public/`.

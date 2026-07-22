@@ -20,7 +20,10 @@
               "type": "array",
               "items": {
                 "type": "object",
-                "properties": { "key": { "type": "string" }, "value": { "type": "string" } },
+                "properties": {
+                  "key": { "type": "string" },
+                  "value": { "type": "string" }
+                },
                 "required": ["key", "value"]
               }
             }
@@ -32,14 +35,33 @@
   "actions": {
     "Reject_Bot_Submission": {
       "type": "If",
-      "expression": { "and": [{ "not": { "equals": ["@triggerFormDataValue('company_website')", ""] } }] },
+      "expression": {
+        "and": [
+          {
+            "not": {
+              "equals": ["@triggerFormDataValue('company_website')", ""]
+            }
+          }
+        ]
+      },
       "actions": {
         "Respond_Bot": {
           "type": "Response",
           "kind": "Http",
-          "inputs": { "statusCode": 400, "headers": { "Content-Type": "application/json", "Access-Control-Allow-Origin": "https://usfellows.org" }, "body": { "success": false, "message": "Invalid submission" } }
+          "inputs": {
+            "statusCode": 400,
+            "headers": {
+              "Content-Type": "application/json",
+              "Access-Control-Allow-Origin": "https://usfellows.org"
+            },
+            "body": { "success": false, "message": "Invalid submission" }
+          }
         },
-        "Stop_Bot": { "type": "Terminate", "runAfter": { "Respond_Bot": ["Succeeded"] }, "inputs": { "runStatus": "Succeeded" } }
+        "Stop_Bot": {
+          "type": "Terminate",
+          "runAfter": { "Respond_Bot": ["Succeeded"] },
+          "inputs": { "runStatus": "Succeeded" }
+        }
       },
       "runAfter": {}
     },
@@ -47,21 +69,51 @@
       "type": "InitializeVariable",
       "runAfter": { "Reject_Bot_Submission": ["Succeeded"] },
       "inputs": {
-        "variables": [{
-          "name": "application_description",
-          "type": "string",
-          "value": "@{concat('US FELLOWS APPLICATION', decodeUriComponent('%0A%0A'), 'Applicant: ', triggerFormDataValue('first_name'), ' ', triggerFormDataValue('middle_name'), ' ', triggerFormDataValue('last_name'), decodeUriComponent('%0A'), 'Preferred name: ', triggerFormDataValue('preferred_name'), decodeUriComponent('%0A'), 'Email: ', triggerFormDataValue('email'), decodeUriComponent('%0A'), 'Phone: ', triggerFormDataValue('phone'), decodeUriComponent('%0A'), 'Location: ', triggerFormDataValue('city'), ', ', triggerFormDataValue('state'), ', ', triggerFormDataValue('country'), decodeUriComponent('%0A'), 'Citizenship: ', triggerFormDataValue('citizenship_country'), decodeUriComponent('%0A%0A'), 'Fellowship program: ', triggerFormDataValue('fellowship_program'), decodeUriComponent('%0A'), 'Primary mission: ', triggerFormDataValue('primary_mission'), decodeUriComponent('%0A'), 'Appointment pathway: ', triggerFormDataValue('appointment_pathway'), decodeUriComponent('%0A'), 'Preferred format: ', triggerFormDataValue('preferred_format'), decodeUriComponent('%0A'), 'Available start: ', triggerFormDataValue('available_start_date'), decodeUriComponent('%0A'), 'Hours/week: ', triggerFormDataValue('hours_per_week'), decodeUriComponent('%0A%0A'), 'Current role: ', triggerFormDataValue('current_role'), decodeUriComponent('%0A'), 'Organization: ', triggerFormDataValue('organization'), decodeUriComponent('%0A'), 'Education: ', triggerFormDataValue('degree_level'), ' — ', triggerFormDataValue('field_of_study'), decodeUriComponent('%0A'), 'School: ', triggerFormDataValue('school_name'), decodeUriComponent('%0A'), 'Graduation year: ', triggerFormDataValue('graduation_year'), decodeUriComponent('%0A'), 'Resume/CV: ', triggerFormDataValue('resume_url'), decodeUriComponent('%0A'), 'LinkedIn: ', triggerFormDataValue('linkedin_url'), decodeUriComponent('%0A'), 'Portfolio/publications: ', triggerFormDataValue('portfolio_url'), decodeUriComponent('%0A%0A'), 'RELEVANT EXPERIENCE', decodeUriComponent('%0A'), triggerFormDataValue('experience_summary'), decodeUriComponent('%0A%0A'), 'WHY FELLOWSHIP', decodeUriComponent('%0A'), triggerFormDataValue('why_apply'), decodeUriComponent('%0A%0A'), 'PROPOSED CONTRIBUTION', decodeUriComponent('%0A'), triggerFormDataValue('proposed_contribution'), decodeUriComponent('%0A%0A'), 'PUBLIC BENEFIT', decodeUriComponent('%0A'), triggerFormDataValue('public_benefit_statement'), decodeUriComponent('%0A%0A'), 'ACCESSIBILITY/PARTICIPATION NEEDS', decodeUriComponent('%0A'), triggerFormDataValue('accessibility_needs'))}"
-        }]
+        "variables": [
+          {
+            "name": "application_description",
+            "type": "string",
+            "value": "@{concat('US FELLOWS APPLICATION', decodeUriComponent('%0A%0A'), 'Applicant: ', triggerFormDataValue('first_name'), ' ', triggerFormDataValue('middle_name'), ' ', triggerFormDataValue('last_name'), decodeUriComponent('%0A'), 'Preferred name: ', triggerFormDataValue('preferred_name'), decodeUriComponent('%0A'), 'Email: ', triggerFormDataValue('email'), decodeUriComponent('%0A'), 'Phone: ', triggerFormDataValue('phone'), decodeUriComponent('%0A'), 'Location: ', triggerFormDataValue('city'), ', ', triggerFormDataValue('state'), ', ', triggerFormDataValue('country'), decodeUriComponent('%0A'), 'Citizenship: ', triggerFormDataValue('citizenship_country'), decodeUriComponent('%0A%0A'), 'Fellowship program: ', triggerFormDataValue('fellowship_program'), decodeUriComponent('%0A'), 'Primary mission: ', triggerFormDataValue('primary_mission'), decodeUriComponent('%0A'), 'Appointment pathway: ', triggerFormDataValue('appointment_pathway'), decodeUriComponent('%0A'), 'Preferred format: ', triggerFormDataValue('preferred_format'), decodeUriComponent('%0A'), 'Available start: ', triggerFormDataValue('available_start_date'), decodeUriComponent('%0A'), 'Hours/week: ', triggerFormDataValue('hours_per_week'), decodeUriComponent('%0A%0A'), 'Current role: ', triggerFormDataValue('current_role'), decodeUriComponent('%0A'), 'Organization: ', triggerFormDataValue('organization'), decodeUriComponent('%0A'), 'Education: ', triggerFormDataValue('degree_level'), ' — ', triggerFormDataValue('field_of_study'), decodeUriComponent('%0A'), 'School: ', triggerFormDataValue('school_name'), decodeUriComponent('%0A'), 'Graduation year: ', triggerFormDataValue('graduation_year'), decodeUriComponent('%0A'), 'Resume/CV: ', triggerFormDataValue('resume_url'), decodeUriComponent('%0A'), 'LinkedIn: ', triggerFormDataValue('linkedin_url'), decodeUriComponent('%0A'), 'Portfolio/publications: ', triggerFormDataValue('portfolio_url'), decodeUriComponent('%0A%0A'), 'RELEVANT EXPERIENCE', decodeUriComponent('%0A'), triggerFormDataValue('experience_summary'), decodeUriComponent('%0A%0A'), 'WHY FELLOWSHIP', decodeUriComponent('%0A'), triggerFormDataValue('why_apply'), decodeUriComponent('%0A%0A'), 'PROPOSED CONTRIBUTION', decodeUriComponent('%0A'), triggerFormDataValue('proposed_contribution'), decodeUriComponent('%0A%0A'), 'PUBLIC BENEFIT', decodeUriComponent('%0A'), triggerFormDataValue('public_benefit_statement'), decodeUriComponent('%0A%0A'), 'ACCESSIBILITY/PARTICIPATION NEEDS', decodeUriComponent('%0A'), triggerFormDataValue('accessibility_needs'))}"
+          }
+        ]
+      }
+    },
+    "Append_Scholar_Application_Details": {
+      "type": "AppendToStringVariable",
+      "runAfter": { "Initialize_Application_Description": ["Succeeded"] },
+      "inputs": {
+        "name": "application_description",
+        "value": "@{concat(decodeUriComponent('%0A%0A'), 'R&D SCHOLAR DETAILS', decodeUriComponent('%0A'), 'Research focus: ', triggerFormDataValue('scholar_research_focus'), decodeUriComponent('%0A'), 'Thesis/project: ', triggerFormDataValue('thesis_summary'), decodeUriComponent('%0A'), 'Home advisor: ', triggerFormDataValue('home_advisor'), decodeUriComponent('%0A'), 'Advisor endorsement: ', triggerFormDataValue('advisor_endorsement_url'), decodeUriComponent('%0A'), 'Opportunity IDs: ', triggerFormDataValue('solicitation_ids'), decodeUriComponent('%0A'), 'Collaboration request: ', triggerFormDataValue('collaboration_request'), decodeUriComponent('%0A'), 'International guidance email opt-in: ', triggerFormDataValue('scholar_guidance_consent'), decodeUriComponent('%0A'), 'Resident 20+ hour commitment: ', triggerFormDataValue('resident_time_commitment'), decodeUriComponent('%0A'), 'Active clearance confirmation (no details collected): ', triggerFormDataValue('trusted_clearance_confirmation'), decodeUriComponent('%0A'), 'Trusted full-time national-mission engagement: ', triggerFormDataValue('trusted_full_time_engagement'), decodeUriComponent('%0A'), 'Principal leadership record: ', triggerFormDataValue('principal_role_summary'), decodeUriComponent('%0A'), 'Distinguished impact record: ', triggerFormDataValue('distinguished_impact_summary'), decodeUriComponent('%0A'), 'Distinguished continuing contribution: ', triggerFormDataValue('distinguished_contribution'))}"
+      }
+    },
+    "Append_Expanded_Scholar_Application_Details": {
+      "type": "AppendToStringVariable",
+      "runAfter": { "Append_Scholar_Application_Details": ["Succeeded"] },
+      "inputs": {
+        "name": "application_description",
+        "value": "@{concat(decodeUriComponent('%0A'), 'Resident development goals: ', triggerFormDataValue('resident_development_goals'), decodeUriComponent('%0A'), 'Trusted verification consent: ', triggerFormDataValue('trusted_verification_consent'), decodeUriComponent('%0A'), 'Principal role type: ', triggerFormDataValue('principal_role_type'), decodeUriComponent('%0A'), 'Principal public evidence: ', triggerFormDataValue('principal_evidence_url'), decodeUriComponent('%0A'), 'Distinguished review route: ', triggerFormDataValue('distinguished_review_route'), decodeUriComponent('%0A'), 'Distinguished public record: ', triggerFormDataValue('distinguished_record_url'))}"
       }
     },
     "Create_D365_Applicant_Lead": {
       "type": "ApiConnection",
-      "runAfter": { "Initialize_Application_Description": ["Succeeded"] },
+      "runAfter": {
+        "Append_Expanded_Scholar_Application_Details": ["Succeeded"]
+      },
       "inputs": {
-        "host": { "connection": { "name": "@parameters('$connections')['dynamicscrmonline']['connectionId']" } },
+        "host": {
+          "connection": {
+            "name": "@parameters('$connections')['dynamicscrmonline']['connectionId']"
+          }
+        },
         "method": "post",
         "path": "/datasets/@{encodeURIComponent(encodeURIComponent(parameters('d365Organization')))}/tables/@{encodeURIComponent(encodeURIComponent('leads'))}/items",
-        "retryPolicy": { "type": "exponential", "count": 3, "interval": "PT30S", "minimumInterval": "PT10S", "maximumInterval": "PT5M" },
+        "retryPolicy": {
+          "type": "exponential",
+          "count": 3,
+          "interval": "PT30S",
+          "minimumInterval": "PT10S",
+          "maximumInterval": "PT5M"
+        },
         "body": {
           "_leadsourcecode_label": "Web",
           "_leadqualitycode_label": "Warm",
@@ -89,17 +141,87 @@
         }
       }
     },
+    "Send_International_Scholar_Guidance_If_Requested": {
+      "type": "If",
+      "expression": {
+        "and": [
+          {
+            "equals": [
+              "@triggerFormDataValue('fellowship_program')",
+              "International R&D Scholar"
+            ]
+          },
+          {
+            "equals": [
+              "@triggerFormDataValue('scholar_guidance_consent')",
+              "yes"
+            ]
+          }
+        ]
+      },
+      "actions": {
+        "Send_International_Scholar_Guidance": {
+          "type": "ApiConnection",
+          "inputs": {
+            "host": {
+              "connection": {
+                "name": "@parameters('$connections')['office365']['connectionId']"
+              }
+            },
+            "method": "post",
+            "path": "/v2/Mail",
+            "body": {
+              "To": "@triggerFormDataValue('email')",
+              "Subject": "International R&D Scholar Outreach, Thesis, and Funding-Opportunity Expectations",
+              "Body": "@{concat('<p>Dear ', triggerFormDataValue('first_name'), ',</p><p>Thank you for applying to the US Fellows International R&amp;D Scholar pathway. The goal is to build a credible research network around a clear thesis or technical question—not to seek a generic endorsement.</p><h2>Prepare the research package</h2><ul><li>A concise thesis or project summary, research question, objectives, methods direction, and intended impact.</li><li>Your institution, degree context, home advisor, and preferably an advisor endorsement.</li><li>Your CV, relevant publications, portfolio, and existing endorsements.</li><li>Several relevant solicitation IDs or official opportunity links.</li><li>One specific request for each recipient.</li></ul><p>A network may include your home advisor, a field-aligned research scientist, a U.S. higher-education researcher, an industry or mission partner, and other relevant experts. Never list a person or organization without explicit permission.</p><h2>Verify opportunities</h2><p>Review <a href=\"https://www.grants.gov/\">Grants.gov</a>, <a href=\"https://sam.gov/content/opportunities\">SAM.gov</a>, <a href=\"https://www.sbir.gov/\">SBIR</a>, <a href=\"https://www.sbir.gov/about\">STTR</a>, fellowships, graduate assistantships, cooperative agreements, and industry-sponsored research. Confirm topic, deadline, eligibility, deliverables, and eligible lead-organization rules in the official notice.</p><h2>Make a specific ask</h2><p>You may request thesis or methods feedback, an introduction, solicitation guidance, an endorsement, or consideration of an SME, Key Personnel, PI, or Co-PI role for a named opportunity. Personalize the request and avoid mass outreach.</p><h2>Protect the work</h2><p>Do not share classified, export-controlled, proprietary, unpublished sensitive, or protected personal information. A conversation or endorsement does not imply supervision, employment, funding, sponsorship, proposal participation, laboratory access, or institutional commitment.</p><p>Keep written records of endorsements, permissions, and agreed roles. The complete guide is available at <a href=\"https://usfellows.org/international-rd-scholars.html\">usfellows.org/international-rd-scholars.html</a>.</p><p>US Fellows</p>')}"
+            },
+            "retryPolicy": {
+              "type": "exponential",
+              "count": 2,
+              "interval": "PT20S",
+              "minimumInterval": "PT10S",
+              "maximumInterval": "PT2M"
+            }
+          }
+        }
+      },
+      "else": { "actions": {} },
+      "runAfter": { "Create_D365_Applicant_Lead": ["Succeeded"] }
+    },
     "Respond_Success": {
       "type": "Response",
       "kind": "Http",
-      "runAfter": { "Create_D365_Applicant_Lead": ["Succeeded"] },
-      "inputs": { "statusCode": 201, "headers": { "Content-Type": "application/json", "Access-Control-Allow-Origin": "https://usfellows.org" }, "body": { "success": true, "message": "US Fellows application accepted" } }
+      "runAfter": {
+        "Send_International_Scholar_Guidance_If_Requested": [
+          "Succeeded",
+          "Failed",
+          "TimedOut"
+        ]
+      },
+      "inputs": {
+        "statusCode": 201,
+        "headers": {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "https://usfellows.org"
+        },
+        "body": {
+          "success": true,
+          "message": "US Fellows application accepted"
+        }
+      }
     },
     "Respond_Failure": {
       "type": "Response",
       "kind": "Http",
       "runAfter": { "Create_D365_Applicant_Lead": ["Failed", "TimedOut"] },
-      "inputs": { "statusCode": 500, "headers": { "Content-Type": "application/json", "Access-Control-Allow-Origin": "https://usfellows.org" }, "body": { "success": false, "message": "Application intake failed" } }
+      "inputs": {
+        "statusCode": 500,
+        "headers": {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "https://usfellows.org"
+        },
+        "body": { "success": false, "message": "Application intake failed" }
+      }
     }
   },
   "outputs": {}

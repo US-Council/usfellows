@@ -1,5 +1,6 @@
 ---
 import { navigation } from "../data/navigation";
+import NavigationBranch from "./NavigationBranch.astro";
 
 interface Props {
   mobile?: boolean;
@@ -26,11 +27,7 @@ const { mobile = false, activePage = "" } = Astro.props;
         {mobile && (
           <button type="button" aria-expanded="false" aria-label={`Open ${item.label} menu`} />
         )}
-        <ul class="dropdown">
-          {item.children.map((child) => (
-            <li><a href={child.href}>{child.label}</a></li>
-          ))}
-        </ul>
+        <NavigationBranch items={item.children ?? []} mobile={mobile} />
       </li>
     );
   })}

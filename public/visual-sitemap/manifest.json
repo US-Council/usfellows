@@ -4,7 +4,7 @@
     "number": 1,
     "redirect": null,
     "title": "US Fellows | A National Fellowship Society for Humanity-Scale Service",
-    "captureUrl": "https://usfellows.org/",
+    "captureUrl": "http://127.0.0.1:4321/",
     "image": "shots/01-index.jpg",
     "ok": true,
     "url": "https://usfellows.org/"
@@ -14,7 +14,7 @@
     "number": 2,
     "redirect": null,
     "title": "Mission | US Fellows",
-    "captureUrl": "https://usfellows.org/mission.html",
+    "captureUrl": "http://127.0.0.1:4321/mission.html",
     "image": "shots/02-mission.jpg",
     "ok": true,
     "url": "https://usfellows.org/mission.html"
@@ -24,7 +24,7 @@
     "number": 3,
     "redirect": null,
     "title": "Fellowships | US Fellows",
-    "captureUrl": "https://usfellows.org/fellowships.html",
+    "captureUrl": "http://127.0.0.1:4321/fellowships.html",
     "image": "shots/03-fellowships.jpg",
     "ok": true,
     "url": "https://usfellows.org/fellowships.html"
@@ -34,7 +34,7 @@
     "number": 4,
     "redirect": null,
     "title": "The Society | US Fellows",
-    "captureUrl": "https://usfellows.org/society.html",
+    "captureUrl": "http://127.0.0.1:4321/society.html",
     "image": "shots/04-society.jpg",
     "ok": true,
     "url": "https://usfellows.org/society.html"
@@ -44,7 +44,7 @@
     "number": 5,
     "redirect": null,
     "title": "Host Institutions | US Fellows",
-    "captureUrl": "https://usfellows.org/host-institutions.html",
+    "captureUrl": "http://127.0.0.1:4321/host-institutions.html",
     "image": "shots/05-host-institutions.jpg",
     "ok": true,
     "url": "https://usfellows.org/host-institutions.html"
@@ -54,7 +54,7 @@
     "number": 6,
     "redirect": null,
     "title": "Humanity-Scale Missions | US Fellows",
-    "captureUrl": "https://usfellows.org/missions.html",
+    "captureUrl": "http://127.0.0.1:4321/missions.html",
     "image": "shots/06-missions.jpg",
     "ok": true,
     "url": "https://usfellows.org/missions.html"
@@ -64,7 +64,7 @@
     "number": 7,
     "redirect": null,
     "title": "Become a Fellow | US Fellows",
-    "captureUrl": "https://usfellows.org/fellows.html",
+    "captureUrl": "http://127.0.0.1:4321/fellows.html",
     "image": "shots/07-fellows.jpg",
     "ok": true,
     "url": "https://usfellows.org/fellows.html"
@@ -74,7 +74,7 @@
     "number": 8,
     "redirect": null,
     "title": "Journal | US Fellows",
-    "captureUrl": "https://usfellows.org/journal.html",
+    "captureUrl": "http://127.0.0.1:4321/journal.html",
     "image": "shots/08-journal.jpg",
     "ok": true,
     "url": "https://usfellows.org/journal.html"
@@ -84,7 +84,7 @@
     "number": 9,
     "redirect": null,
     "title": "Apply to US Fellows",
-    "captureUrl": "https://usfellows.org/apply.html",
+    "captureUrl": "http://127.0.0.1:4321/apply.html",
     "image": "shots/09-apply.jpg",
     "ok": true,
     "url": "https://usfellows.org/apply.html"
@@ -94,7 +94,7 @@
     "number": 10,
     "redirect": null,
     "title": "Our Mission | US Fellows",
-    "captureUrl": "https://usfellows.org/our-mission.html",
+    "captureUrl": "http://127.0.0.1:4321/our-mission.html",
     "image": "shots/10-our-mission.jpg",
     "ok": true,
     "url": "https://usfellows.org/our-mission.html"
@@ -104,7 +104,7 @@
     "number": 11,
     "redirect": null,
     "title": "Our Vision | US Fellows",
-    "captureUrl": "https://usfellows.org/vision.html",
+    "captureUrl": "http://127.0.0.1:4321/vision.html",
     "image": "shots/11-vision.jpg",
     "ok": true,
     "url": "https://usfellows.org/vision.html"
@@ -114,7 +114,7 @@
     "number": 12,
     "redirect": null,
     "title": "Why US Fellows Exists | US Fellows",
-    "captureUrl": "https://usfellows.org/why-us-fellows.html",
+    "captureUrl": "http://127.0.0.1:4321/why-us-fellows.html",
     "image": "shots/12-why-us-fellows.jpg",
     "ok": true,
     "url": "https://usfellows.org/why-us-fellows.html"
@@ -124,7 +124,7 @@
     "number": 13,
     "redirect": null,
     "title": "The US Fellows Standard",
-    "captureUrl": "https://usfellows.org/us-fellows-standard.html",
+    "captureUrl": "http://127.0.0.1:4321/us-fellows-standard.html",
     "image": "shots/13-us-fellows-standard.jpg",
     "ok": true,
     "url": "https://usfellows.org/us-fellows-standard.html"
@@ -134,7 +134,7 @@
     "number": 14,
     "redirect": null,
     "title": "Governance &amp; Stewardship | US Fellows",
-    "captureUrl": "https://usfellows.org/governance-stewardship.html",
+    "captureUrl": "http://127.0.0.1:4321/governance-stewardship.html",
     "image": "shots/14-governance-stewardship.jpg",
     "ok": true,
     "url": "https://usfellows.org/governance-stewardship.html"
@@ -144,7 +144,7 @@
     "number": 15,
     "redirect": null,
     "title": "Fellowship Programs | US Fellows",
-    "captureUrl": "https://usfellows.org/fellowship-programs.html",
+    "captureUrl": "http://127.0.0.1:4321/fellowship-programs.html",
     "image": "shots/15-fellowship-programs.jpg",
     "ok": true,
     "url": "https://usfellows.org/fellowship-programs.html"
@@ -154,7 +154,7 @@
     "number": 16,
     "redirect": null,
     "title": "Career Advancement Track | US Fellows",
-    "captureUrl": "https://usfellows.org/career-advancement.html",
+    "captureUrl": "http://127.0.0.1:4321/career-advancement.html",
     "image": "shots/16-career-advancement.jpg",
     "ok": true,
     "url": "https://usfellows.org/career-advancement.html"
@@ -164,7 +164,7 @@
     "number": 17,
     "redirect": null,
     "title": "International Graduate Fellows | US Fellows",
-    "captureUrl": "https://usfellows.org/international-graduate-fellows.html",
+    "captureUrl": "http://127.0.0.1:4321/international-graduate-fellows.html",
     "image": "shots/17-international-graduate-fellows.jpg",
     "ok": true,
     "url": "https://usfellows.org/international-graduate-fellows.html"
@@ -174,7 +174,7 @@
     "number": 18,
     "redirect": null,
     "title": "National Capacity Fellows | US Fellows",
-    "captureUrl": "https://usfellows.org/national-capacity-fellows.html",
+    "captureUrl": "http://127.0.0.1:4321/national-capacity-fellows.html",
     "image": "shots/18-national-capacity-fellows.jpg",
     "ok": true,
     "url": "https://usfellows.org/national-capacity-fellows.html"
@@ -184,7 +184,7 @@
     "number": 19,
     "redirect": null,
     "title": "Mission Fellowships | US Fellows",
-    "captureUrl": "https://usfellows.org/mission-fellowships.html",
+    "captureUrl": "http://127.0.0.1:4321/mission-fellowships.html",
     "image": "shots/19-mission-fellowships.jpg",
     "ok": true,
     "url": "https://usfellows.org/mission-fellowships.html"
@@ -194,7 +194,7 @@
     "number": 20,
     "redirect": null,
     "title": "The US Fellows Society",
-    "captureUrl": "https://usfellows.org/fellowship-society.html",
+    "captureUrl": "http://127.0.0.1:4321/fellowship-society.html",
     "image": "shots/20-fellowship-society.jpg",
     "ok": true,
     "url": "https://usfellows.org/fellowship-society.html"
@@ -204,7 +204,7 @@
     "number": 21,
     "redirect": null,
     "title": "Cohorts &amp; Chapters | US Fellows",
-    "captureUrl": "https://usfellows.org/cohorts-chapters.html",
+    "captureUrl": "http://127.0.0.1:4321/cohorts-chapters.html",
     "image": "shots/21-cohorts-chapters.jpg",
     "ok": true,
     "url": "https://usfellows.org/cohorts-chapters.html"
@@ -214,7 +214,7 @@
     "number": 22,
     "redirect": null,
     "title": "Convenings &amp; Honors | US Fellows",
-    "captureUrl": "https://usfellows.org/convenings-honors.html",
+    "captureUrl": "http://127.0.0.1:4321/convenings-honors.html",
     "image": "shots/22-convenings-honors.jpg",
     "ok": true,
     "url": "https://usfellows.org/convenings-honors.html"
@@ -224,7 +224,7 @@
     "number": 23,
     "redirect": null,
     "title": "Code of Service | US Fellows",
-    "captureUrl": "https://usfellows.org/code-of-service.html",
+    "captureUrl": "http://127.0.0.1:4321/code-of-service.html",
     "image": "shots/23-code-of-service.jpg",
     "ok": true,
     "url": "https://usfellows.org/code-of-service.html"
@@ -234,7 +234,7 @@
     "number": 24,
     "redirect": null,
     "title": "Fellowship Oath | US Fellows",
-    "captureUrl": "https://usfellows.org/fellowship-oath.html",
+    "captureUrl": "http://127.0.0.1:4321/fellowship-oath.html",
     "image": "shots/24-fellowship-oath.jpg",
     "ok": true,
     "url": "https://usfellows.org/fellowship-oath.html"
@@ -244,7 +244,7 @@
     "number": 25,
     "redirect": null,
     "title": "Become a Host Institution | US Fellows",
-    "captureUrl": "https://usfellows.org/become-a-host.html",
+    "captureUrl": "http://127.0.0.1:4321/become-a-host.html",
     "image": "shots/25-become-a-host.jpg",
     "ok": true,
     "url": "https://usfellows.org/become-a-host.html"
@@ -254,7 +254,7 @@
     "number": 26,
     "redirect": null,
     "title": "Who Can Host | US Fellows",
-    "captureUrl": "https://usfellows.org/who-can-host.html",
+    "captureUrl": "http://127.0.0.1:4321/who-can-host.html",
     "image": "shots/26-who-can-host.jpg",
     "ok": true,
     "url": "https://usfellows.org/who-can-host.html"
@@ -264,7 +264,7 @@
     "number": 27,
     "redirect": null,
     "title": "Host Standards | US Fellows",
-    "captureUrl": "https://usfellows.org/host-standards.html",
+    "captureUrl": "http://127.0.0.1:4321/host-standards.html",
     "image": "shots/27-host-standards.jpg",
     "ok": true,
     "url": "https://usfellows.org/host-standards.html"
@@ -274,7 +274,7 @@
     "number": 28,
     "redirect": null,
     "title": "Fellowship Appointment Model | US Fellows",
-    "captureUrl": "https://usfellows.org/appointment-model.html",
+    "captureUrl": "http://127.0.0.1:4321/appointment-model.html",
     "image": "shots/28-appointment-model.jpg",
     "ok": true,
     "url": "https://usfellows.org/appointment-model.html"
@@ -284,7 +284,7 @@
     "number": 29,
     "redirect": null,
     "title": "Submit a Mission Opportunity | US Fellows",
-    "captureUrl": "https://usfellows.org/submit-opportunity.html",
+    "captureUrl": "http://127.0.0.1:4321/submit-opportunity.html",
     "image": "shots/29-submit-opportunity.jpg",
     "ok": true,
     "url": "https://usfellows.org/submit-opportunity.html"
@@ -294,7 +294,7 @@
     "number": 30,
     "redirect": null,
     "title": "Humanity &amp; Human Dignity | US Fellows",
-    "captureUrl": "https://usfellows.org/humanity-dignity.html",
+    "captureUrl": "http://127.0.0.1:4321/humanity-dignity.html",
     "image": "shots/30-humanity-dignity.jpg",
     "ok": true,
     "url": "https://usfellows.org/humanity-dignity.html"
@@ -304,7 +304,7 @@
     "number": 31,
     "redirect": null,
     "title": "Science &amp; Discovery | US Fellows",
-    "captureUrl": "https://usfellows.org/science-discovery.html",
+    "captureUrl": "http://127.0.0.1:4321/science-discovery.html",
     "image": "shots/31-science-discovery.jpg",
     "ok": true,
     "url": "https://usfellows.org/science-discovery.html"
@@ -314,7 +314,7 @@
     "number": 32,
     "redirect": null,
     "title": "Climate &amp; Planetary Stewardship | US Fellows",
-    "captureUrl": "https://usfellows.org/planetary-stewardship.html",
+    "captureUrl": "http://127.0.0.1:4321/planetary-stewardship.html",
     "image": "shots/32-planetary-stewardship.jpg",
     "ok": true,
     "url": "https://usfellows.org/planetary-stewardship.html"
@@ -324,7 +324,7 @@
     "number": 33,
     "redirect": null,
     "title": "Civic Life &amp; Public Trust | US Fellows",
-    "captureUrl": "https://usfellows.org/civic-life-public-trust.html",
+    "captureUrl": "http://127.0.0.1:4321/civic-life-public-trust.html",
     "image": "shots/33-civic-life-public-trust.jpg",
     "ok": true,
     "url": "https://usfellows.org/civic-life-public-trust.html"
@@ -334,7 +334,7 @@
     "number": 34,
     "redirect": null,
     "title": "National Capacity &amp; Resilience | US Fellows",
-    "captureUrl": "https://usfellows.org/national-capacity-resilience.html",
+    "captureUrl": "http://127.0.0.1:4321/national-capacity-resilience.html",
     "image": "shots/34-national-capacity-resilience.jpg",
     "ok": true,
     "url": "https://usfellows.org/national-capacity-resilience.html"
@@ -344,7 +344,7 @@
     "number": 35,
     "redirect": null,
     "title": "Become a US Fellow",
-    "captureUrl": "https://usfellows.org/become-a-fellow.html",
+    "captureUrl": "http://127.0.0.1:4321/become-a-fellow.html",
     "image": "shots/35-become-a-fellow.jpg",
     "ok": true,
     "url": "https://usfellows.org/become-a-fellow.html"
@@ -354,7 +354,7 @@
     "number": 36,
     "redirect": null,
     "title": "Fellowship Eligibility | US Fellows",
-    "captureUrl": "https://usfellows.org/eligibility.html",
+    "captureUrl": "http://127.0.0.1:4321/eligibility.html",
     "image": "shots/36-eligibility.jpg",
     "ok": true,
     "url": "https://usfellows.org/eligibility.html"
@@ -364,7 +364,7 @@
     "number": 37,
     "redirect": null,
     "title": "Selection Criteria | US Fellows",
-    "captureUrl": "https://usfellows.org/selection-criteria.html",
+    "captureUrl": "http://127.0.0.1:4321/selection-criteria.html",
     "image": "shots/37-selection-criteria.jpg",
     "ok": true,
     "url": "https://usfellows.org/selection-criteria.html"
@@ -374,7 +374,7 @@
     "number": 38,
     "redirect": null,
     "title": "Fellow Benefits | US Fellows",
-    "captureUrl": "https://usfellows.org/fellow-benefits.html",
+    "captureUrl": "http://127.0.0.1:4321/fellow-benefits.html",
     "image": "shots/38-fellow-benefits.jpg",
     "ok": true,
     "url": "https://usfellows.org/fellow-benefits.html"
@@ -384,7 +384,7 @@
     "number": 39,
     "redirect": null,
     "title": "Nominate a Fellow | US Fellows",
-    "captureUrl": "https://usfellows.org/nominate-a-fellow.html",
+    "captureUrl": "http://127.0.0.1:4321/nominate-a-fellow.html",
     "image": "shots/39-nominate-a-fellow.jpg",
     "ok": true,
     "url": "https://usfellows.org/nominate-a-fellow.html"
@@ -394,7 +394,7 @@
     "number": 40,
     "redirect": null,
     "title": "Essays &amp; Research Notes | US Fellows Journal",
-    "captureUrl": "https://usfellows.org/essays-research-notes.html",
+    "captureUrl": "http://127.0.0.1:4321/essays-research-notes.html",
     "image": "shots/40-essays-research-notes.jpg",
     "ok": true,
     "url": "https://usfellows.org/essays-research-notes.html"
@@ -404,7 +404,7 @@
     "number": 41,
     "redirect": null,
     "title": "Field Reports | US Fellows Journal",
-    "captureUrl": "https://usfellows.org/field-reports.html",
+    "captureUrl": "http://127.0.0.1:4321/field-reports.html",
     "image": "shots/41-field-reports.jpg",
     "ok": true,
     "url": "https://usfellows.org/field-reports.html"
@@ -414,7 +414,7 @@
     "number": 42,
     "redirect": null,
     "title": "Fellow Stories | US Fellows Journal",
-    "captureUrl": "https://usfellows.org/fellow-stories.html",
+    "captureUrl": "http://127.0.0.1:4321/fellow-stories.html",
     "image": "shots/42-fellow-stories.jpg",
     "ok": true,
     "url": "https://usfellows.org/fellow-stories.html"
@@ -424,7 +424,7 @@
     "number": 43,
     "redirect": null,
     "title": "Institutional Briefings | US Fellows Journal",
-    "captureUrl": "https://usfellows.org/institutional-briefings.html",
+    "captureUrl": "http://127.0.0.1:4321/institutional-briefings.html",
     "image": "shots/43-institutional-briefings.jpg",
     "ok": true,
     "url": "https://usfellows.org/institutional-briefings.html"
@@ -434,7 +434,7 @@
     "number": 44,
     "redirect": null,
     "title": "Impact Reports | US Fellows Journal",
-    "captureUrl": "https://usfellows.org/impact-reports.html",
+    "captureUrl": "http://127.0.0.1:4321/impact-reports.html",
     "image": "shots/44-impact-reports.jpg",
     "ok": true,
     "url": "https://usfellows.org/impact-reports.html"
@@ -444,7 +444,7 @@
     "number": 45,
     "redirect": null,
     "title": "Terms of Service | US Fellows",
-    "captureUrl": "https://usfellows.org/terms-of-service.html",
+    "captureUrl": "http://127.0.0.1:4321/terms-of-service.html",
     "image": "shots/45-terms-of-service.jpg",
     "ok": true,
     "url": "https://usfellows.org/terms-of-service.html"
@@ -454,7 +454,7 @@
     "number": 46,
     "redirect": null,
     "title": "Privacy Policy | US Fellows",
-    "captureUrl": "https://usfellows.org/privacy-policy.html",
+    "captureUrl": "http://127.0.0.1:4321/privacy-policy.html",
     "image": "shots/46-privacy-policy.jpg",
     "ok": true,
     "url": "https://usfellows.org/privacy-policy.html"
@@ -464,7 +464,7 @@
     "number": 47,
     "redirect": "fellows.html",
     "title": "Moved | US Fellows",
-    "captureUrl": "https://usfellows.org/fellows.html",
+    "captureUrl": "http://127.0.0.1:4321/fellows.html",
     "image": "shots/47-doorways.jpg",
     "ok": true,
     "url": "https://usfellows.org/doorways.html"
@@ -474,7 +474,7 @@
     "number": 48,
     "redirect": "society.html",
     "title": "Moved | US Fellows",
-    "captureUrl": "https://usfellows.org/society.html",
+    "captureUrl": "http://127.0.0.1:4321/society.html",
     "image": "shots/48-journey.jpg",
     "ok": true,
     "url": "https://usfellows.org/journey.html"
@@ -484,7 +484,7 @@
     "number": 49,
     "redirect": "host-institutions.html",
     "title": "Moved | US Fellows",
-    "captureUrl": "https://usfellows.org/host-institutions.html",
+    "captureUrl": "http://127.0.0.1:4321/host-institutions.html",
     "image": "shots/49-partners.jpg",
     "ok": true,
     "url": "https://usfellows.org/partners.html"
@@ -494,9 +494,99 @@
     "number": 50,
     "redirect": "fellowships.html",
     "title": "Moved | US Fellows",
-    "captureUrl": "https://usfellows.org/fellowships.html",
+    "captureUrl": "http://127.0.0.1:4321/fellowships.html",
     "image": "shots/50-pathways.jpg",
     "ok": true,
     "url": "https://usfellows.org/pathways.html"
+  },
+  {
+    "file": "distinguished-rd-scholar.html",
+    "number": 51,
+    "redirect": null,
+    "title": "Distinguished R&amp;D Scholar | US Fellows",
+    "captureUrl": "http://127.0.0.1:4321/distinguished-rd-scholar.html",
+    "image": "shots/51-distinguished-rd-scholar.jpg",
+    "ok": true,
+    "url": "https://usfellows.org/distinguished-rd-scholar.html"
+  },
+  {
+    "file": "international-rd-scholars.html",
+    "number": 52,
+    "redirect": null,
+    "title": "International R&amp;D Scholar Program | US Fellows",
+    "captureUrl": "http://127.0.0.1:4321/international-rd-scholars.html",
+    "image": "shots/52-international-rd-scholars.jpg",
+    "ok": true,
+    "url": "https://usfellows.org/international-rd-scholars.html"
+  },
+  {
+    "file": "principal-rd-scholar.html",
+    "number": 53,
+    "redirect": null,
+    "title": "Principal R&amp;D Scholar | US Fellows",
+    "captureUrl": "http://127.0.0.1:4321/principal-rd-scholar.html",
+    "image": "shots/53-principal-rd-scholar.jpg",
+    "ok": true,
+    "url": "https://usfellows.org/principal-rd-scholar.html"
+  },
+  {
+    "file": "research-scientist-network.html",
+    "number": 54,
+    "redirect": "scholars-network.html",
+    "title": "Moved to Scholars Network | US Fellows",
+    "captureUrl": "http://127.0.0.1:4321/scholars-network.html",
+    "image": "shots/54-research-scientist-network.jpg",
+    "ok": true,
+    "url": "https://usfellows.org/research-scientist-network.html"
+  },
+  {
+    "file": "resident-rd-scholar.html",
+    "number": 55,
+    "redirect": null,
+    "title": "Resident R&amp;D Scholar Program | US Fellows",
+    "captureUrl": "http://127.0.0.1:4321/resident-rd-scholar.html",
+    "image": "shots/55-resident-rd-scholar.jpg",
+    "ok": true,
+    "url": "https://usfellows.org/resident-rd-scholar.html"
+  },
+  {
+    "file": "scholar-standards.html",
+    "number": 56,
+    "redirect": null,
+    "title": "R&amp;D Scholar Standards and Standing | US Fellows",
+    "captureUrl": "http://127.0.0.1:4321/scholar-standards.html",
+    "image": "shots/56-scholar-standards.jpg",
+    "ok": true,
+    "url": "https://usfellows.org/scholar-standards.html"
+  },
+  {
+    "file": "scholars-network.html",
+    "number": 57,
+    "redirect": null,
+    "title": "Scholars Network | US Fellows",
+    "captureUrl": "http://127.0.0.1:4321/scholars-network.html",
+    "image": "shots/57-scholars-network.jpg",
+    "ok": true,
+    "url": "https://usfellows.org/scholars-network.html"
+  },
+  {
+    "file": "scholars.html",
+    "number": 58,
+    "redirect": null,
+    "title": "R&amp;D Scholars Program | US Fellows",
+    "captureUrl": "http://127.0.0.1:4321/scholars.html",
+    "image": "shots/58-scholars.jpg",
+    "ok": true,
+    "url": "https://usfellows.org/scholars.html"
+  },
+  {
+    "file": "trusted-rd-scholar.html",
+    "number": 59,
+    "redirect": null,
+    "title": "Trusted R&amp;D Scholar | US Fellows",
+    "captureUrl": "http://127.0.0.1:4321/trusted-rd-scholar.html",
+    "image": "shots/59-trusted-rd-scholar.jpg",
+    "ok": true,
+    "url": "https://usfellows.org/trusted-rd-scholar.html"
   }
 ]

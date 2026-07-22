@@ -1,7 +1,7 @@
 export interface NavigationItem {
   href: string;
   label: string;
-  children: Array<{ href: string; label: string }>;
+  children?: NavigationItem[];
 }
 
 export const navigation: NavigationItem[] = [
@@ -21,6 +21,19 @@ export const navigation: NavigationItem[] = [
     label: "Fellowships",
     children: [
       { href: "fellowship-programs.html", label: "Fellowship Programs" },
+      {
+        href: "scholars.html",
+        label: "R&D Scholars Program",
+        children: [
+          { href: "international-rd-scholars.html", label: "01 — International R&D Scholar" },
+          { href: "resident-rd-scholar.html", label: "02 — Resident R&D Scholar" },
+          { href: "trusted-rd-scholar.html", label: "03 — Trusted R&D Scholar" },
+          { href: "principal-rd-scholar.html", label: "04 — Principal R&D Scholar" },
+          { href: "distinguished-rd-scholar.html", label: "05 — Distinguished R&D Scholar" },
+          { href: "scholar-standards.html", label: "Standards & Standing" },
+          { href: "scholars-network.html", label: "Scholars Network" }
+        ]
+      },
       { href: "career-advancement.html", label: "Career Advancement Track" },
       { href: "international-graduate-fellows.html", label: "International Graduate Fellows" },
       { href: "national-capacity-fellows.html", label: "National Capacity Fellows" },
