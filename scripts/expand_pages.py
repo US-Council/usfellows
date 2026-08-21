@@ -337,6 +337,9 @@ def main():
         if header_end < 0 or main_end < 0 or header_end > main_end:
             raise RuntimeError(f"Cannot locate content boundaries in {filename}")
         expanded = source[:header_end + len("</header>")] + render(filename, data) + source[main_end:]
+        # Keep a stray text `>` from becoming visible before the main close when
+        # a previously generated destination page is used as the template.
+        expanded = re.sub(r">+(?=\s*</main\s*>)", ">", expanded, count=1)
         path.write_text(expanded, encoding="utf-8")
 
     print(f"Expanded {len(PAGES)} destination pages.")
