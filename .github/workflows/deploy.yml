@@ -32,21 +32,14 @@ jobs:
         run: |
           rm -rf _site
           mkdir -p _site
-          rsync -a \
-            --exclude='.git/' \
-            --exclude='.github/' \
-            --exclude='_site/' \
-            --exclude='node_modules/' \
-            --exclude='infrastructure/' \
-            --exclude='communications/' \
-            --exclude='scripts/' \
-            --exclude='*.md' \
-            --exclude='*.json' \
-            --exclude='*.py' \
-            --exclude='*.sh' \
-            --exclude='package*.json' \
-            --exclude='pnpm-lock.yaml' \
-            ./ _site/
+          for page in ./*.html; do cp "$page" _site/; done
+          for required_file in CNAME .nojekyll robots.txt sitemap.xml; do
+            test -f "$required_file" && cp "$required_file" _site/
+          done
+          rsync -a assets/ _site/assets/
+
+      - name: Audit public site artifact
+        run: python3 scripts/public-site-audit.py --root _site
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v5
