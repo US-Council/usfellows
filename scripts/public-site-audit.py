@@ -32,7 +32,8 @@ FORBIDDEN_TERMS = (
     ),
     ("INSTAR Lab", re.compile(r"instar\s+lab", re.IGNORECASE)),
 )
-SOCIAL_PROPERTIES = ("og:title", "og:description", "og:url", "og:image")
+SOCIAL_PROPERTIES = ("og:title", "og:description", "og:type", "og:url", "og:image")
+TWITTER_PROPERTIES = ("twitter:card", "twitter:title", "twitter:description", "twitter:image")
 JS_ATTRIBUTE_RE = re.compile(
     r"\b(?:href|src)\s*=\s*(?P<quote>[\"'])(?P<value>[^\"'<>{}$+\s]+)(?P=quote)",
     re.IGNORECASE,
@@ -70,8 +71,10 @@ class PageParser(HTMLParser):
         self.h1_count = 0
         self.h1_texts: list[str] = []
         self.refresh = False
+        self.robots: list[str] = []
+        self.preloads: list[str] = []
         self.social: dict[str, list[str]] = {
-            key: [] for key in SOCIAL_PROPERTIES + ("twitter:card",)
+            key: [] for key in SOCIAL_PROPERTIES + TWITTER_PROPERTIES
         }
         self.malformed_main = False
         self._capture_tag: str | None = None
@@ -104,15 +107,21 @@ class PageParser(HTMLParser):
             if name == "description":
                 self.description_count += 1
                 self.description_values.append(content)
-            if name == "twitter:card":
-                self.social["twitter:card"].append(content)
+            if name == "robots":
+                self.robots.append(content)
+            if name in TWITTER_PROPERTIES:
+                self.social[name].append(content)
             if attributes.get("http-equiv", "").lower() == "refresh":
                 self.refresh = True
             if property_name in SOCIAL_PROPERTIES:
                 self.social[property_name].append(content)
-        elif tag == "link" and "canonical" in attributes.get("rel", "").lower().split():
-            self.canonical_count += 1
-            self.canonical_values.append(attributes.get("href", ""))
+        elif tag == "link":
+            rel = attributes.get("rel", "").lower().split()
+            if "canonical" in rel:
+                self.canonical_count += 1
+                self.canonical_values.append(attributes.get("href", ""))
+            if "preload" in rel and attributes.get("as", "").lower() == "image":
+                self.preloads.append(attributes.get("href", ""))
 
         self._last_data = None
 
@@ -277,6 +286,17 @@ def check_sitemap(root: Path, texts: dict[Path, str]) -> list[str]:
     except ET.ParseError as exc:
         return [f"sitemap.xml: malformed XML ({exc})"]
 
+    for url_node in document:
+        if url_node.tag.rsplit("}", 1)[-1] != "url":
+            continue
+        lastmods = [
+            (child.text or "").strip()
+            for child in url_node
+            if child.tag.rsplit("}", 1)[-1] == "lastmod"
+        ]
+        if len(lastmods) != 1 or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", lastmods[0]):
+            errors.append("sitemap.xml: every URL needs one ISO date lastmod")
+
     for loc in document.iter():
         if loc.tag.rsplit("}", 1)[-1] != "loc":
             continue
@@ -332,6 +352,8 @@ def audit(root: Path) -> tuple[list[str], int]:
         if relative in LEGACY_STUBS and parser.refresh:
             if parser.canonical_count != 1 or not any(parser.canonical_values):
                 errors.append(f"{relative}: legacy stub needs one canonical link")
+            if not any("noindex" in value.lower() for value in parser.robots):
+                errors.append(f"{relative}: legacy stub needs noindex,follow")
             expected = LEGACY_STUBS[relative]
             if not any(
                 attribute == "href"
@@ -350,10 +372,17 @@ def audit(root: Path) -> tuple[list[str], int]:
         for label, count, values in required:
             if count != 1 or not any(value.strip() for value in values):
                 errors.append(f"{relative}: expected one non-empty {label} (found {count})")
-        for key in SOCIAL_PROPERTIES + ("twitter:card",):
+        for key in SOCIAL_PROPERTIES + TWITTER_PROPERTIES:
             values = parser.social[key]
             if len(values) != 1 or not any(value.strip() for value in values):
                 errors.append(f"{relative}: expected one non-empty {key} (found {len(values)})")
+        if parser.social["og:type"] != ["website"]:
+            errors.append(f"{relative}: og:type must be website")
+        photo_match = re.search(r"--page-photo:\s*url\(([^)]+)\)", texts[path], re.IGNORECASE)
+        if photo_match:
+            expected_photo = photo_match.group(1).strip("\"'")
+            if expected_photo not in parser.preloads:
+                errors.append(f"{relative}: above-fold page photo is not preloaded")
 
     errors.extend(check_links(root, texts, parsers))
     errors.extend(check_sitemap(root, texts))

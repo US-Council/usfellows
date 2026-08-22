@@ -1,5 +1,6 @@
 (function () {
   "use strict";
+  setTimeout(function () {
   var form = document.getElementById("fellowship-application");
   if (!form) return;
   var steps = Array.prototype.slice.call(form.querySelectorAll(".form-step")),
@@ -87,10 +88,12 @@
     );
     if (current === steps.length - 1) buildReview();
     if (focus !== false) steps[current].querySelector("legend").focus();
-    window.scrollTo({
-      top: document.querySelector(".application-shell").offsetTop - 100,
-      behavior: "smooth",
-    });
+    if (focus !== false) {
+      window.scrollTo({
+        top: document.querySelector(".application-shell").offsetTop - 100,
+        behavior: "smooth",
+      });
+    }
   }
   function errorFor(el) {
     return document.getElementById(el.id + "-error");
@@ -320,4 +323,5 @@
   } catch (e) {}
   updateScholarFields();
   show(current, false);
+  }, 0);
 })();
