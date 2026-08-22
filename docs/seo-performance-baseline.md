@@ -19,12 +19,13 @@ the source tree and the exact Pages artifact before deployment.
 
 ## Analytics decision
 
-No client-side analytics, advertising pixels, or third-party tracking scripts
-are shipped. This is intentional: the public site is informational and has no
-need to collect behavioral data for the release. Operational host/security logs
-remain outside the public page bundle. If measurement needs change, a separate
-privacy review and documented consent/retention decision is required before a
-tracker is added.
+No first-party analytics, advertising pixels, or third-party tracking scripts
+are shipped in this repository. Cloudflare currently adds its managed
+`/cdn-cgi/rum` edge beacon to the live property; this is the selected
+privacy-oriented measurement option for aggregate reliability/performance
+signals and is explicitly allowlisted by the QA harness. The site does not add
+an application-level analytics SDK. If the edge setting or measurement purpose
+changes, the privacy notice and release record must be updated.
 
 ## Core Web Vitals evidence
 
@@ -33,14 +34,14 @@ representative Chromium mobile run. The 2026-08-22 local release run measured:
 
 | Route | LCP | CLS | INP observation |
 | --- | ---: | ---: | ---: |
-| `/` | 472 ms | 0.000 | 96 ms |
-| `/mission.html` | 200 ms | 0.000 | no interaction observed |
-| `/fellowships.html` | 188 ms | 0.000 | no interaction observed |
-| `/scholars.html` | 124 ms | 0.000 | no interaction observed |
-| `/international-rd-scholars.html` | 144 ms | 0.000 | no interaction observed |
-| `/host-institutions.html` | 208 ms | 0.000 | no interaction observed |
-| `/journal.html` | 144 ms | 0.000 | no interaction observed |
-| `/apply.html` | 116 ms | 0.000 | 40 ms |
+| `/` | 224 ms | 0.000 | 32 ms |
+| `/mission.html` | 180 ms | 0.000 | no interaction observed |
+| `/fellowships.html` | 116 ms | 0.000 | no interaction observed |
+| `/scholars.html` | 152 ms | 0.000 | no interaction observed |
+| `/international-rd-scholars.html` | 156 ms | 0.000 | no interaction observed |
+| `/host-institutions.html` | 176 ms | 0.000 | no interaction observed |
+| `/journal.html` | 140 ms | 0.000 | no interaction observed |
+| `/apply.html` | 144 ms | 0.000 | 40 ms |
 
 These are real browser measurements on the release artifact, not fabricated
 field data. INP is reported only when the browser observes an interaction;
@@ -55,4 +56,5 @@ BASE_URL=https://usfellows.org/ node scripts/public-site-qa.mjs
 ```
 
 The GitHub Actions workflow runs the static audit and this HTTPS browser matrix
-after every successful Pages deployment.
+after every successful Pages deployment. Any non-read-only request other than
+the exact Cloudflare-managed RUM endpoint fails the gate.

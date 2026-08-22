@@ -46,6 +46,13 @@ function canonicalRoute(route) {
   return new URL(route, EXPECTED_CANONICAL_ORIGIN).href;
 }
 
+function isManagedCloudflareRum(requestEvent) {
+  const url = new URL(requestEvent.url());
+  return requestEvent.method() === "POST" &&
+    url.origin === BASE_URL.origin &&
+    url.pathname === "/cdn-cgi/rum";
+}
+
 async function installVitals(context) {
   await context.addInitScript(() => {
     const vitals = { lcp: 0, cls: 0, inp: 0 };
@@ -152,7 +159,9 @@ async function runBrowser(name, browserType, options, routes, runMobileFlow) {
         if (failedUrl.origin === BASE_URL.origin) pageFailures.push(`requestfailed: ${requestEvent.url()} (${requestEvent.failure()?.errorText || "unknown"})`);
       });
       page.on("request", (requestEvent) => {
-        if (!["GET", "HEAD"].includes(requestEvent.method())) pageFailures.push(`non-read-only request: ${requestEvent.method()} ${requestEvent.url()}`);
+        if (!["GET", "HEAD"].includes(requestEvent.method()) && !isManagedCloudflareRum(requestEvent)) {
+          pageFailures.push(`non-read-only request: ${requestEvent.method()} ${requestEvent.url()}`);
+        }
       });
 
       try {
