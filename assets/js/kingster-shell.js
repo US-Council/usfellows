@@ -1,5 +1,6 @@
 (function () {
   "use strict";
+  setTimeout(function () {
   var page = document.body.dataset.page || "";
   var menus = [
     [
@@ -176,6 +177,16 @@
     footer.innerHTML =
       '<footer class="site-footer"><div class="footer-main"><div class="container footer-grid"><div class="footer-brand"><a class="brand" href="index.html"><span class="brand__seal" aria-hidden="true" style="color:#fff">US</span><span class="brand__name" style="color:#fff">US Fellows</span></a><p style="margin-top:22px">A national civic fellowship society connecting exceptional people to humanity-scale missions.</p></div><div><h2 class="footer-title">US Fellows</h2><ul class="footer-links"><li><a href="mission.html">Mission</a></li><li><a href="fellowships.html">Fellowships</a></li><li><a href="scholars.html">R&amp;D Scholars</a></li><li><a href="missions.html">Missions</a></li></ul></div><div><h2 class="footer-title">Participate</h2><ul class="footer-links"><li><a href="become-a-fellow.html">Become a Fellow</a></li><li><a href="apply.html?program=International%20R%26D%20Scholar">Become a Scholar</a></li><li><a href="become-a-host.html">Host a Fellow</a></li><li><a href="scholars-network.html">Scholars Network</a></li></ul></div><div><h2 class="footer-title">Explore</h2><ul class="footer-links"><li><a href="journal.html">Journal</a></li><li><a href="governance-stewardship.html">Governance</a></li><li><a href="our-mission.html">Public-Benefit Commitment</a></li><li><a href="institutional-briefings.html">Institutional Briefings</a></li></ul></div><div><h2 class="footer-title">Apply</h2><ul class="footer-links"><li><a href="apply.html">Fellow or Scholar Application</a></li><li><a href="become-a-host.html">Host Institution</a></li><li><a href="submit-opportunity.html">Mission Opportunity</a></li><li><a href="host-institutions.html">Partner with Us</a></li></ul></div></div></div><div class="footer-bottom"><div class="container footer-bottom__line"><span>&copy; <span data-year></span> US Fellows. All rights reserved.</span><span class="footer-separator" aria-hidden="true">&bull;</span><span class="owner-mark">A national civic fellowship society owned and stewarded by US Council.</span><span class="footer-separator" aria-hidden="true">&bull;</span><a href="terms-of-service.html">Terms of Service</a><span class="footer-separator" aria-hidden="true">&bull;</span><a href="privacy-policy.html">Privacy Policy</a></div></div></footer>';
   }
+  if (footer) {
+    var footerBrand = footer.querySelector(".footer-brand");
+    if (footerBrand) {
+      var disclaimer = document.createElement("p");
+      disclaimer.className = "footer-disclaimer";
+      disclaimer.innerHTML =
+        'Public website information is general and is not legal, financial, medical, academic, career, or other professional advice. See the <a href="terms-of-service.html">Terms of Service</a>.';
+      footerBrand.appendChild(disclaimer);
+    }
+  }
   document.querySelectorAll("[data-year]").forEach(function (el) {
     el.textContent = new Date().getFullYear();
   });
@@ -267,4 +278,5 @@
       window.scrollTo(0, 0);
     });
   }
+  }, 0);
 })();

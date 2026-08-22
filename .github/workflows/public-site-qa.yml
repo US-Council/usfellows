@@ -1,0 +1,44 @@
+name: Public site browser QA
+
+on:
+  workflow_run:
+    workflows:
+      - Deploy static site to GitHub Pages
+    types:
+      - completed
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: public-site-qa
+  cancel-in-progress: false
+
+jobs:
+  browser-qa:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: 24
+
+      - name: Install pinned Playwright runner
+        run: npm install --no-save --no-package-lock playwright@1.61.1
+
+      - name: Install browser engines
+        run: npx playwright install --with-deps chromium firefox webkit
+
+      - name: Run static artifact audit
+        run: python3 scripts/public-site-audit.py --root .
+
+      - name: Run read-only browser matrix
+        env:
+          BASE_URL: https://usfellows.org/
+        run: node scripts/public-site-qa.mjs
