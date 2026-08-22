@@ -5,6 +5,11 @@
         "connectionId": "/subscriptions/REPLACE/resourceGroups/REPLACE/providers/Microsoft.Web/connections/dynamicscrmonline",
         "connectionName": "dynamicscrmonline",
         "id": "/subscriptions/REPLACE/providers/Microsoft.Web/locations/eastus/managedApis/dynamicscrmonline"
+      },
+      "office365": {
+        "connectionId": "/subscriptions/REPLACE/resourceGroups/REPLACE/providers/Microsoft.Web/connections/office365-2",
+        "connectionName": "office365-2",
+        "id": "/subscriptions/REPLACE/providers/Microsoft.Web/locations/eastus/managedApis/office365"
       }
     }
   },

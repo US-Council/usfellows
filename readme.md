@@ -11,6 +11,14 @@ US Fellows honors and connects exceptional people across disciplines to humanity
 | `index.html` | Institutional homepage and primary overview |
 | `mission.html` | Mission, vision, standard, public-benefit commitment, and governance |
 | `fellowships.html` | Fellowship programs, appointment model, and specialized tracks |
+| `scholars.html` | Five R&D Scholar designations, standards, standing, and program boundaries |
+| `international-rd-scholars.html` | International Scholar thesis, outreach, network, and opportunity guide |
+| `resident-rd-scholar.html` | Structured 20-hour Resident curriculum, applied work, mentorship, and completion standard |
+| `trusted-rd-scholar.html` | Trusted eligibility, national-mission responsibilities, security boundaries, and standing |
+| `principal-rd-scholar.html` | Principal-level funding, team, sponsor, risk, delivery, and mentorship leadership |
+| `distinguished-rd-scholar.html` | Distinguished record, national impact, stewardship, review, and emeritus standing |
+| `scholar-standards.html` | Shared selection, integrity, security, publication, service, title-use, and standing rules |
+| `scholars-network.html` | Cross-level Scholar community and responsible collaboration protocol |
 | `society.html` | Society life, code of service, and Fellowship Oath |
 | `host-institutions.html` | Host eligibility, standards, and appointment model |
 | `missions.html` | Ten humanity-scale mission areas |
@@ -18,52 +26,36 @@ US Fellows honors and connects exceptional people across disciplines to humanity
 | `journal.html` | Journal scope, publication categories, and editorial standard |
 | `apply.html` | Participation routes for Fellows, hosts, nominators, advisors, and partners |
 
-Every dropdown destination in the primary navigation is a standalone HTML document. The application page is a five-step accessible wizard with local draft persistence and Azure Logic App submission.
+Every dropdown destination in the primary navigation is a standalone HTML document. The application page is a five-step accessible wizard with local draft persistence, designation-specific Scholar fields, and Azure Logic App submission.
 
 Legacy paths (`journey.html`, `pathways.html`, `doorways.html`, and `partners.html`) are retained only as redirects.
 
 ## Technology
 
-- Astro 7 static-site framework with strict TypeScript
-- Reusable layouts and components in `src/layouts/` and `src/components/`
-- Page sources in `src/pages/`; the build preserves all established `.html` URLs
-- Shared visual system in `src/styles/global.css`
-- Bundled interaction and application modules in `src/scripts/`
-- Self-hosted Cormorant Garamond and Source Sans 3 through Fontsource
-- Tree-shaken Lucide SVG icons through `@lucide/astro`
-- Generated XML sitemap through `@astrojs/sitemap`
-- Azure/Dynamics intake infrastructure in `infrastructure/logicapps/us-fellows-intake/`
-- Static output compatible with GitHub Pages and other static hosts
+- Plain HTML, CSS, and dependency-free JavaScript
+- No framework, package manager, server-side code, or build step
+- GitHub Pages-compatible relative links
+- Shared navigation/footer and interaction behavior in `assets/js/kingster-shell.js`
+- Shared visual system in `assets/css/site.css`
+- Application behavior in `assets/js/application.js`
+- Scholar communication source and delivery rules in `communications/SCHOLAR-COMMUNICATIONS.md`
+- Azure/Dynamics intake and opt-in International Scholar email infrastructure in `infrastructure/logicapps/us-fellows-intake/`
+- Licensed Kingster template used as the structural reference for the top bar, institutional header, dropdown navigation, hero, and homepage content rhythm
 
 ## Local preview
 
-Requires Node.js 24 or newer.
-
 ```sh
-npm install
-npm run dev
+python3 -m http.server 8000
 ```
 
-Open `http://localhost:4321`.
+Open `http://localhost:8000`.
 
 ## Content source of truth
 
 `NOTES.md` defines the approved organization narrative, navigation, programs, missions, standards, and calls to action. New copy must remain consistent with it. Do not restore the retired immigration/visa-placement narrative from repository history.
 
-Edit page content in `src/pages/`, shared shell content in `src/components/`, and navigation data in `src/data/navigation.ts`.
-
-## Verification
-
-```sh
-npm run validate
-npm run preview
-npm run smoke
-```
-
-`validate` compiles the site and checks all 50 routes, metadata, internal links, and deployment assets. `smoke` checks representative pages at desktop and mobile widths against a running preview server.
+The long-form sections on the 35 destination pages are maintained in `scripts/expand_pages.py`. After changing that content model, run `python3 scripts/expand_pages.py` from the repository root to regenerate the static HTML. The deployed site still has no build-time dependency.
 
 ## Deployment
 
-The production build is written to `dist/`. `.github/workflows/deploy.yml` uses Astro's official GitHub Pages action when `main` or `gh-pages` is pushed. GitHub Pages must use **GitHub Actions** as its publishing source, and the custom domain remains `usfellows.org`.
-
-Files copied directly to the build, including `CNAME`, `.nojekyll`, `robots.txt`, visual-sitemap artifacts, and public images, live in `public/`.
+The repository is designed for static deployment from its root. `CNAME`, `robots.txt`, and `sitemap.xml` contain the domain and crawler configuration.

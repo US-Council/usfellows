@@ -1,3 +1,12 @@
-node_modules/
+# Private ChatGPT history export; keep it local.
+/US-Fellows-Scholars-Program.chat.json
+
+# Build artifacts
 dist/
+
+# Dependencies
+node_modules/
+
+# Framework caches
 .astro/
+.deepseek/

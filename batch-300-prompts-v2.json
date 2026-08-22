@@ -1,0 +1,1602 @@
+[
+  {
+    "prompt": "A white experienced professional 50-65 person, looking confidently at camera, in a public library reading area, nonprofit mission-driven team planning outreach strategy. No text, no writing, no signage anywhere in the scene. documentary photography style, soft natural light, warm tones, candid moment.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A black south african young professional 25-30 person, working intently on a task, in a sunlit modern office with plants, fellowship alumni networking at a professional reception. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A northern european early career 22-28 person, engaged in conversation with colleague, in a public library reading area, research collaborators discussing results over coffee. No text, no writing, no signage anywhere in the scene. lifestyle photography style, golden hour lighting, authentic, warm, inviting.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A northern european professional, early career 22-28, focused on a computer screen, seen from side, in a coffee shop with warm interior lighting, neighbors working together in a community garden. No text, no writing, no signage anywhere in the scene. editorial photography style, natural window light, rich colors, professional atmosphere.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A early career 22-28 person, profile view, in a outdoor field research site in nature, program evaluator reviewing assessment data with team. No text, no writing, no signage anywhere in the scene. editorial photography style, natural window light, rich colors, professional atmosphere.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A brazilian young professional 25-30 adult, smiling warmly at camera, in a nonprofit office with warm decor, college prep advisor meeting with high school students. No text, no writing, no signage anywhere in the scene. photojournalism style, natural light, honest moment, warm skin tones, depth of field.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A white american experienced professional 50-65 person, gesturing while speaking to a group, in a busy urban plaza with fountains, international development team planning a field mission. No text, no writing, no signage anywhere in the scene. editorial photography style, natural window light, rich colors, professional atmosphere.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A mid-career professional 35-45 person, looking upward thoughtfully, in a city rooftop garden with skyline view, executive director facilitating a strategic planning session. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A african experienced professional 50-65 individual, working intently on a task, in a nonprofit office with warm decor, public servant assisting a citizen at a government counter. No text, no writing, no signage anywhere in the scene. editorial photography style, natural window light, rich colors, professional atmosphere.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A middle eastern young professional 25-30 individual, focused on a computer screen, seen from side, in a busy urban plaza with fountains, social enterprise founders brainstorming in a co-working space. No text, no writing, no signage anywhere in the scene. documentary photography style, soft natural light, warm tones, candid moment.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A mediterranean experienced professional 50-65 person, working intently on a task, in a museum gallery with soft lighting, social impact team reviewing program metrics together. No text, no writing, no signage anywhere in the scene. documentary photography style, soft natural light, warm tones, candid moment.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A middle eastern professional, young professional 25-30, laughing with eyes crinkling, in a coffee shop with warm interior lighting, fellow working at a host institution desk with natural light. No text, no writing, no signage anywhere in the scene. lifestyle photography style, golden hour lighting, authentic, warm, inviting.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A south asian early career 22-28 individual, looking upward thoughtfully, in a school playground with children, scientist examining samples under a microscope in a lab. No text, no writing, no signage anywhere in the scene. lifestyle photography style, golden hour lighting, authentic, warm, inviting.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A experienced professional 50-65 person, gesturing while speaking to a group, in a farm or agricultural field, residents participating in a neighborhood cleanup. No text, no writing, no signage anywhere in the scene. lifestyle photography style, golden hour lighting, authentic, warm, inviting.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A northern european mid-career professional 35-45 person, mid-laugh during casual conversation, in a collaborative classroom with whiteboard, site visit to a funded project in a rural area. No text, no writing, no signage anywhere in the scene. photojournalism style, natural light, honest moment, warm skin tones, depth of field.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A european mid-career professional 35-45 adult, three-quarter view facing camera, in a technology makerspace with tools, teacher helping a student with a challenging assignment. No text, no writing, no signage anywhere in the scene. photojournalism style, natural light, honest moment, warm skin tones, depth of field.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A northern european professional, young professional 25-30, smiling warmly at camera, in a outdoor field research site in nature, international fellows in a roundtable discussion. No text, no writing, no signage anywhere in the scene. photojournalism style, natural light, honest moment, warm skin tones, depth of field.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A white american professional, early career 22-28, smiling warmly at camera, in a urban community center gathering space, executive director facilitating a strategic planning session. No text, no writing, no signage anywhere in the scene. lifestyle photography style, golden hour lighting, authentic, warm, inviting.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A mid-career professional 35-45 person, nodding while listening to a speaker, in a neighborhood street in late afternoon, legal aid attorney reviewing documents with a client. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A black south african mid-career professional 35-45 person, laughing with eyes crinkling, in a collaborative classroom with whiteboard, social enterprise founders brainstorming in a co-working space. No text, no writing, no signage anywhere in the scene. editorial photography style, natural window light, rich colors, professional atmosphere.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A early career 22-28 person, mid-laugh during casual conversation, in a sunlit modern office with plants, civic leaders gathered around a mission statement on wall. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A young professional 25-30 person, engaged in conversation with colleague, in a public library reading area, fellow and mentor having a mentoring conversation in an office. No text, no writing, no signage anywhere in the scene. photojournalism style, natural light, honest moment, warm skin tones, depth of field.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A south asian early career 22-28 adult, focused on a computer screen, seen from side, in a community health center clinic room, research team analyzing data on a shared monitor. No text, no writing, no signage anywhere in the scene. photojournalism style, natural light, honest moment, warm skin tones, depth of field.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A middle eastern experienced professional 50-65 individual, three-quarter view facing camera, in a neighborhood street in late afternoon, residents participating in a neighborhood cleanup. No text, no writing, no signage anywhere in the scene. photojournalism style, natural light, honest moment, warm skin tones, depth of field.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A middle eastern experienced professional 50-65 individual, working intently on a task, in a nonprofit office with warm decor, impact report presentation in a conference room. No text, no writing, no signage anywhere in the scene. photojournalism style, natural light, honest moment, warm skin tones, depth of field.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A middle eastern young professional 25-30 person, mid-laugh during casual conversation, in a farm or agricultural field, teacher helping a student with a challenging assignment. No text, no writing, no signage anywhere in the scene. photojournalism style, natural light, honest moment, warm skin tones, depth of field.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A young professional 25-30 person, focused on a computer screen, seen from side, in a public library reading area, international development team planning a field mission. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A south asian mid-career professional 35-45 adult, profile view, in a rural landscape at golden hour, board of directors meeting in a nonprofit boardroom. No text, no writing, no signage anywhere in the scene. lifestyle photography style, golden hour lighting, authentic, warm, inviting.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A indigenous early career 22-28 adult, nodding while listening to a speaker, in a technology makerspace with tools, volunteer coordinator training new volunteers. No text, no writing, no signage anywhere in the scene. documentary photography style, soft natural light, warm tones, candid moment.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A indigenous early career 22-28 person, working intently on a task, in a nonprofit office with warm decor, social enterprise founders brainstorming in a co-working space. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A black south african experienced professional 50-65 adult, working intently on a task, in a outdoor field research site in nature, nonprofit mission-driven team planning outreach strategy. No text, no writing, no signage anywhere in the scene. documentary photography style, soft natural light, warm tones, candid moment.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A brazilian mid-career professional 35-45 person, working intently on a task, in a rural landscape at golden hour, fellow working at a host institution desk with natural light. No text, no writing, no signage anywhere in the scene. lifestyle photography style, golden hour lighting, authentic, warm, inviting.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A young professional 25-30 person, nodding while listening to a speaker, in a university laboratory with equipment, graduate student reviewing literature in a university library. No text, no writing, no signage anywhere in the scene. photojournalism style, natural light, honest moment, warm skin tones, depth of field.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A middle eastern mid-career professional 35-45 adult, turning to address someone off-frame, in a urban community center gathering space, community center staff welcoming residents to a program. No text, no writing, no signage anywhere in the scene. lifestyle photography style, golden hour lighting, authentic, warm, inviting.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A northern european early career 22-28 adult, three-quarter view facing camera, in a sunlit modern office with plants, program evaluator reviewing assessment data with team. No text, no writing, no signage anywhere in the scene. lifestyle photography style, golden hour lighting, authentic, warm, inviting.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A black early career 22-28 person, working intently on a task, in a collaborative classroom with whiteboard, STEM workshop with participants building a prototype. No text, no writing, no signage anywhere in the scene. documentary photography style, soft natural light, warm tones, candid moment.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A mediterranean young professional 25-30 individual, looking confidently at camera, in a farm or agricultural field, global health workers consulting in a remote clinic. No text, no writing, no signage anywhere in the scene. lifestyle photography style, golden hour lighting, authentic, warm, inviting.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A indigenous young professional 25-30 individual, gesturing while speaking to a group, in a urban community center gathering space, executive director facilitating a strategic planning session. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A white mid-career professional 35-45 adult, profile view, in a farm or agricultural field, social worker meeting with a family in their home. No text, no writing, no signage anywhere in the scene. photojournalism style, natural light, honest moment, warm skin tones, depth of field.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A african experienced professional 50-65 individual, in a team huddle discussion, in a rural landscape at golden hour, innovation lab team reviewing user feedback data. No text, no writing, no signage anywhere in the scene. documentary photography style, soft natural light, warm tones, candid moment.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A northern european mid-career professional 35-45 person, working intently on a task, in a city rooftop garden with skyline view, community organizers discussing neighborhood improvement. No text, no writing, no signage anywhere in the scene. lifestyle photography style, golden hour lighting, authentic, warm, inviting.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A latinx young professional 25-30 individual, reading a document thoughtfully, in a community health center clinic room, fellowship cohort during orientation in a bright seminar room. No text, no writing, no signage anywhere in the scene. photojournalism style, natural light, honest moment, warm skin tones, depth of field.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A russian professional, young professional 25-30, turning to address someone off-frame, in a public library reading area, field researcher collecting environmental samples outdoors. No text, no writing, no signage anywhere in the scene. editorial photography style, natural window light, rich colors, professional atmosphere.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A young professional 25-30 person, nodding while listening to a speaker, in a museum gallery with soft lighting, residents participating in a neighborhood cleanup. No text, no writing, no signage anywhere in the scene. editorial photography style, natural window light, rich colors, professional atmosphere.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A mid-career professional 35-45 person, turning to address someone off-frame, in a rural landscape at golden hour, program evaluator reviewing assessment data with team. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A african experienced professional 50-65 individual, three-quarter view facing camera, in a city rooftop garden with skyline view, college prep advisor meeting with high school students. No text, no writing, no signage anywhere in the scene. photojournalism style, natural light, honest moment, warm skin tones, depth of field.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A european professional, early career 22-28, gesturing while speaking to a group, in a rural landscape at golden hour, global health workers consulting in a remote clinic. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A russian experienced professional 50-65 adult, looking confidently at camera, in a collaborative classroom with whiteboard, executive director facilitating a strategic planning session. No text, no writing, no signage anywhere in the scene. editorial photography style, natural window light, rich colors, professional atmosphere.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A mediterranean professional, young professional 25-30, looking confidently at camera, in a community health center clinic room, legal aid attorney reviewing documents with a client. No text, no writing, no signage anywhere in the scene. documentary photography style, soft natural light, warm tones, candid moment.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A african mid-career professional 35-45 person, gesturing while speaking to a group, in a technology makerspace with tools, innovation lab team reviewing user feedback data. No text, no writing, no signage anywhere in the scene. documentary photography style, soft natural light, warm tones, candid moment.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A brazilian mid-career professional 35-45 adult, engaged in conversation with colleague, in a outdoor field research site in nature, community organizers discussing neighborhood improvement. No text, no writing, no signage anywhere in the scene. editorial photography style, natural window light, rich colors, professional atmosphere.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A mid-career professional 35-45 person, focused on a computer screen, seen from side, in a public library reading area, fellowship alumni networking at a professional reception. No text, no writing, no signage anywhere in the scene. documentary photography style, soft natural light, warm tones, candid moment.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A african early career 22-28 adult, turning to address someone off-frame, in a sunlit modern office with plants, scientist examining samples under a microscope in a lab. No text, no writing, no signage anywhere in the scene. documentary photography style, soft natural light, warm tones, candid moment.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A mid-career professional 35-45 person, smiling warmly at camera, in a outdoor field research site in nature, neighbors working together in a community garden. No text, no writing, no signage anywhere in the scene. lifestyle photography style, golden hour lighting, authentic, warm, inviting.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A northern european mid-career professional 35-45 individual, engaged in conversation with colleague, in a nonprofit office with warm decor, site visit to a funded project in a rural area. No text, no writing, no signage anywhere in the scene. editorial photography style, natural window light, rich colors, professional atmosphere.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A white professional, mid-career professional 35-45, looking confidently at camera, in a school playground with children, adult education class learning new skills together. No text, no writing, no signage anywhere in the scene. editorial photography style, natural window light, rich colors, professional atmosphere.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A early career 22-28 person, looking upward thoughtfully, in a museum gallery with soft lighting, global health workers consulting in a remote clinic. No text, no writing, no signage anywhere in the scene. editorial photography style, natural window light, rich colors, professional atmosphere.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A experienced professional 50-65 person, turning to address someone off-frame, in a urban community center gathering space, executive director facilitating a strategic planning session. No text, no writing, no signage anywhere in the scene. photojournalism style, natural light, honest moment, warm skin tones, depth of field.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A northern european professional, young professional 25-30, looking confidently at camera, in a busy urban plaza with fountains, healthcare provider consulting with a patient in a clinic. No text, no writing, no signage anywhere in the scene. lifestyle photography style, golden hour lighting, authentic, warm, inviting.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A black young professional 25-30 adult, in a team huddle discussion, in a school playground with children, engineers testing a clean energy prototype in a workshop. No text, no writing, no signage anywhere in the scene. photojournalism style, natural light, honest moment, warm skin tones, depth of field.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A indigenous professional, mid-career professional 35-45, gesturing while speaking to a group, in a government building conference room, nonprofit mission-driven team planning outreach strategy. No text, no writing, no signage anywhere in the scene. lifestyle photography style, golden hour lighting, authentic, warm, inviting.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A european professional, young professional 25-30, mid-laugh during casual conversation, in a city rooftop garden with skyline view, fellowship alumni networking at a professional reception. No text, no writing, no signage anywhere in the scene. photojournalism style, natural light, honest moment, warm skin tones, depth of field.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A indigenous experienced professional 50-65 adult, focused on a computer screen, seen from side, in a museum gallery with soft lighting, graduate student reviewing literature in a university library. No text, no writing, no signage anywhere in the scene. documentary photography style, soft natural light, warm tones, candid moment.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A experienced professional 50-65 person, in a team huddle discussion, in a school playground with children, neighbors working together in a community garden. No text, no writing, no signage anywhere in the scene. photojournalism style, natural light, honest moment, warm skin tones, depth of field.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A african mid-career professional 35-45 adult, smiling warmly at camera, in a technology makerspace with tools, impact report presentation in a conference room. No text, no writing, no signage anywhere in the scene. photojournalism style, natural light, honest moment, warm skin tones, depth of field.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A northern european mid-career professional 35-45 individual, reading a document thoughtfully, in a neighborhood street in late afternoon, literacy tutor reading with a child at a library. No text, no writing, no signage anywhere in the scene. lifestyle photography style, golden hour lighting, authentic, warm, inviting.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A middle eastern experienced professional 50-65 individual, smiling warmly at camera, in a community health center clinic room, international development team planning a field mission. No text, no writing, no signage anywhere in the scene. documentary photography style, soft natural light, warm tones, candid moment.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A northern european young professional 25-30 person, looking confidently at camera, in a public library reading area, emerging leader practicing a presentation to peers. No text, no writing, no signage anywhere in the scene. lifestyle photography style, golden hour lighting, authentic, warm, inviting.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A south asian mid-career professional 35-45 person, working intently on a task, in a school playground with children, social worker meeting with a family in their home. No text, no writing, no signage anywhere in the scene. lifestyle photography style, golden hour lighting, authentic, warm, inviting.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A early career 22-28 person, nodding while listening to a speaker, in a public library reading area, tech for good team prototyping a new application. No text, no writing, no signage anywhere in the scene. documentary photography style, soft natural light, warm tones, candid moment.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A young professional 25-30 person, reading a document thoughtfully, in a museum gallery with soft lighting, civic leaders gathered around a mission statement on wall. No text, no writing, no signage anywhere in the scene. documentary photography style, soft natural light, warm tones, candid moment.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A mid-career professional 35-45 person, reading a document thoughtfully, in a nonprofit office with warm decor, fellowship cohort during orientation in a bright seminar room. No text, no writing, no signage anywhere in the scene. photojournalism style, natural light, honest moment, warm skin tones, depth of field.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A brazilian early career 22-28 adult, mid-laugh during casual conversation, in a busy urban plaza with fountains, research collaborators discussing results over coffee. No text, no writing, no signage anywhere in the scene. photojournalism style, natural light, honest moment, warm skin tones, depth of field.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A mediterranean professional, early career 22-28, focused on a computer screen, seen from side, in a nonprofit office with warm decor, neighbors working together in a community garden. No text, no writing, no signage anywhere in the scene. editorial photography style, natural window light, rich colors, professional atmosphere.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A latinx mid-career professional 35-45 individual, reading a document thoughtfully, in a rural landscape at golden hour, success story interview being conducted in a home. No text, no writing, no signage anywhere in the scene. lifestyle photography style, golden hour lighting, authentic, warm, inviting.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A middle eastern experienced professional 50-65 adult, mid-laugh during casual conversation, in a museum gallery with soft lighting, STEM workshop with participants building a prototype. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A black south african mid-career professional 35-45 adult, focused on a computer screen, seen from side, in a community health center clinic room, cross-cultural exchange participants sharing experiences. No text, no writing, no signage anywhere in the scene. lifestyle photography style, golden hour lighting, authentic, warm, inviting.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A mid-career professional 35-45 person, looking confidently at camera, in a technology makerspace with tools, leadership coach mentoring a young professional. No text, no writing, no signage anywhere in the scene. lifestyle photography style, golden hour lighting, authentic, warm, inviting.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A african professional, young professional 25-30, focused on a computer screen, seen from side, in a farm or agricultural field, legal aid attorney reviewing documents with a client. No text, no writing, no signage anywhere in the scene. lifestyle photography style, golden hour lighting, authentic, warm, inviting.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A brazilian early career 22-28 individual, laughing with eyes crinkling, in a museum gallery with soft lighting, engineers testing a clean energy prototype in a workshop. No text, no writing, no signage anywhere in the scene. photojournalism style, natural light, honest moment, warm skin tones, depth of field.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A african experienced professional 50-65 adult, engaged in conversation with colleague, in a technology makerspace with tools, social impact team reviewing program metrics together. No text, no writing, no signage anywhere in the scene. lifestyle photography style, golden hour lighting, authentic, warm, inviting.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A brazilian early career 22-28 adult, three-quarter view facing camera, in a collaborative classroom with whiteboard, fellow presenting a project update to colleagues. No text, no writing, no signage anywhere in the scene. photojournalism style, natural light, honest moment, warm skin tones, depth of field.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A russian young professional 25-30 individual, in a team huddle discussion, in a community health center clinic room, research collaborators discussing results over coffee. No text, no writing, no signage anywhere in the scene. lifestyle photography style, golden hour lighting, authentic, warm, inviting.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A african early career 22-28 adult, smiling warmly at camera, in a coffee shop with warm interior lighting, community center staff welcoming residents to a program. No text, no writing, no signage anywhere in the scene. documentary photography style, soft natural light, warm tones, candid moment.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A white american early career 22-28 person, nodding while listening to a speaker, in a rural landscape at golden hour, impact report presentation in a conference room. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A young professional 25-30 person, engaged in conversation with colleague, in a university laboratory with equipment, STEM workshop with participants building a prototype. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A russian young professional 25-30 person, laughing with eyes crinkling, in a busy urban plaza with fountains, cross-cultural exchange participants sharing experiences. No text, no writing, no signage anywhere in the scene. documentary photography style, soft natural light, warm tones, candid moment.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A caribbean early career 22-28 person, engaged in conversation with colleague, in a rural landscape at golden hour, team lead guiding a collaborative brainstorming session. No text, no writing, no signage anywhere in the scene. editorial photography style, natural window light, rich colors, professional atmosphere.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A young professional 25-30 person, smiling warmly at camera, in a farm or agricultural field, volunteer coordinator training new volunteers. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A white american early career 22-28 individual, looking upward thoughtfully, in a school playground with children, innovation lab team reviewing user feedback data. No text, no writing, no signage anywhere in the scene. documentary photography style, soft natural light, warm tones, candid moment.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A caribbean experienced professional 50-65 person, focused on a computer screen, seen from side, in a busy urban plaza with fountains, nonprofit mission-driven team planning outreach strategy. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A african early career 22-28 person, gesturing while speaking to a group, in a government building conference room, fellow and mentor having a mentoring conversation in an office. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A early career 22-28 person, laughing with eyes crinkling, in a outdoor field research site in nature, graduate student reviewing literature in a university library. No text, no writing, no signage anywhere in the scene. lifestyle photography style, golden hour lighting, authentic, warm, inviting.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A indigenous professional, mid-career professional 35-45, focused on a computer screen, seen from side, in a technology makerspace with tools, community health fair with informational booths. No text, no writing, no signage anywhere in the scene. documentary photography style, soft natural light, warm tones, candid moment.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A early career 22-28 person, nodding while listening to a speaker, in a nonprofit office with warm decor, success story interview being conducted in a home. No text, no writing, no signage anywhere in the scene. lifestyle photography style, golden hour lighting, authentic, warm, inviting.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A russian experienced professional 50-65 individual, smiling warmly at camera, in a public library reading area, college prep advisor meeting with high school students. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A african early career 22-28 individual, in a team huddle discussion, in a coffee shop with warm interior lighting, translators working with community documents. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A caribbean professional, experienced professional 50-65, engaged in conversation with colleague, in a rural landscape at golden hour, leadership coach mentoring a young professional. No text, no writing, no signage anywhere in the scene. editorial photography style, natural window light, rich colors, professional atmosphere.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A russian mid-career professional 35-45 individual, looking confidently at camera, in a community health center clinic room, legal aid attorney reviewing documents with a client. No text, no writing, no signage anywhere in the scene. documentary photography style, soft natural light, warm tones, candid moment.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A middle eastern early career 22-28 adult, looking upward thoughtfully, in a nonprofit office with warm decor, engineers testing a clean energy prototype in a workshop. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A european professional, experienced professional 50-65, smiling warmly at camera, in a botanical garden greenhouse, volunteers assembling care packages for distribution. No text, no writing, no signage anywhere in the scene. photojournalism style, natural light, honest moment, warm skin tones, depth of field.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A white early career 22-28 individual, focused on a computer screen, seen from side, in a rural landscape at golden hour, fellow and mentor having a mentoring conversation in an office. No text, no writing, no signage anywhere in the scene. editorial photography style, natural window light, rich colors, professional atmosphere.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A latinx professional, mid-career professional 35-45, profile view, in a hospital corridor with natural light, field researcher collecting environmental samples outdoors. No text, no writing, no signage anywhere in the scene. documentary photography style, soft natural light, warm tones, candid moment.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A latinx mid-career professional 35-45 person, laughing with eyes crinkling, in a city rooftop garden with skyline view, community center staff welcoming residents to a program. No text, no writing, no signage anywhere in the scene. documentary photography style, soft natural light, warm tones, candid moment.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A white american experienced professional 50-65 individual, three-quarter view facing camera, in a university laboratory with equipment, success story interview being conducted in a home. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A russian professional, young professional 25-30, profile view, in a farm or agricultural field, literacy tutor reading with a child at a library. No text, no writing, no signage anywhere in the scene. editorial photography style, natural window light, rich colors, professional atmosphere.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A experienced professional 50-65 person, looking confidently at camera, in a botanical garden greenhouse, cross-cultural exchange participants sharing experiences. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A northern european professional, young professional 25-30, reading a document thoughtfully, in a farm or agricultural field, leadership coach mentoring a young professional. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A northern european young professional 25-30 individual, engaged in conversation with colleague, in a museum gallery with soft lighting, public servant assisting a citizen at a government counter. No text, no writing, no signage anywhere in the scene. lifestyle photography style, golden hour lighting, authentic, warm, inviting.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A early career 22-28 person, working intently on a task, in a nonprofit office with warm decor, innovation lab team reviewing user feedback data. No text, no writing, no signage anywhere in the scene. editorial photography style, natural window light, rich colors, professional atmosphere.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A young professional 25-30 person, smiling warmly at camera, in a busy urban plaza with fountains, social impact team reviewing program metrics together. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A south asian mid-career professional 35-45 person, looking upward thoughtfully, in a rural landscape at golden hour, fellow working at a host institution desk with natural light. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A black early career 22-28 individual, looking confidently at camera, in a nonprofit office with warm decor, scientist examining samples under a microscope in a lab. No text, no writing, no signage anywhere in the scene. photojournalism style, natural light, honest moment, warm skin tones, depth of field.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A brazilian professional, experienced professional 50-65, focused on a computer screen, seen from side, in a nonprofit office with warm decor, local leaders facilitating a town hall discussion. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A indigenous mid-career professional 35-45 individual, looking upward thoughtfully, in a technology makerspace with tools, success story interview being conducted in a home. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A latinx professional, mid-career professional 35-45, laughing with eyes crinkling, in a community health center clinic room, STEM workshop with participants building a prototype. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A early career 22-28 person, profile view, in a city rooftop garden with skyline view, translators working with community documents. No text, no writing, no signage anywhere in the scene. lifestyle photography style, golden hour lighting, authentic, warm, inviting.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A brazilian early career 22-28 adult, gesturing while speaking to a group, in a nonprofit office with warm decor, team lead guiding a collaborative brainstorming session. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A indigenous experienced professional 50-65 person, in a team huddle discussion, in a sunlit modern office with plants, healthcare provider consulting with a patient in a clinic. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A russian professional, young professional 25-30, in a team huddle discussion, in a urban community center gathering space, social enterprise founders brainstorming in a co-working space. No text, no writing, no signage anywhere in the scene. lifestyle photography style, golden hour lighting, authentic, warm, inviting.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A european professional, early career 22-28, in a team huddle discussion, in a botanical garden greenhouse, volunteers assembling care packages for distribution. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A russian professional, young professional 25-30, looking upward thoughtfully, in a urban community center gathering space, fellow and mentor having a mentoring conversation in an office. No text, no writing, no signage anywhere in the scene. editorial photography style, natural window light, rich colors, professional atmosphere.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A african young professional 25-30 person, laughing with eyes crinkling, in a nonprofit office with warm decor, graduate student reviewing literature in a university library. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A middle eastern professional, young professional 25-30, laughing with eyes crinkling, in a museum gallery with soft lighting, community health fair with informational booths. No text, no writing, no signage anywhere in the scene. lifestyle photography style, golden hour lighting, authentic, warm, inviting.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A black south african early career 22-28 individual, nodding while listening to a speaker, in a nonprofit office with warm decor, success story interview being conducted in a home. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A early career 22-28 person, reading a document thoughtfully, in a outdoor field research site in nature, STEM workshop with participants building a prototype. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A black south african mid-career professional 35-45 adult, nodding while listening to a speaker, in a urban community center gathering space, international fellows in a roundtable discussion. No text, no writing, no signage anywhere in the scene. editorial photography style, natural window light, rich colors, professional atmosphere.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A south asian young professional 25-30 adult, engaged in conversation with colleague, in a nonprofit office with warm decor, executive director facilitating a strategic planning session. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A experienced professional 50-65 person, gesturing while speaking to a group, in a technology makerspace with tools, healthcare provider consulting with a patient in a clinic. No text, no writing, no signage anywhere in the scene. lifestyle photography style, golden hour lighting, authentic, warm, inviting.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A mid-career professional 35-45 person, reading a document thoughtfully, in a school playground with children, design thinking workshop with sticky notes on wall. No text, no writing, no signage anywhere in the scene. documentary photography style, soft natural light, warm tones, candid moment.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A mediterranean mid-career professional 35-45 adult, focused on a computer screen, seen from side, in a community health center clinic room, civic leaders gathered around a mission statement on wall. No text, no writing, no signage anywhere in the scene. editorial photography style, natural window light, rich colors, professional atmosphere.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A mediterranean experienced professional 50-65 adult, turning to address someone off-frame, in a sunlit modern office with plants, fellow and mentor having a mentoring conversation in an office. No text, no writing, no signage anywhere in the scene. editorial photography style, natural window light, rich colors, professional atmosphere.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A black south african early career 22-28 adult, reading a document thoughtfully, in a government building conference room, scientist examining samples under a microscope in a lab. No text, no writing, no signage anywhere in the scene. editorial photography style, natural window light, rich colors, professional atmosphere.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A middle eastern experienced professional 50-65 adult, turning to address someone off-frame, in a hospital corridor with natural light, community health fair with informational booths. No text, no writing, no signage anywhere in the scene. documentary photography style, soft natural light, warm tones, candid moment.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A early career 22-28 person, mid-laugh during casual conversation, in a school playground with children, program evaluator reviewing assessment data with team. No text, no writing, no signage anywhere in the scene. lifestyle photography style, golden hour lighting, authentic, warm, inviting.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A young professional 25-30 person, reading a document thoughtfully, in a collaborative classroom with whiteboard, adult education class learning new skills together. No text, no writing, no signage anywhere in the scene. photojournalism style, natural light, honest moment, warm skin tones, depth of field.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A russian young professional 25-30 person, laughing with eyes crinkling, in a nonprofit office with warm decor, global health workers consulting in a remote clinic. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A latinx professional, mid-career professional 35-45, working intently on a task, in a community health center clinic room, emerging leader practicing a presentation to peers. No text, no writing, no signage anywhere in the scene. lifestyle photography style, golden hour lighting, authentic, warm, inviting.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A early career 22-28 person, focused on a computer screen, seen from side, in a community health center clinic room, legal aid attorney reviewing documents with a client. No text, no writing, no signage anywhere in the scene. editorial photography style, natural window light, rich colors, professional atmosphere.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A white experienced professional 50-65 individual, working intently on a task, in a botanical garden greenhouse, innovation lab team reviewing user feedback data. No text, no writing, no signage anywhere in the scene. photojournalism style, natural light, honest moment, warm skin tones, depth of field.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A white american young professional 25-30 person, engaged in conversation with colleague, in a technology makerspace with tools, community organizers discussing neighborhood improvement. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A black professional, experienced professional 50-65, three-quarter view facing camera, in a sunlit modern office with plants, new fellows meeting program staff on first day. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A caribbean early career 22-28 individual, mid-laugh during casual conversation, in a collaborative classroom with whiteboard, field researcher collecting environmental samples outdoors. No text, no writing, no signage anywhere in the scene. documentary photography style, soft natural light, warm tones, candid moment.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A middle eastern young professional 25-30 adult, three-quarter view facing camera, in a busy urban plaza with fountains, neighbors working together in a community garden. No text, no writing, no signage anywhere in the scene. lifestyle photography style, golden hour lighting, authentic, warm, inviting.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A indigenous mid-career professional 35-45 person, three-quarter view facing camera, in a nonprofit office with warm decor, success story interview being conducted in a home. No text, no writing, no signage anywhere in the scene. editorial photography style, natural window light, rich colors, professional atmosphere.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A african professional, experienced professional 50-65, turning to address someone off-frame, in a museum gallery with soft lighting, literacy tutor reading with a child at a library. No text, no writing, no signage anywhere in the scene. documentary photography style, soft natural light, warm tones, candid moment.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A european experienced professional 50-65 adult, focused on a computer screen, seen from side, in a nonprofit office with warm decor, translators working with community documents. No text, no writing, no signage anywhere in the scene. editorial photography style, natural window light, rich colors, professional atmosphere.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A white american professional, early career 22-28, engaged in conversation with colleague, in a farm or agricultural field, executive director facilitating a strategic planning session. No text, no writing, no signage anywhere in the scene. editorial photography style, natural window light, rich colors, professional atmosphere.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A indigenous early career 22-28 person, laughing with eyes crinkling, in a rural landscape at golden hour, public servant assisting a citizen at a government counter. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A african early career 22-28 individual, focused on a computer screen, seen from side, in a city rooftop garden with skyline view, innovation lab team reviewing user feedback data. No text, no writing, no signage anywhere in the scene. documentary photography style, soft natural light, warm tones, candid moment.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A experienced professional 50-65 person, in a team huddle discussion, in a collaborative classroom with whiteboard, volunteers assembling care packages for distribution. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A white american experienced professional 50-65 individual, looking confidently at camera, in a nonprofit office with warm decor, fellow presenting a project update to colleagues. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A south asian professional, experienced professional 50-65, turning to address someone off-frame, in a coffee shop with warm interior lighting, research team analyzing data on a shared monitor. No text, no writing, no signage anywhere in the scene. lifestyle photography style, golden hour lighting, authentic, warm, inviting.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A experienced professional 50-65 person, gesturing while speaking to a group, in a urban community center gathering space, residents participating in a neighborhood cleanup. No text, no writing, no signage anywhere in the scene. editorial photography style, natural window light, rich colors, professional atmosphere.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A white experienced professional 50-65 individual, nodding while listening to a speaker, in a coffee shop with warm interior lighting, site visit to a funded project in a rural area. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A european early career 22-28 person, laughing with eyes crinkling, in a museum gallery with soft lighting, adult education class learning new skills together. No text, no writing, no signage anywhere in the scene. editorial photography style, natural window light, rich colors, professional atmosphere.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A indigenous professional, young professional 25-30, gesturing while speaking to a group, in a nonprofit office with warm decor, global health workers consulting in a remote clinic. No text, no writing, no signage anywhere in the scene. editorial photography style, natural window light, rich colors, professional atmosphere.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A caribbean professional, experienced professional 50-65, working intently on a task, in a outdoor field research site in nature, team lead guiding a collaborative brainstorming session. No text, no writing, no signage anywhere in the scene. documentary photography style, soft natural light, warm tones, candid moment.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A white young professional 25-30 individual, engaged in conversation with colleague, in a nonprofit office with warm decor, legal aid attorney reviewing documents with a client. No text, no writing, no signage anywhere in the scene. editorial photography style, natural window light, rich colors, professional atmosphere.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A brazilian experienced professional 50-65 individual, looking confidently at camera, in a botanical garden greenhouse, tech for good team prototyping a new application. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A white american experienced professional 50-65 individual, reading a document thoughtfully, in a museum gallery with soft lighting, social impact team reviewing program metrics together. No text, no writing, no signage anywhere in the scene. lifestyle photography style, golden hour lighting, authentic, warm, inviting.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A latinx young professional 25-30 person, looking upward thoughtfully, in a botanical garden greenhouse, new fellows meeting program staff on first day. No text, no writing, no signage anywhere in the scene. photojournalism style, natural light, honest moment, warm skin tones, depth of field.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A early career 22-28 person, engaged in conversation with colleague, in a nonprofit office with warm decor, field researcher collecting environmental samples outdoors. No text, no writing, no signage anywhere in the scene. documentary photography style, soft natural light, warm tones, candid moment.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A latinx experienced professional 50-65 individual, looking upward thoughtfully, in a museum gallery with soft lighting, community center staff welcoming residents to a program. No text, no writing, no signage anywhere in the scene. editorial photography style, natural window light, rich colors, professional atmosphere.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A caribbean early career 22-28 person, laughing with eyes crinkling, in a community health center clinic room, program evaluator reviewing assessment data with team. No text, no writing, no signage anywhere in the scene. documentary photography style, soft natural light, warm tones, candid moment.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A middle eastern experienced professional 50-65 person, nodding while listening to a speaker, in a public library reading area, teacher helping a student with a challenging assignment. No text, no writing, no signage anywhere in the scene. documentary photography style, soft natural light, warm tones, candid moment.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A northern european mid-career professional 35-45 person, engaged in conversation with colleague, in a public library reading area, international fellows in a roundtable discussion. No text, no writing, no signage anywhere in the scene. editorial photography style, natural window light, rich colors, professional atmosphere.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A south asian mid-career professional 35-45 person, laughing with eyes crinkling, in a collaborative classroom with whiteboard, board of directors meeting in a nonprofit boardroom. No text, no writing, no signage anywhere in the scene. photojournalism style, natural light, honest moment, warm skin tones, depth of field.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A black young professional 25-30 individual, three-quarter view facing camera, in a government building conference room, public servant assisting a citizen at a government counter. No text, no writing, no signage anywhere in the scene. documentary photography style, soft natural light, warm tones, candid moment.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A white mid-career professional 35-45 adult, looking confidently at camera, in a technology makerspace with tools, social enterprise founders brainstorming in a co-working space. No text, no writing, no signage anywhere in the scene. photojournalism style, natural light, honest moment, warm skin tones, depth of field.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A black south african experienced professional 50-65 individual, nodding while listening to a speaker, in a neighborhood street in late afternoon, social impact team reviewing program metrics together. No text, no writing, no signage anywhere in the scene. photojournalism style, natural light, honest moment, warm skin tones, depth of field.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A russian experienced professional 50-65 adult, looking confidently at camera, in a nonprofit office with warm decor, fellowship alumni networking at a professional reception. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A white professional, young professional 25-30, looking upward thoughtfully, in a botanical garden greenhouse, graduate student reviewing literature in a university library. No text, no writing, no signage anywhere in the scene. lifestyle photography style, golden hour lighting, authentic, warm, inviting.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A caribbean professional, young professional 25-30, three-quarter view facing camera, in a collaborative classroom with whiteboard, residents participating in a neighborhood cleanup. No text, no writing, no signage anywhere in the scene. editorial photography style, natural window light, rich colors, professional atmosphere.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A white experienced professional 50-65 person, in a team huddle discussion, in a nonprofit office with warm decor, site visit to a funded project in a rural area. No text, no writing, no signage anywhere in the scene. photojournalism style, natural light, honest moment, warm skin tones, depth of field.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A mid-career professional 35-45 person, focused on a computer screen, seen from side, in a technology makerspace with tools, college prep advisor meeting with high school students. No text, no writing, no signage anywhere in the scene. lifestyle photography style, golden hour lighting, authentic, warm, inviting.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A african early career 22-28 adult, mid-laugh during casual conversation, in a school playground with children, translators working with community documents. No text, no writing, no signage anywhere in the scene. lifestyle photography style, golden hour lighting, authentic, warm, inviting.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A russian experienced professional 50-65 person, looking upward thoughtfully, in a government building conference room, board of directors meeting in a nonprofit boardroom. No text, no writing, no signage anywhere in the scene. documentary photography style, soft natural light, warm tones, candid moment.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A white american professional, young professional 25-30, laughing with eyes crinkling, in a community health center clinic room, public servant assisting a citizen at a government counter. No text, no writing, no signage anywhere in the scene. lifestyle photography style, golden hour lighting, authentic, warm, inviting.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A indigenous young professional 25-30 person, gesturing while speaking to a group, in a farm or agricultural field, design thinking workshop with sticky notes on wall. No text, no writing, no signage anywhere in the scene. photojournalism style, natural light, honest moment, warm skin tones, depth of field.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A african early career 22-28 person, mid-laugh during casual conversation, in a university laboratory with equipment, social impact team reviewing program metrics together. No text, no writing, no signage anywhere in the scene. editorial photography style, natural window light, rich colors, professional atmosphere.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A white professional, mid-career professional 35-45, gesturing while speaking to a group, in a collaborative classroom with whiteboard, fellowship alumni networking at a professional reception. No text, no writing, no signage anywhere in the scene. lifestyle photography style, golden hour lighting, authentic, warm, inviting.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A european young professional 25-30 person, mid-laugh during casual conversation, in a rural landscape at golden hour, research collaborators discussing results over coffee. No text, no writing, no signage anywhere in the scene. photojournalism style, natural light, honest moment, warm skin tones, depth of field.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A northern european professional, experienced professional 50-65, turning to address someone off-frame, in a sunlit modern office with plants, residents participating in a neighborhood cleanup. No text, no writing, no signage anywhere in the scene. documentary photography style, soft natural light, warm tones, candid moment.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A european young professional 25-30 person, mid-laugh during casual conversation, in a urban community center gathering space, impact report presentation in a conference room. No text, no writing, no signage anywhere in the scene. documentary photography style, soft natural light, warm tones, candid moment.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A european young professional 25-30 adult, focused on a computer screen, seen from side, in a community health center clinic room, adult education class learning new skills together. No text, no writing, no signage anywhere in the scene. photojournalism style, natural light, honest moment, warm skin tones, depth of field.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A caribbean experienced professional 50-65 person, three-quarter view facing camera, in a city rooftop garden with skyline view, global health workers consulting in a remote clinic. No text, no writing, no signage anywhere in the scene. editorial photography style, natural window light, rich colors, professional atmosphere.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A latinx mid-career professional 35-45 adult, three-quarter view facing camera, in a busy urban plaza with fountains, executive director facilitating a strategic planning session. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A black south african early career 22-28 person, reading a document thoughtfully, in a technology makerspace with tools, social worker meeting with a family in their home. No text, no writing, no signage anywhere in the scene. editorial photography style, natural window light, rich colors, professional atmosphere.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A indigenous professional, young professional 25-30, working intently on a task, in a city rooftop garden with skyline view, social enterprise founders brainstorming in a co-working space. No text, no writing, no signage anywhere in the scene. photojournalism style, natural light, honest moment, warm skin tones, depth of field.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A latinx early career 22-28 individual, engaged in conversation with colleague, in a busy urban plaza with fountains, nonprofit mission-driven team planning outreach strategy. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A russian experienced professional 50-65 adult, nodding while listening to a speaker, in a city rooftop garden with skyline view, fellow working at a host institution desk with natural light. No text, no writing, no signage anywhere in the scene. editorial photography style, natural window light, rich colors, professional atmosphere.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A mediterranean professional, early career 22-28, three-quarter view facing camera, in a museum gallery with soft lighting, scientist examining samples under a microscope in a lab. No text, no writing, no signage anywhere in the scene. documentary photography style, soft natural light, warm tones, candid moment.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A white professional, young professional 25-30, working intently on a task, in a technology makerspace with tools, community center staff welcoming residents to a program. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A black professional, early career 22-28, working intently on a task, in a technology makerspace with tools, success story interview being conducted in a home. No text, no writing, no signage anywhere in the scene. editorial photography style, natural window light, rich colors, professional atmosphere.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A white early career 22-28 individual, nodding while listening to a speaker, in a government building conference room, adult education class learning new skills together. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A latinx professional, early career 22-28, in a team huddle discussion, in a neighborhood street in late afternoon, translators working with community documents. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A black south african mid-career professional 35-45 individual, mid-laugh during casual conversation, in a community health center clinic room, emerging leader practicing a presentation to peers. No text, no writing, no signage anywhere in the scene. photojournalism style, natural light, honest moment, warm skin tones, depth of field.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A middle eastern mid-career professional 35-45 individual, mid-laugh during casual conversation, in a public library reading area, healthcare provider consulting with a patient in a clinic. No text, no writing, no signage anywhere in the scene. realistic photography style, natural lighting, professional, warm, editorial quality.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  },
+  {
+    "prompt": "A caribbean young professional 25-30 adult, three-quarter view facing camera, in a urban community center gathering space, innovation lab team reviewing user feedback data. No text, no writing, no signage anywhere in the scene. lifestyle photography style, golden hour lighting, authentic, warm, inviting.",
+    "params": {
+      "size": "1024x1024",
+      "steps": 8,
+      "negative_prompt": "Chinese people, East Asian faces, heads down, looking down, bowed heads, text, watermark, signature, logo, label, caption, writing, typography, words, letters, numbers, signage, calligraphy, subtitles, banner, heading, title, slogan, graffiti, poor quality, distorted faces, ugly, deformed, blurry, low resolution"
+    }
+  }
+]
