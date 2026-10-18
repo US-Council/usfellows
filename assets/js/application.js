@@ -86,7 +86,10 @@
       "aria-valuetext",
       "Page " + n + " of " + steps.length + ": " + name,
     );
-    if (current === steps.length - 1) buildReview();
+    if (current === steps.length - 1) {
+      buildReview();
+      loadRecaptcha();
+    }
     if (focus !== false) steps[current].querySelector("legend").focus();
     if (focus !== false) {
       window.scrollTo({
@@ -94,6 +97,36 @@
         behavior: "smooth",
       });
     }
+  }
+  // reCAPTCHA v3 loads only once the applicant reaches the review step, so
+  // browsing the site sends nothing to Google; the token is minted at submit.
+  function loadRecaptcha() {
+    var key = (window.US_FELLOWS_INTAKE || {}).recaptchaSiteKey;
+    if (!key || window.grecaptcha || document.querySelector("script[data-usf-recaptcha]")) return;
+    var s = document.createElement("script");
+    s.src = "https://www.google.com/recaptcha/api.js?render=" + encodeURIComponent(key);
+    s.async = true;
+    s.setAttribute("data-usf-recaptcha", "");
+    document.head.appendChild(s);
+  }
+  function recaptchaToken(cfg) {
+    loadRecaptcha();
+    return new Promise(function (resolve, reject) {
+      var waited = 0;
+      (function wait() {
+        if (window.grecaptcha && typeof window.grecaptcha.execute === "function") {
+          window.grecaptcha.ready(function () {
+            window.grecaptcha
+              .execute(cfg.recaptchaSiteKey, { action: cfg.recaptchaAction || "submit" })
+              .then(resolve, reject);
+          });
+        } else if ((waited += 100) > 15000) {
+          reject(new Error("reCAPTCHA did not load"));
+        } else {
+          setTimeout(wait, 100);
+        }
+      })();
+    });
   }
   function errorFor(el) {
     return document.getElementById(el.id + "-error");
@@ -275,7 +308,7 @@
       }, 300);
       return;
     }
-    if (!endpoint || endpoint.indexOf("__US_FELLOWS") === 0) {
+    if (!endpoint || endpoint.indexOf("__US_FELLOWS") === 0 || !cfg.recaptchaSiteKey || !cfg.formType) {
       setStatus(
         "The secure application endpoint has not been configured. Your draft remains saved in this browser.",
         "error",
@@ -283,7 +316,17 @@
       submit.disabled = false;
       return;
     }
-    fetch(endpoint, { method: "POST", body: payload })
+    recaptchaToken(cfg)
+      .then(function (token) {
+        payload.set("token", token);
+        payload.set("formType", cfg.formType);
+        return fetch(endpoint, {
+          method: "POST",
+          body: payload,
+          mode: "cors",
+          credentials: "omit",
+        });
+      })
       .then(function (res) {
         if (!res.ok) throw new Error("HTTP " + res.status);
         return res.json().catch(function () {

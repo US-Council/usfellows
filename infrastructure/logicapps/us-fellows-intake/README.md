@@ -11,7 +11,7 @@ The workflow follows the proven USIVA intake pattern while using a smaller US Fe
 - Authorized Dynamics CRM Online API connection
 - Authorized Office 365 Outlook API connection with an approved US Fellows sender
 - D365 organization name
-- Request-trigger CORS/access-control configuration for `https://usfellows.org`
+- Request-trigger caller allowlist restricted to formfunnel's outbound addresses (browsers never call the trigger)
 
 ## Deploy/update
 
@@ -41,7 +41,7 @@ The Office 365 connection uses delegated OAuth and must show `Connected` before 
 
 Supply values based on `parameters.example.json` through the deployment layer. The connector identity becomes the default owner of new applicant leads unless a dedicated US Fellows assignment rule is configured in Dynamics.
 
-After deployment, retrieve the `manual` trigger callback URL and configure `assets/js/intake-config.js`. This repository is a static site, so the callback is necessarily visible to browsers just as it is in the reference implementation. Treat it as a rotatable intake credential, retain server-side bot checks, and rotate it if abuse is detected.
+Browsers never see the trigger. `apply.html` posts to formfunnel (`https://door.taolearning.org/api/form`, `formType=usfellows`) behind Azure Front Door and its WAF. formfunnel verifies a reCAPTCHA v3 token against the usfellows.org-only key and forwards accepted applications, form-encoded, to this trigger. The callback URL lives only in Azure Key Vault `omlab-secrets/formfunnel-trigger-us-fellows` (see tao-ninja/formfunnel `deploy/README.md` for rotation). Never put a callback URL in this repository.
 
 ## D365 record model
 
