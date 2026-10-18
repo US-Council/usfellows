@@ -1,5 +1,13 @@
-/* Deployment replaces the endpoint placeholder with the US Fellows Logic App callback URL. */
+/*
+ * Applications go to formfunnel (reCAPTCHA v3 gate behind Azure Front Door and
+ * its WAF), which forwards accepted submissions to the US Fellows intake Logic
+ * App. No Logic App URL or other credential belongs in this file: the site
+ * key below is public, and its secret lives only server-side.
+ */
 window.US_FELLOWS_INTAKE = {
-  endpoint: "https://prod-51.eastus.logic.azure.com:443/workflows/033c99cc0f574c6b84b1d36a46130d56/triggers/manual/paths/invoke?api-version=2019-05-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=ppl3s7KAQUSwsTjkjd0W7Nyza8EqAALM6MHQUfGDi3w",
+  endpoint: "https://door.taolearning.org/api/form",
+  formType: "usfellows",
+  recaptchaSiteKey: "6LeI9_MtAAAAAP_VZ5ktV1QKgRHk62yOP49ujUM9",
+  recaptchaAction: "usfellows_application",
   testMode: false
 };
