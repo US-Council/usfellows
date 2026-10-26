@@ -89,6 +89,23 @@
       ],
     ],
     [
+      "record/index.html",
+      "Record Room",
+      [
+        ["record/index.html", "Company Facts"],
+        ["record/leadership.html", "Leadership"],
+        ["record/federal.html", "Federal Records"],
+        ["record/verify.html", "Source Register"],
+        ["record/files.html", "Documents"],
+        ["record/nav.html", "Site Map"],
+        ["record/metrics.html", "Content Inventory"],
+        ["record/ops.html", "Business Status"],
+        ["record/style.html", "Brand Guide"],
+        ["record/marketing.html", "Market Profile"],
+        ["record/journeys.html", "Decision Briefs"],
+      ],
+    ],
+    [
       "journal.html",
       "Journal",
       [
