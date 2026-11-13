@@ -2,7 +2,7 @@
 
 This is the static website for US Fellows, a national civic fellowship society owned and stewarded by US Council.
 
-Read `NOTES.md`, `readme.md`, and `agents.md` before making changes. `NOTES.md` is the authority for content and positioning.
+Read `NOTES.md`, `README.md`, and `agents.md` before making changes. `NOTES.md` is the authority for content and positioning.
 
 Key rules:
 

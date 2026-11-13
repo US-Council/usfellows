@@ -7,7 +7,7 @@ Maintain the official US Fellows website as a prestigious, credible national civ
 ## Source of truth
 
 1. Use `NOTES.md` for institutional facts, positioning, program names, mission areas, standards, and approved calls to action.
-2. Use `readme.md` for the current technical architecture.
+2. Use `README.md` for the current technical architecture.
 3. Treat old immigration, visa, unpaid-placement, and named partner copy as retired. Do not reintroduce it.
 
 ## Technical constraints

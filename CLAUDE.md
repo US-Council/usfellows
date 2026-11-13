@@ -7,14 +7,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Pure static site** — HTML, CSS, dependency-free JavaScript. No build step, no framework.
 - **Root is the published site root** — all `.html` files serve directly via GitHub Pages.
 - **Content generation** — `python3 scripts/expand_pages.py` regenerates editorial sections from NOTES.md content.
-- **Two remotes** — GitLab (`origin`, `git.developerdojo.org/US-Council/usfellows.git`) is primary; GitHub (`github`, `github.com/us-council/usfellows.git`) is mirror. Push to both.
-- **Form intake** — `apply.html` submits to an Azure Logic App (in `infrastructure/`) → Dynamics 365 Leads.
+- **Two remotes** — GitLab (`origin`, `git.developerdojo.org/US-Council/usfellows.git`) is primary; GitHub (`github.com/us-council/usfellows.git`) is a mirror kept by git-mirror-sync (infrastructure#521). Push to GitLab only.
+- **Form intake** — `apply.html` posts to formfunnel (`door.taolearning.org/api/form`, reCAPTCHA v3), which forwards accepted applications to the Azure Logic App (in `infrastructure/`) → Dynamics 365 Leads. The Logic App URL lives only in Key Vault; never put it in `assets/js/intake-config.js`.
 
 ## Commands
 
 - **Local preview:** `python3 -m http.server 8000` (run from repo root)
 - **Regenerate editorial content:** `python3 scripts/expand_pages.py` (run from repo root)
-- **Push to both remotes:** `git push origin main && git push github main`
+- **Publish:** merge to `main` on GitLab; the GitHub mirror's `deploy.yml` deploys to GitHub Pages
 
 ## Content Rules
 
@@ -38,5 +38,5 @@ Every page must have: one descriptive `h1`, skip navigation, keyboard-accessible
 ## Git Workflow
 
 - Commit early, commit often. Push after every commit.
-- Push to both origin (GitLab) and github (GitHub mirror).
-- No CI/CD pipeline — deployment is push-triggered.
+- Push to origin (GitLab); git-mirror-sync carries it to GitHub.
+- No GitLab CI pipeline — GitHub Actions on the mirror audit and deploy on push to `main`.
