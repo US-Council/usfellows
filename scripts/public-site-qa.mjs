@@ -25,6 +25,10 @@ const BROWSER_ROUTES = [
   "/apply.html",
 ];
 
+// Desktop widths swept for horizontal overflow on top of the 1440 runs (#5, after !13).
+const DESKTOP_OVERFLOW_WIDTHS = [1024, 1280, 1920];
+const DESKTOP_OVERFLOW_HEIGHT = 1000;
+
 const failures = [];
 const checks = [];
 const vitalSamples = [];
@@ -44,6 +48,10 @@ function routePath(value) {
 
 function canonicalRoute(route) {
   return new URL(route, EXPECTED_CANONICAL_ORIGIN).href;
+}
+
+function overflowMessage(name, route, state) {
+  return `${name} ${route}: horizontal overflow at ${state.viewport}px wide: scrollWidth ${state.width}px > ${state.viewport}px (+${state.width - state.viewport}px)`;
 }
 
 function isManagedCloudflareRum(requestEvent) {
@@ -178,7 +186,7 @@ async function runBrowser(name, browserType, options, routes, runMobileFlow) {
           missingAlt: [...document.images].filter((image) => !image.hasAttribute("alt")).length,
           bodyText: document.body.innerText,
         }));
-        if (options.isMobile) check(pageState.width <= pageState.viewport + 1, `${name} ${route}: horizontal overflow ${pageState.width}px > ${pageState.viewport}px`);
+        check(pageState.width <= pageState.viewport + 1, overflowMessage(name, route, pageState));
         check(pageState.missingAlt === 0, `${name} ${route}: image without alt text`);
         check(!FORBIDDEN_PUBLIC_TERMS.test(pageState.bodyText), `${name} ${route}: contains a retired or cross-company public term`);
 
@@ -205,7 +213,43 @@ async function runBrowser(name, browserType, options, routes, runMobileFlow) {
       for (const pageFailure of pageFailures) failures.push(`${name} ${route}: ${pageFailure}`);
       await page.close();
     }
-    checks.push(`${name}: ${routeSet.length} route(s)`);
+    checks.push(`${name}: ${routeSet.length} route(s) at ${options.viewport.width}px`);
+    await context.close();
+  } catch (error) {
+    failures.push(`${name}: browser setup failed: ${error.message}`);
+  } finally {
+    if (browser) await browser.close();
+  }
+}
+
+/* Loads each route once, resizes the viewport through every width and fails any width that scrolls sideways. */
+async function runOverflowSweep(name, browserType, routes, widths) {
+  let browser;
+  try {
+    browser = await browserType.launch({ headless: true });
+    const context = await browser.newContext({ viewport: { width: widths[0], height: DESKTOP_OVERFLOW_HEIGHT } });
+    for (const route of routes) {
+      const page = await context.newPage();
+      try {
+        await page.setViewportSize({ width: widths[0], height: DESKTOP_OVERFLOW_HEIGHT });
+        const response = await page.goto(absoluteUrl(route), { waitUntil: "load", timeout: TIMEOUT });
+        check(response?.status() === 200, `${name} ${route}: expected HTTP 200, got ${response?.status()}`);
+        for (const width of widths) {
+          await page.setViewportSize({ width, height: DESKTOP_OVERFLOW_HEIGHT });
+          await page.evaluate(() => new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+          const state = await page.evaluate(() => ({
+            width: document.documentElement.scrollWidth,
+            viewport: window.innerWidth,
+          }));
+          check(state.viewport === width, `${name} ${route}: viewport is ${state.viewport}px, expected ${width}px`);
+          check(state.width <= state.viewport + 1, overflowMessage(name, route, state));
+        }
+      } catch (error) {
+        failures.push(`${name} ${route}: ${error.message}`);
+      }
+      await page.close();
+    }
+    checks.push(`${name}: ${routes.length} route(s) at ${widths.join("/")}px`);
     await context.close();
   } catch (error) {
     failures.push(`${name}: browser setup failed: ${error.message}`);
@@ -230,6 +274,9 @@ async function main() {
     await runBrowser("webkit-desktop", webkit, desktop, BROWSER_ROUTES, false);
     await runBrowser("chromium-mobile", chromium, mobileDevice, BROWSER_ROUTES, true);
     await runBrowser("webkit-mobile", webkit, mobileDevice, BROWSER_ROUTES, true);
+    await runOverflowSweep("chromium-overflow", chromium, routes, DESKTOP_OVERFLOW_WIDTHS);
+    await runOverflowSweep("firefox-overflow", firefox, BROWSER_ROUTES, DESKTOP_OVERFLOW_WIDTHS);
+    await runOverflowSweep("webkit-overflow", webkit, BROWSER_ROUTES, DESKTOP_OVERFLOW_WIDTHS);
   } finally {
     await api.dispose();
   }
