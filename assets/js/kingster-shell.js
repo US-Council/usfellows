@@ -72,6 +72,7 @@
       [
         ["humanity-dignity.html", "Humanity & Dignity"],
         ["science-discovery.html", "Science & Discovery"],
+        ["robotics-biotechnology.html", "Robotics & Biotechnology"],
         ["planetary-stewardship.html", "Planetary Stewardship"],
         ["civic-life-public-trust.html", "Civic Life & Trust"],
         ["national-capacity-resilience.html", "National Capacity"],
