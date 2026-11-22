@@ -1,0 +1,47 @@
+# Static site (GitHub Pages, deployed by .github/workflows/deploy.yml); there is no build.
+# This pipeline only checks merge requests before they land (US-Council/usfellows#6):
+# the repo's own release gates, run against the MR's files instead of the live site,
+# plus full-page preview screenshots of every page the MR changes.
+workflow:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+
+# Static artifact audit: metadata, links, sitemap, forbidden public terms.
+check:public-site-audit:
+  image: node:26.7.0-trixie
+  script:
+    - python3 scripts/public-site-audit.py --root .
+
+# Browser QA (scripts/public-site-qa.mjs) against a local copy of the deploy
+# artifact, built the way deploy.yml builds it, and preview screenshots at
+# 390x844 and 1280x800 for each changed page.
+check:public-site-qa:
+  image: mcr.microsoft.com/playwright:v1.61.1-noble
+  variables:
+    GIT_DEPTH: "0"
+    BASE_URL: http://127.0.0.1:8000/
+    ALLOW_HTTP: "1"
+  script:
+    - command -v python3 || (apt-get update -qq && apt-get install -y -qq --no-install-recommends python3)
+    - rm -rf _site && mkdir -p _site
+    - cp ./*.html _site/
+    - for f in CNAME .nojekyll robots.txt sitemap.xml; do if [ -f "$f" ]; then cp "$f" _site/; fi; done
+    - cp -a assets _site/assets
+    - python3 -m http.server 8000 --bind 127.0.0.1 --directory _site > http.log 2>&1 &
+    - npm install --no-save --no-package-lock playwright@1.61.1
+    - node -e 'const go=async n=>{for(let i=0;i<n;i++){try{if((await fetch(process.env.BASE_URL)).ok)return;}catch{}await new Promise(r=>setTimeout(r,500));}throw new Error("local server did not start");};go(40)'
+    - node scripts/public-site-qa.mjs
+    - |
+      mkdir -p preview
+      base="${CI_MERGE_REQUEST_DIFF_BASE_SHA:-HEAD~1}"
+      for page in $(git diff --name-only --diff-filter=AM "$base" HEAD -- '*.html'); do
+        name="${page%.html}"
+        npx playwright screenshot --browser chromium --viewport-size "390,844" --full-page "${BASE_URL}${page}" "preview/${name}-390x844.png"
+        npx playwright screenshot --browser chromium --viewport-size "1280,800" --full-page "${BASE_URL}${page}" "preview/${name}-1280x800.png"
+      done
+      ls -l preview
+  artifacts:
+    when: always
+    expose_as: preview screenshots
+    paths:
+      - preview/
