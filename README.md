@@ -23,7 +23,7 @@ US Fellows honors and connects exceptional people across disciplines to humanity
 | `scholars-network.html` | Cross-level Scholar community and responsible collaboration protocol |
 | `society.html` | Society life, code of service, and Fellowship Oath |
 | `host-institutions.html` | Host eligibility, standards, and appointment model |
-| `missions.html` | Ten humanity-scale mission areas |
+| `missions.html` | Eleven humanity-scale mission areas, including Robotics &amp; Biotechnology (`robotics-biotechnology.html`) |
 | `fellows.html` | Fellow eligibility, selection, responsibilities, and benefits |
 | `journal.html` | Journal scope, publication categories, and editorial standard |
 | `apply.html` | Participation routes for Fellows, hosts, nominators, advisors, and partners |

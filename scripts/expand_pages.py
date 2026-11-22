@@ -298,6 +298,12 @@ def _nav(mode, order):
     return f'<nav class="anchor-nav anchor-nav--{mode}" aria-label="On this page"><div class="container">{links}<a href="#next"><span>05</span>Next steps</a></div></nav>'
 
 
+# Page-specific "Related pathways" links, listed before the category defaults.
+RELATED = {
+    "robotics-biotechnology.html": [("robotics-biotechnology-track.html", "Robotics & Biotechnology R&D track")],
+}
+
+
 def render(page, data):
     category, heading, lead, detail, focus = data
     shared = CATEGORY[category]
@@ -312,7 +318,7 @@ def render(page, data):
     principle_rows = "".join(f'<article class="principle-row"><span>0{i}</span><div><h3>{esc(k)}</h3><p>{esc(v)}</p></div></article>' for i, (k, v) in enumerate(shared["principles"], 1))
     steps = "".join(f'<article class="step"><h3>{esc(k)}</h3><p>{esc(v)} Here, attend to {esc(focus[i][0].lower())}: {esc(focus[i][1])}</p></article>' for i, (k, v) in enumerate(shared["steps"]))
     steps_vertical = "".join(f'<article class="timeline-step"><span>0{i + 1}</span><div><h3>{esc(k)}</h3><p>{esc(v)} Attend specifically to {esc(focus[i][0].lower())}.</p></div></article>' for i, (k, v) in enumerate(shared["steps"]))
-    related = "".join(f'<li><a href="{href}">{esc(label)}</a></li>' for href, label in shared["related"])
+    related = "".join(f'<li><a href="{href}">{esc(label)}</a></li>' for href, label in RELATED.get(page, []) + shared["related"])
     _, _, primary_href, primary_label, secondary_href, secondary_label = shared["cta"]
     lens = f'{focus[0][0]} establishes the point of entry; {focus[3][0].lower()} defines what should remain after the immediate work is complete.'
     intro = f'<div class="prose"><span class="eyebrow">{esc(shared["label"])}</span><h2>{esc(heading)}</h2><div class="rule"></div><p>{esc(lead)}</p><p>{esc(detail)}</p><p>{esc(lens)}</p></div>'
