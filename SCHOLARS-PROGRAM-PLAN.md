@@ -24,7 +24,7 @@ Add R&D Scholars as a coherent professional pathway within US Fellows without co
 
 | Designation | Primary gate | Expected engagement | Website treatment |
 | --- | --- | --- | --- |
-| International R&D Scholar | Mission-aligned research potential and a credible thesis/research direction | Flexible, part-time, voluntary, and self-paced | Emphasize advisor endorsement, network-building, funding research, and targeted requests |
+| International R&D Scholar | Mission-aligned research potential and a credible thesis/research direction | Flexible, part-time, voluntary, and self-paced; organized as a six-month readiness sprint and a long-range support model (NOTES.md entry 4) | Emphasize advisor endorsement, network-building, funding literacy, professor fit, and targeted requests |
 | Resident R&D Scholar | Readiness for a structured professional research pathway | At least 20 hours per week | Emphasize mentoring, methods, AI/cyber literacy, documentation, ethics, and teamwork |
 | Trusted R&D Scholar | Active U.S. Government clearance plus continuing eligibility | Full-time work on projects of U.S. national importance | State the gate without collecting clearance details; emphasize security and compliance |
 | Principal R&D Scholar | Current or former PI, Co-PI, Key Personnel, program/technical director, chief scientist, or comparable leadership | Leadership of funded, multidisciplinary mission work | Emphasize proposal leadership, teams, partnerships, and translation to mission use |
